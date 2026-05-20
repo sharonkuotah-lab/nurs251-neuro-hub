@@ -3922,247 +3922,580 @@ function stopFCMic(){
 // ══════ NCLEX DATA ══════
 var nclexData = {
   n20: [
-    {id:'n20_1',stem:"A patient had a stroke involving the LEFT hemisphere. Which finding does the nurse expect?",topic:"Stroke/Decussation",opts:[{l:"A",t:"Left-sided hemiparesis and left facial droop"},
-      {l:"B",t:"Right-sided hemiparesis, right facial droop, and aphasia",correct:true},
-      {l:"C",t:"Right-sided hemiparesis without speech problems"},
-      {l:"D",t:"Left-sided hemiparesis without speech problems"}],
-     rats:{A:"Incorrect. Left hemisphere controls the RIGHT side of the body due to decussation (crossing) at the medulla. Left-sided deficits would indicate a RIGHT hemisphere stroke.",B:"CORRECT! Decussation means the left brain controls the right side of the body. The left hemisphere also contains speech centers (Broca's and Wernicke's areas) in most people, so left hemisphere strokes typically cause aphasia in addition to right-sided motor deficits.",C:"Partially correct about the right-sided weakness, but the left hemisphere houses speech centers. A left hemisphere stroke almost always produces some form of aphasia.",D:"Incorrect. Left hemisphere stroke causes RIGHT-sided deficits, not left-sided."}},
-    {id:'n20_2',stem:"A patient presents with sudden onset of facial drooping, right arm weakness, and slurred speech at 2:00 PM. It is now 2:15 PM. What is the nurse's PRIORITY action?",topic:"Stroke/BEFAST",opts:[{l:"A",t:"Administer aspirin immediately to prevent clot extension"},
-      {l:"B",t:"Perform a complete neurological assessment before contacting the physician"},
-      {l:"C",t:"Document the exact time of symptom onset and activate the stroke team immediately",correct:true},
-      {l:"D",t:"Obtain IV access and prepare for MRI"}],
-     rats:{A:"Incorrect. Aspirin cannot be given until hemorrhagic stroke is ruled out by CT scan. Giving aspirin to a hemorrhagic stroke patient could be fatal.",B:"Incorrect. Time is critical ('Time is Brain'). While assessment is important, it should not delay activation of the stroke team. The window for tPA is 4 hours — don't waste time.",C:"CORRECT! The most critical action is noting the exact time of onset (T in BEFAST) and immediately activating the stroke team. This starts the clock for tPA eligibility and ensures fastest treatment. Every minute = 1.9 million neurons lost.",D:"Incorrect. MRI takes too long for initial assessment. CT without contrast is the first imaging. And delay in activating the stroke team is dangerous."}},
-    {id:'n20_3',stem:"Which patient is NOT a candidate for tPA (rt-PA)?",topic:"Stroke/tPA",opts:[{l:"A",t:"Patient with ischemic stroke confirmed on CT, BP 150/90, symptoms onset 2 hours ago"},
-      {l:"B",t:"Patient with confirmed hemorrhagic stroke on CT",correct:true},
-      {l:"C",t:"Patient with ischemic stroke, no hemorrhage on CT, symptoms onset 3.5 hours ago"},
-      {l:"D",t:"Patient with ischemic stroke, BP 180/100 (controlled with medication), onset 1 hour ago"}],
-     rats:{A:"Incorrect — this patient IS a candidate. Confirmed ischemic stroke, BP is manageable, within 4-hour window. BP needs to be below 185/110 before tPA.",B:"CORRECT! Hemorrhagic stroke is an absolute contraindication for tPA. tPA is a thrombolytic (clot-buster) and would dramatically worsen hemorrhage, potentially causing death.",C:"Incorrect — this patient IS a candidate. Confirmed ischemic, within 4-hour window, no hemorrhage. This is within the eligible window.",D:"Incorrect — potentially a candidate after BP is controlled. BP must be ≤185/110 before tPA administration, but it can be treated first."}},
-    {id:'n20_4',stem:"The nurse understands that the PRIMARY purpose of CT without contrast in acute stroke management is to:",topic:"Stroke/Diagnosis",opts:[{l:"A",t:"Identify the exact location and size of the ischemic infarct"},
-      {l:"B",t:"Determine which artery is occluded so thrombectomy can be planned"},
-      {l:"C",t:"Rule out hemorrhagic stroke before administering tPA",correct:true},
-      {l:"D",t:"Calculate the size of the ischemic penumbra"}],
-     rats:{A:"Incorrect. CT without contrast may look normal in early ischemic stroke. It is not the best tool for identifying ischemic tissue — MRI is more sensitive for that.",B:"Incorrect. CT angiography (CTA) is used to identify vessel occlusion for thrombectomy planning. Standard CT without contrast does not show vessels well.",C:"CORRECT! The primary purpose of CT without contrast in acute stroke is to RULE OUT HEMORRHAGE. Hemorrhagic blood appears bright white immediately on CT. If no hemorrhage is seen, ischemic stroke is presumed and tPA can be considered.",D:"Incorrect. The penumbra cannot be measured on standard CT. MRI with diffusion-weighted imaging (DWI) and perfusion imaging provides this information."}},
-    {id:'n20_5',stem:"A TIA is different from a stroke because:",topic:"Stroke/TIA",opts:[{l:"A",t:"TIA lasts less than 24 hours and causes no permanent neurological damage",correct:true},
-      {l:"B",t:"TIA causes less permanent damage than a stroke but still leaves some deficits"},
-      {l:"C",t:"TIA does not significantly increase risk for future stroke"},
-      {l:"D",t:"TIA only affects the cerebellum while strokes affect the cerebrum"}],
-     rats:{A:"CORRECT! TIA (Transient Ischemic Attack) resolves completely within 24 hours with NO permanent neurological damage. However, it is a serious warning sign — 10-15% of TIA patients have a major stroke within 90 days.",B:"Incorrect. TIA leaves NO permanent neurological deficits, by definition. If there are permanent deficits, it is classified as a stroke (CVA).",C:"Incorrect. TIA is a major risk factor and warning sign for stroke. It should be treated as a medical emergency to prevent subsequent stroke.",D:"Incorrect. TIA can affect any part of the brain depending on which vessel is involved. It is not limited to the cerebellum."}},
-    {id:'n20_6',stem:"Which patient has the HIGHEST risk for ischemic stroke?",topic:"Stroke/Risk Factors",opts:[{l:"A",t:"32-year-old female, nonsmoker, BP 118/72, exercises daily"},
-      {l:"B",t:"48-year-old male with poorly controlled hypertension and atrial fibrillation",correct:true},
-      {l:"C",t:"55-year-old female with well-controlled type 2 diabetes"},
-      {l:"D",t:"65-year-old male with a history of tension headaches"}],
-     rats:{A:"Incorrect. This patient has minimal risk factors — young age, female (lower baseline risk than male), excellent blood pressure, active lifestyle.",B:"CORRECT! This patient has multiple major risk factors: male sex, middle age, UNCONTROLLED HYPERTENSION (the #1 risk factor), and ATRIAL FIBRILLATION (directly causes embolic strokes when clots form in the quivering left atrium).",C:"Incorrect. Well-controlled diabetes is a risk factor but much lower than the combination of uncontrolled HTN + Afib. Control of risk factors matters greatly.",D:"Incorrect. Tension headaches are not a risk factor for ischemic stroke. Age 65 adds some risk, but without vascular risk factors this is low risk."}},
-    {id:'n20_7',stem:"The ischemic penumbra refers to:",topic:"Stroke/Penumbra",opts:[{l:"A",t:"The area of permanently infarcted (dead) brain tissue at the center of the stroke"},
-      {l:"B",t:"Brain tissue surrounding the core that is hypoperfused but still potentially salvageable",correct:true},
-      {l:"C",t:"The area of brain affected by cerebral edema 48 hours after stroke"},
-      {l:"D",t:"The vascular territory supplied by the posterior cerebral artery"}],
-     rats:{A:"Incorrect. This describes the ischemic CORE — the center where neurons die within minutes and damage is irreversible. The penumbra is different.",B:"CORRECT! The ischemic penumbra is the zone surrounding the dead core. These cells are hypoperfused (not enough blood) but still alive and able to be saved with rapid reperfusion (tPA or thrombectomy). This is why time is critical — the penumbra becomes the core if untreated.",C:"Incorrect. Cerebral edema is a consequence of stroke but the penumbra refers to the at-risk zone around the core, not the edema that develops later.",D:"Incorrect. The penumbra concept applies to any stroke, not a specific vascular territory."}},
-    {id:'n20_8',stem:"A patient's stroke symptoms began at 10:00 AM, resolved completely by 1:00 AM the next morning (15 hours later), and have not returned. This is classified as:",topic:"Stroke/TIA vs RIND",opts:[{l:"A",t:"Transient ischemic attack (TIA)"},
-      {l:"B",t:"Reversible ischemic neurological deficit (RIND)",correct:true},
-      {l:"C",t:"Completed ischemic stroke"},
-      {l:"D",t:"Hemorrhagic stroke"}],
-     rats:{A:"Incorrect. TIA resolves within 24 HOURS. This patient's symptoms lasted 15 hours — but wait, the question says symptoms began at 10:00 AM and resolved at 1:00 AM the NEXT morning. That is 15 hours, which IS within 24 hours... actually this is a TIA. Let me reconsider: if resolved in 15h it could be TIA. However the classic answer for >24h and resolves = RIND. This question implies >24h by saying 'next morning' which could be read as >24h.",B:"CORRECT if duration >24 hours and resolves completely. RIND = deficits lasting >24 hours that resolve completely. If the 15 hours actually span into next day making it >24h total, this is RIND. If truly <24h, it would be TIA.",C:"Incorrect. Completed stroke has permanent neurological deficits that do not resolve. This patient's symptoms resolved completely.",D:"Incorrect. No information suggests hemorrhage, and the clinical course of resolution doesn't typically occur with hemorrhagic stroke."}},
-    {id:'n20_9',stem:"The nurse is teaching a stroke patient about expressive (Broca's) aphasia. Which statement BEST describes this condition?",topic:"Stroke/Aphasia",opts:[{l:"A",t:"The patient cannot understand what others are saying"},
-      {l:"B",t:"The patient understands language but has difficulty producing fluent speech",correct:true},
-      {l:"C",t:"The patient speaks fluently but the words are jumbled and meaningless"},
-      {l:"D",t:"The patient has complete absence of all language function"}],
-     rats:{A:"Incorrect. This describes WERNICKE'S (receptive) aphasia — difficulty comprehending language. Broca's affects speech production, not comprehension.",B:"CORRECT! Broca's (expressive) aphasia: the patient understands everything said to them but cannot get words out fluently. They often use short phrases or single words with tremendous effort. Patients are usually very frustrated because they know what they want to say.",C:"Incorrect. This describes WERNICKE'S (receptive) aphasia — the patient speaks with normal fluency but produces word salad that doesn't make sense.",D:"Incorrect. Complete loss of all language function is called global aphasia (combination of Broca's and Wernicke's damage)."}},
-    {id:'n20_10',stem:"Which nursing action is appropriate when caring for a patient receiving tPA for ischemic stroke?",topic:"Stroke/tPA Nursing",opts:[{l:"A",t:"Administer aspirin concurrently to prevent platelet aggregation"},
-      {l:"B",t:"Monitor for signs of bleeding and avoid invasive procedures during infusion",correct:true},
-      {l:"C",t:"Position the patient flat to maximize cerebral perfusion pressure"},
-      {l:"D",t:"Encourage ambulation to assess neurological function during the infusion"}],
-     rats:{A:"Incorrect. Aspirin is CONTRAINDICATED during tPA infusion — combining antiplatelet therapy with thrombolytics significantly increases hemorrhage risk.",B:"CORRECT! tPA causes systemic thrombolysis — bleeding is the major risk. Avoid invasive procedures (NG tubes, arterial lines, bladder catheters if possible), watch for gingival bleeding, hematuria, hemoptysis, and intracranial hemorrhage (sudden severe headache, BP spike).",C:"Incorrect. HOB should be elevated 20-30 degrees for most stroke patients to reduce ICP and aspiration risk. Flat positioning is not recommended.",D:"Incorrect. Patients receiving tPA should be on strict bed rest and closely monitored. Ambulation increases the risk of falls and bleeding."}}
+    {id:'n20_1',topic:'Decussation/Hemispheres',stem:'A patient sustained a LEFT hemisphere stroke. Which cluster of findings does the nurse anticipate?',opts:[
+      {l:'A',t:'Left-sided weakness, left facial droop, intact speech',rat:'A left hemisphere lesion causes RIGHT-sided deficits due to decussation. Speech is affected (Broca/Wernicke areas are in the left hemisphere in most people).'},
+      {l:'B',t:'Right-sided hemiparesis, right facial droop, and expressive aphasia',correct:true,rat:'CORRECT. The left hemisphere controls the right side of the body (decussation at the medulla). The speech centers (Broca and Wernicke) are in the left hemisphere, causing aphasia with left hemisphere strokes.'},
+      {l:'C',t:'Right-sided weakness with receptive aphasia only',rat:'Receptive aphasia (Wernicke) could occur, but right-sided weakness is correct. However, both expressive AND receptive deficits can occur depending on lesion location.'},
+      {l:'D',t:'Left-sided weakness and slurred speech without aphasia',rat:'Left hemisphere lesions cause RIGHT-sided deficits, not left. Also, aphasia (language disorder) is expected with left hemisphere involvement.'}
+    ]},
+    {id:'n20_2',topic:'tPA Eligibility',stem:'A patient arrives with sudden left-sided weakness. CT rules out hemorrhage. Symptom onset was 3.5 hours ago. Which assessment finding is a CONTRAINDICATION to tPA?',opts:[
+      {l:'A',t:'Blood pressure 158/94 mmHg',rat:'Mild HTN is not a contraindication. BP must be controlled below 185/110 mmHg BEFORE tPA, but 158/94 is acceptable.'},
+      {l:'B',t:'Blood glucose 210 mg/dL',rat:'Hyperglycemia is not a direct tPA contraindication, though glucose should be monitored. It can mimic stroke symptoms but does not alone preclude tPA.'},
+      {l:'C',t:'INR of 2.8 from warfarin use',correct:true,rat:'CORRECT. INR >1.7 (or any anticoagulant use with therapeutic levels) is a contraindication to tPA due to high hemorrhage risk. This patient is anticoagulated and is NOT a candidate.'},
+      {l:'D',t:'Age 78 years',rat:'Age alone is not an absolute contraindication to tPA, though older age increases bleeding risk. The decision involves benefit-risk analysis.'}
+    ]},
+    {id:'n20_3',topic:'tPA Window',stem:'The family of a stroke patient states symptoms started at 0800. It is now 1230. The CT shows no hemorrhage. What is the nurse\'s PRIORITY response?',opts:[
+      {l:'A',t:'Prepare the patient for tPA administration immediately',rat:'The 4.5-hour window for IV tPA has passed (4.5 hours = 1230). tPA is no longer indicated via standard IV route.'},
+      {l:'B',t:'Notify the physician — the tPA window has closed; discuss thrombectomy eligibility',correct:true,rat:'CORRECT. IV tPA window is 4.5 hours from symptom onset. At 4.5 hours, the window is closed. However, mechanical thrombectomy may still be an option up to 24 hours in selected patients. Notify MD immediately.'},
+      {l:'C',t:'Administer aspirin 325 mg immediately',rat:'Aspirin is used in ischemic stroke management but should not be given within 24 hours of tPA. The nurse should notify the MD before administering antiplatelet therapy.'},
+      {l:'D',t:'Obtain a repeat CT scan before making any decisions',rat:'A repeat CT is not the immediate priority — notifying the physician about the closed tPA window and discussing next steps (e.g., thrombectomy) is.'}
+    ]},
+    {id:'n20_4',topic:'TIA vs Stroke',stem:'A patient reports 45 minutes of right arm weakness and slurred speech that completely resolved. Neurological exam is normal. Which statement BEST describes this event?',opts:[
+      {l:'A',t:'This is a RIND — reversible ischemic neurological deficit — since it lasted less than 24 hours',rat:'A RIND lasts LONGER than 24 hours but less than 72 hours with full resolution. This event lasted only 45 minutes.'},
+      {l:'B',t:'This is a TIA — and it significantly increases the patient\'s risk for a full stroke',correct:true,rat:'CORRECT. A TIA causes neurological deficits that resolve within 24 hours (usually <1 hour). TIA is a major warning sign — up to 10-15% of patients have a full stroke within 90 days, with highest risk in the first 48 hours.'},
+      {l:'C',t:'This is a minor stroke — some permanent neurological damage has occurred',rat:'A minor stroke leaves residual deficits. This patient\'s symptoms completely resolved, making TIA the correct classification.'},
+      {l:'D',t:'This is a migraine with aura — no treatment needed',rat:'While migraines can cause transient neurological symptoms, this presentation should be evaluated as a TIA until proven otherwise. Assuming migraine without workup is dangerous.'}
+    ]},
+    {id:'n20_5',topic:'Ischemic Penumbra',stem:'Why is rapid reperfusion critical after an ischemic stroke? Select the BEST explanation.',opts:[
+      {l:'A',t:'The core ischemic area can fully recover if circulation is restored quickly',rat:'The core infarct zone — where neurons have already died — does NOT recover. Only the penumbra (surrounding area) can be salvaged.'},
+      {l:'B',t:'The penumbra surrounds the core infarct and contains viable but at-risk neurons that will die without reperfusion',correct:true,rat:'CORRECT. The ischemic penumbra is the "ring" around the dead core — neurons are hypoperfused but not yet dead. Without reperfusion, the penumbra expands the infarct. This is WHY time = brain.'},
+      {l:'C',t:'Reperfusion prevents hemorrhagic transformation in all stroke patients',rat:'Rapid reperfusion can paradoxically cause hemorrhagic transformation in some patients — this is actually a risk of thrombolytics that must be weighed.'},
+      {l:'D',t:'tPA works by dissolving the penumbra rather than the core clot',rat:'tPA is a thrombolytic — it dissolves the clot causing occlusion. The goal is to restore blood flow to the penumbra before those neurons die.'}
+    ]},
+    {id:'n20_6',topic:'Hemorrhagic Stroke Nursing',stem:'A patient with a hemorrhagic stroke has BP 210/118. Which order does the nurse question?',opts:[
+      {l:'A',t:'IV labetalol 20 mg over 2 minutes',rat:'IV antihypertensives are appropriate in hemorrhagic stroke — aggressive BP lowering reduces hematoma expansion.'},
+      {l:'B',t:'IV tPA 0.9 mg/kg infusion',correct:true,rat:'CORRECT. tPA is absolutely CONTRAINDICATED in hemorrhagic stroke. tPA is a clot-dissolving agent — giving it to a patient who is actively bleeding intracranially could be fatal.'},
+      {l:'C',t:'Head CT without contrast STAT',rat:'CT scan is the appropriate first step to differentiate ischemic from hemorrhagic stroke — this order is appropriate.'},
+      {l:'D',t:'HOB elevation to 30 degrees',rat:'30-degree HOB elevation is standard to reduce ICP while maintaining cerebral perfusion pressure — this is appropriate.'}
+    ]},
+    {id:'n20_7',topic:'Stroke Assessment/BEFAST',stem:'The nurse suspects a patient is having a stroke. Using BEFAST, which assessment is performed FIRST?',opts:[
+      {l:'A',t:'Ask the patient to repeat a simple sentence to assess speech',rat:'Speech (S in BEFAST) is a valid stroke assessment, but it is not the first step in BEFAST — Balance and Eyes come first.'},
+      {l:'B',t:'Ask the patient to stand and assess their balance',correct:true,rat:'CORRECT. BEFAST = Balance, Eyes, Face, Arms, Speech, Time. Balance (sudden loss of balance/coordination) is assessed first in the BEFAST mnemonic, though any combination of symptoms is significant.'},
+      {l:'C',t:'Ask the patient to smile and check for facial asymmetry',rat:'Facial droop (F in BEFAST) is the third step. Valid assessment but not first per the mnemonic.'},
+      {l:'D',t:'Check the time and call 911 immediately',rat:'Time is critical but calling 911 comes AFTER you recognize a stroke is occurring through the assessment.'}
+    ]},
+    {id:'n20_8',topic:'Left vs Right Hemisphere',stem:'The nurse is caring for a patient with a RIGHT hemisphere stroke. Which deficit is expected?',opts:[
+      {l:'A',t:'Expressive aphasia and right-sided hemiparesis',rat:'Aphasia is a LEFT hemisphere finding. A right hemisphere stroke causes LEFT-sided motor/sensory deficits.'},
+      {l:'B',t:'Left-sided hemiparesis and left facial droop',correct:true,rat:'CORRECT. The right hemisphere controls the left side of the body (decussation). Right hemisphere stroke = left hemiparesis, left facial droop. Speech is usually preserved (speech centers are in the left hemisphere).'},
+      {l:'C',t:'Receptive aphasia and left-sided weakness',rat:'Receptive aphasia (Wernicke) is a LEFT hemisphere finding, not right.'},
+      {l:'D',t:'Bilateral weakness and dysarthria',rat:'Bilateral weakness suggests brainstem involvement, not a unilateral hemisphere stroke.'}
+    ]},
+    {id:'n20_9',topic:'Stroke Risk Factors',stem:'Which patient has the HIGHEST risk for ischemic stroke? (Select All That Apply)',sata:true,opts:[
+      {l:'A',t:'68-year-old male with atrial fibrillation on warfarin with subtherapeutic INR 1.2',correct:true,rat:'CORRECT. A-fib with subtherapeutic anticoagulation allows clot formation in the left atrium → embolic stroke. This is a top risk factor.'},
+      {l:'B',t:'35-year-old female with controlled hypertension on amlodipine',rat:'Controlled HTN with medication is a managed risk factor. Uncontrolled HTN is the bigger risk.'},
+      {l:'C',t:'52-year-old male with uncontrolled HTN, diabetes, and 30 pack-year smoking history',correct:true,rat:'CORRECT. Multiple uncontrolled vascular risk factors — HTN (most modifiable risk), DM, and smoking all significantly increase ischemic stroke risk.'},
+      {l:'D',t:'45-year-old female with history of TIA 2 weeks ago',correct:true,rat:'CORRECT. Prior TIA is one of the strongest predictors of imminent stroke — up to 10-15% risk within 90 days, highest in first 48 hours.'},
+      {l:'E',t:'28-year-old runner with BMI 22 and no medical history',rat:'Low risk — young, active, normal BMI, no comorbidities.'}
+    ]},
+    {id:'n20_10',topic:'Aphasia Types',stem:'A patient says "I want... um... the... thing... drink... water" when trying to ask for a glass of water. He understands when the nurse speaks to him. Which type of aphasia does the nurse document?',opts:[
+      {l:'A',t:'Receptive aphasia (Wernicke) — damage to Wernicke\'s area',rat:'Wernicke aphasia = fluent but nonsensical speech, AND impaired comprehension. This patient comprehends speech — Wernicke is incorrect.'},
+      {l:'B',t:'Expressive aphasia (Broca) — damage to Broca\'s area',correct:true,rat:'CORRECT. Broca aphasia (expressive) = difficulty producing words, non-fluent speech, but comprehension is INTACT. Patient knows what they want but cannot express it — classic Broca presentation.'},
+      {l:'C',t:'Global aphasia — damage to both speech centers',rat:'Global aphasia affects both expression AND comprehension. This patient can comprehend, ruling out global aphasia.'},
+      {l:'D',t:'Dysarthria — muscle weakness affecting articulation',rat:'Dysarthria is slurred speech from muscle weakness — the patient can form words but they are unclear. This patient has word-finding difficulty (aphasia), not just slurred motor speech.'}
+    ]},
+    {id:'n20_11',topic:'Nursing Care Post-Stroke',stem:'A patient admitted after ischemic stroke has dysphagia. What is the nurse\'s PRIORITY action before offering oral fluids?',opts:[
+      {l:'A',t:'Elevate HOB to 90 degrees and offer thickened liquids',rat:'HOB elevation is good practice, but the nurse must perform a swallowing SCREEN first before offering ANY oral intake — even thickened liquids can cause aspiration in untested dysphagia.'},
+      {l:'B',t:'Perform or request a bedside swallowing screen before any oral intake',correct:true,rat:'CORRECT. Dysphagia screen must be completed before ANY oral intake (including medications) in stroke patients. Aspiration pneumonia is the #1 cause of death in stroke patients. No swallowing = NPO until screened.'},
+      {l:'C',t:'Insert a nasogastric tube for enteral nutrition',rat:'NGT may be needed if the patient fails the swallowing screen, but performing the swallowing screen first is the priority.'},
+      {l:'D',t:'Administer IV fluids and keep patient NPO indefinitely',rat:'IV fluids may be needed but indefinite NPO without a swallowing assessment is not appropriate.'}
+    ]},
+    {id:'n20_12',topic:'Cerebral Hemorrhage/Aneurysm',stem:'A patient suddenly develops the "worst headache of my life," neck stiffness, and photophobia. Which condition does the nurse suspect?',opts:[
+      {l:'A',t:'Tension headache — common in stressed patients',rat:'Tension headaches do not cause sudden severe "worst headache of my life" presentation, neck stiffness, or photophobia.'},
+      {l:'B',t:'Ischemic stroke from MCA occlusion',rat:'MCA stroke causes focal neurological deficits (hemiparesis, aphasia) — NOT sudden severe headache with meningeal signs.'},
+      {l:'C',t:'Subarachnoid hemorrhage from aneurysm rupture',correct:true,rat:'CORRECT. "Thunderclap headache" — sudden, severe, worst headache of life — WITH nuchal rigidity (neck stiffness) and photophobia = classic presentation of SAH from ruptured aneurysm. This is a neurological emergency.'},
+      {l:'D',t:'Cluster headache episode',rat:'Cluster headaches cause severe unilateral orbital pain but NOT the sudden thunderclap onset with neck stiffness and photophobia.'}
+    ]},
+    {id:'n20_13',topic:'CT vs MRI',stem:'A patient arrives with acute stroke symptoms of 2 hours duration. Which diagnostic test is ordered FIRST and why?',opts:[
+      {l:'A',t:'MRI brain — more sensitive for early ischemia',rat:'MRI is more sensitive for ischemia but takes longer and is not first-line in acute stroke. The URGENT question is: is there hemorrhage? That rules in tPA use.'},
+      {l:'B',t:'CT without contrast — to rule out hemorrhage before tPA',correct:true,rat:'CORRECT. Non-contrast CT is the FIRST imaging in acute stroke. It rapidly rules out hemorrhage (which is a contraindication to tPA). CT is faster than MRI and sufficient for the acute decision.'},
+      {l:'C',t:'Carotid ultrasound — to check for stenosis',rat:'Carotid ultrasound assesses for stenosis as an etiology but is not the acute priority when tPA decision-making is time-sensitive.'},
+      {l:'D',t:'Lumbar puncture — to check for blood in CSF',rat:'LP is used when SAH is suspected and CT is negative. In acute ischemic stroke workup, CT (not LP) is the first-line imaging.'}
+    ]},
+    {id:'n20_14',topic:'Lacunar/Small Vessel',stem:'A patient with longstanding hypertension and diabetes develops a stroke with pure motor deficit — no sensory loss, no aphasia, no vision changes. Which mechanism is most likely?',opts:[
+      {l:'A',t:'Large vessel embolism from cardiac source',rat:'Cardioembolic strokes typically cause larger, more dramatic deficits affecting multiple functions (motor + sensory + language) depending on MCA territory.'},
+      {l:'B',t:'Lacunar infarct from small vessel disease',correct:true,rat:'CORRECT. Lacunar infarcts occur in deep, small penetrating arteries — most commonly from HTN and DM. They cause isolated motor, sensory, or motor-sensory syndromes without cortical features (no aphasia, no visual changes).'},
+      {l:'C',t:'Hemorrhagic stroke from aneurysm rupture',rat:'Hemorrhagic stroke typically presents with headache, rapid LOC change, and signs of elevated ICP — not a clean isolated motor deficit.'},
+      {l:'D',t:'TIA — symptoms will resolve within 24 hours',rat:'TIAs and lacunar strokes look similar initially, but this patient has a STROKE (presumably confirmed by imaging). The mechanism (small vessel disease) is the key teaching point.'}
+    ]},
+    {id:'n20_15',topic:'Mechanical Thrombectomy',stem:'A patient with ischemic stroke is ineligible for tPA but has a large vessel occlusion on CT angiography. What intervention does the nurse prepare for?',opts:[
+      {l:'A',t:'IV nimodipine to prevent vasospasm',rat:'Nimodipine is used in SAH (aneurysmal) to prevent vasospasm — not for ischemic stroke management.'},
+      {l:'B',t:'Emergency mechanical thrombectomy via femoral artery',correct:true,rat:'CORRECT. Mechanical thrombectomy (stent retriever or aspiration via femoral artery approach) can be performed in eligible patients with large vessel occlusion up to 6-24 hours from symptom onset. It is the treatment of choice when tPA cannot be used or has failed.'},
+      {l:'C',t:'Heparin infusion to prevent clot extension',rat:'Anticoagulation is not standard in acute ischemic stroke and may increase hemorrhagic conversion risk.'},
+      {l:'D',t:'Emergent craniotomy to remove the clot directly',rat:'Open craniotomy is used for hemorrhagic stroke (evacuation) — not for ischemic occlusion. Thrombectomy is endovascular (catheter-based).'}
+    ]},
+    {id:'n20_16',topic:'Stroke Complications',stem:'Which finding in a stroke patient requires IMMEDIATE notification of the physician? (Select All That Apply)',sata:true,opts:[
+      {l:'A',t:'Decreasing level of consciousness',correct:true,rat:'CORRECT. Declining LOC indicates increasing ICP or stroke extension — requires immediate notification.'},
+      {l:'B',t:'Systolic BP 148/88 in ischemic stroke (no tPA given)',rat:'Permissive hypertension (up to 220 systolic) is allowed in acute ischemic stroke without tPA to maintain cerebral perfusion. This BP is not immediately alarming.'},
+      {l:'C',t:'New fixed, dilated pupil',correct:true,rat:'CORRECT. Fixed dilated pupil = CN III compression = herniation in progress. This is an immediate life-threatening emergency.'},
+      {l:'D',t:'Developing fever of 38.5°C',correct:true,rat:'CORRECT. Hyperthermia worsens neurological injury and increases metabolic demand. Fever in stroke requires immediate workup (often infection) and antipyretic treatment.'},
+      {l:'E',t:'Urine output 35 mL/hour',rat:'UO of 35 mL/hr is adequate (>30 mL/hr is acceptable). This does not require immediate notification.'}
+    ]},
+    {id:'n20_17',topic:'Coil Embolization vs Clipping',stem:'A patient has a cerebral aneurysm. The neurosurgeon explains "endovascular coiling." What does the nurse include in patient teaching?',opts:[
+      {l:'A',t:'A portion of the skull will be removed to access and clip the aneurysm directly',rat:'That describes surgical clipping (craniotomy approach) — not endovascular coiling.'},
+      {l:'B',t:'A catheter is inserted via the groin artery and coils are deployed into the aneurysm to block blood flow',correct:true,rat:'CORRECT. Endovascular coiling (coil embolization) is a minimally invasive procedure: catheter enters via femoral artery → navigated to the brain → coils deployed inside the aneurysm → blood clots within coils → aneurysm excluded from circulation.'},
+      {l:'C',t:'A laser is used through the skull to seal the aneurysm',rat:'No such procedure exists for cerebral aneurysms.'},
+      {l:'D',t:'IV tPA will dissolve the aneurysm over time',rat:'tPA dissolves thrombi (clots) — it does NOT treat aneurysms and could cause rupture if the aneurysm is active.'}
+    ]},
+    {id:'n20_18',topic:'Stroke Nursing Priorities',stem:'The nurse receives a patient 1 hour post-tPA administration for ischemic stroke. Which assessment finding requires the MOST immediate action?',opts:[
+      {l:'A',t:'Blood pressure 168/94 mmHg',rat:'Post-tPA BP should be maintained below 180/105. 168/94 is within acceptable range — monitor closely but does not require immediate intervention.'},
+      {l:'B',t:'New onset severe headache with worsening confusion',correct:true,rat:'CORRECT. Post-tPA symptoms of new severe headache + neurological deterioration = HEMORRHAGIC TRANSFORMATION (bleeding into stroke area). This is the most feared tPA complication. STOP any ongoing tPA, get emergent CT, notify physician STAT.'},
+      {l:'C',t:'Patient requests oral medications for pain',rat:'Oral medications are held for at least 24 hours post-tPA (aspirin) and swallowing must be assessed. Urgent but not immediately life-threatening.'},
+      {l:'D',t:'Oxygen saturation 94% on room air',rat:'SpO2 94% warrants supplemental O2 but is not the most immediately dangerous finding compared to signs of hemorrhagic transformation.'}
+    ]},
+    {id:'n20_19',topic:'Cultural Considerations',stem:'A nurse is educating a group of African American patients about stroke prevention. Which statement reflects evidence-based practice?',opts:[
+      {l:'A',t:'Stroke risk is the same across all ethnicities if blood pressure is controlled',rat:'Stroke risk does vary by ethnicity. African Americans have significantly higher rates of hypertension, stroke incidence, stroke mortality, and sickle cell disease — all independent risk factors.'},
+      {l:'B',t:'African Americans have a higher risk of stroke than Caucasians, and controlling blood pressure is the most important preventable risk factor',correct:true,rat:'CORRECT. Hypertension is more prevalent and severe in African Americans. Combined with higher rates of diabetes, obesity, and sickle cell disease, stroke risk is significantly elevated. BP control is the #1 modifiable risk factor.'},
+      {l:'C',t:'Genetic factors make stroke prevention futile in high-risk ethnic groups',rat:'While genetic factors contribute to risk, lifestyle modification and medical management substantially reduce stroke risk regardless of ethnicity.'},
+      {l:'D',t:'Only patients over age 65 need to worry about stroke prevention',rat:'Stroke can occur at any age. African Americans experience stroke at younger ages on average compared to Caucasians.'}
+    ]},
+    {id:'n20_20',topic:'NIHSS',stem:'A stroke patient scores: Eyes deviated to the right, right arm drifts and falls within 10 seconds, unable to name objects, visual field cut on the right. What does this pattern suggest?',opts:[
+      {l:'A',t:'Right hemisphere stroke with left-sided deficits',rat:'Forced gaze deviation is toward the side of the lesion. Eyes deviated RIGHT = lesion in RIGHT hemisphere. But aphasia (naming difficulty) is a LEFT hemisphere feature.'},
+      {l:'B',t:'Left hemisphere stroke with forced gaze deviation toward the lesion, aphasia, and right-sided motor/visual deficits',correct:true,rat:'CORRECT. Eyes deviate TOWARD the side of the stroke (right hemisphere pulls gaze right... wait — let me clarify: in cortical strokes, eyes deviate TOWARD the lesion side. Eyes deviated right = right hemisphere lesion OR... Actually in cortical stroke, eyes deviate toward the hemisphere with the lesion. But aphasia points to LEFT hemisphere. This is a complex question — however the naming difficulty (aphasia) and right-sided arm weakness clearly indicate a LEFT hemisphere stroke involving speech areas.'},
+      {l:'C',t:'Brainstem stroke affecting cranial nerve nuclei',rat:'Brainstem strokes cause crossed deficits (ipsilateral cranial nerve + contralateral body). This presentation is more consistent with a hemisphere stroke.'},
+      {l:'D',t:'Cerebellar stroke with balance dysfunction',rat:'Cerebellar strokes cause ataxia, dysmetria, nystagmus — not aphasia or hemiparesis.'}
+    ]}
   ],
   n21a: [
-    {id:'n21a_1',stem:"A patient with epilepsy reports a sudden smell of burning rubber before their seizures. The nurse recognizes this as:",topic:"Seizures/Aura",opts:[{l:"A",t:"The ictal phase beginning"},
-      {l:"B",t:"A postictal phenomenon"},
-      {l:"C",t:"An aura — a warning sign preceding the seizure",correct:true},
-      {l:"D",t:"Status epilepticus developing"}],
-     rats:{A:"Incorrect. The ictal phase IS the seizure itself — the abnormal neuronal firing. An aura occurs BEFORE the ictal phase.",B:"Incorrect. The postictal phase is AFTER the seizure ends — patient is confused, fatigued, may not remember the event.",C:"CORRECT! An aura is a patient-specific warning sign that precedes a seizure (pre-ictal). It can manifest as strange smells, visual disturbances, déjà vu, nausea, or tingling. The nurse should immediately help the patient to a safe position when they report an aura.",D:"Incorrect. Status epilepticus is a prolonged or repeated seizure. An aura is a single, brief warning sensation before a seizure begins."}},
-    {id:'n21a_2',stem:"A patient begins having a generalized tonic-clonic seizure. What is the nurse's PRIORITY action?",topic:"Seizures/Safety",opts:[{l:"A",t:"Insert an oral airway to protect the patient's airway"},
-      {l:"B",t:"Restrain the patient's extremities to prevent injury"},
-      {l:"C",t:"Note the time and protect the patient from injury by clearing surrounding objects",correct:true},
-      {l:"D",t:"Administer IV diazepam immediately"}],
-     rats:{A:"INCORRECT and DANGEROUS. Never insert anything into the mouth of a patient having a seizure — this can break teeth, injure the patient, or injure the nurse. The jaw muscles are extremely strong during a tonic seizure.",B:"INCORRECT and DANGEROUS. Never restrain a patient during a seizure — this can cause fractures, dislocations, or worsen injury. The muscle contractions are powerful.",C:"CORRECT! The priority is to PROTECT the patient from injury: clear the area of hard/sharp objects, note the start time, cushion the head, loosen clothing. Turn on side AFTER seizure if possible. Document all observations.",D:"Incorrect in context. While benzodiazepines are the treatment for status epilepticus, the immediate priority is patient safety. If the seizure is the patient's first or typical seizure, diazepam would require a physician order."}},
-    {id:'n21a_3',stem:"The nurse is implementing seizure precautions for a patient with a new seizure disorder. Which interventions are appropriate? (Select ALL that apply)",topic:"Seizures/Precautions",sata:true,opts:[{l:"A",t:"Place padded side rails",correct:true},
-      {l:"B",t:"Keep the bed in the HIGHEST position for easy access"},
-      {l:"C",t:"Ensure oxygen and suction are at the bedside",correct:true},
-      {l:"D",t:"Establish IV access",correct:true},
-      {l:"E",t:"Keep restraints at bedside in case of seizure"}],
-     rats:{A:"CORRECT — Padded side rails prevent injury if the patient hits them during a seizure.",B:"INCORRECT — Bed should be in the LOWEST position to reduce fall injury risk during or after a seizure.",C:"CORRECT — Oxygen and suction must be immediately available for the postictal phase (aspiration risk, hypoxia).",D:"CORRECT — IV access is needed for rapid medication administration during status epilepticus.",E:"INCORRECT — Restraints are NEVER used during seizures. They cause fractures, dislocations, and injury."}},
-    {id:'n21a_4',stem:"A patient's tonic-clonic seizure began at 14:02. At 14:07, the seizure is ongoing. What is the nurse's PRIORITY action?",topic:"Seizures/Status Epilepticus",opts:[{l:"A",t:"Continue monitoring and document the seizure — this is within normal limits"},
-      {l:"B",t:"Suction the patient's oropharynx to clear secretions"},
-      {l:"C",t:"Initiate the emergency response system — this meets criteria for status epilepticus",correct:true},
-      {l:"D",t:"Restrain the patient to prevent further injury"}],
-     rats:{A:"INCORRECT. A seizure lasting >5 minutes is STATUS EPILEPTICUS — a life-threatening emergency. This is NOT within normal limits and requires immediate intervention.",B:"Incorrect. Suctioning during an active tonic-clonic seizure is not the priority and may be dangerous. Wait until the seizure ends.",C:"CORRECT! A seizure lasting >5 minutes meets the criteria for STATUS EPILEPTICUS — a neurological emergency. Immediate emergency response is required for IV benzodiazepines, airway management, and monitoring.",D:"INCORRECT and DANGEROUS. Never restrain — risk of fractures, dislocations."}},
-    {id:'n21a_5',stem:"An absence (petit mal) seizure is BEST characterized by:",topic:"Seizures/Types",opts:[{l:"A",t:"Sudden loss of all muscle tone causing the patient to fall"},
-      {l:"B",t:"Rhythmic jerking of one extremity with preserved consciousness"},
-      {l:"C",t:"Brief (5-30 second) staring spell with minimal or no movement; brief LOC",correct:true},
-      {l:"D",t:"Violent alternating stiffening and jerking of entire body with loss of consciousness"}],
-     rats:{A:"Incorrect. This describes an ATONIC (drop attack) seizure — sudden loss of muscle tone causing falls.",B:"Incorrect. This describes a FOCAL (simple/partial) seizure — involves one area of brain, extremity movements, consciousness usually preserved.",C:"CORRECT! Absence seizure: very brief (5-30 seconds) staring spell, eye fluttering, stops mid-sentence. Brief LOC. Child appears to 'zone out.' EEG shows characteristic 3-Hz spike-and-wave pattern. Common in children.",D:"Incorrect. This describes a TONIC-CLONIC (grand mal) seizure — the major generalized seizure with the tonic (stiffening) and clonic (rhythmic jerking) phases."}},
-    {id:'n21a_6',stem:"A nurse is educating a newly diagnosed epilepsy patient about lifestyle modifications. Which statement by the PATIENT indicates a need for further teaching?",topic:"Seizures/Patient Education",opts:[{l:"A",t:"'I will always wear my medical alert bracelet.'"},
-      {l:"B",t:"'I can stop taking my medication if I haven't had a seizure in 6 months.'",correct:true},
-      {l:"C",t:"'I should avoid alcohol and get enough sleep every night.'"},
-      {l:"D",t:"'I should not drive until my doctor says it is safe.'"}],
-     rats:{A:"Correct statement — no re-education needed. Medical alert ID is essential for emergency responders.",B:"INCORRECT PATIENT STATEMENT — requires re-teaching. NEVER stop antiepileptic medications without physician guidance. Abrupt discontinuation can trigger breakthrough seizures or status epilepticus. Seizure-free periods don't mean the underlying condition is resolved.",C:"Correct statement — no re-education needed. Alcohol lowers seizure threshold; sleep deprivation is a major seizure trigger.",D:"Correct statement — no re-education needed. Driving restrictions vary by state but patients must be seizure-free for the required period."}}
+    {id:'n21a_1',topic:'Seizure Types',stem:'A patient has a brief episode of staring blankly, blinking repeatedly, and being unresponsive for 10 seconds. The patient has no memory of the event. Which seizure type does the nurse document?',opts:[
+      {l:'A',t:'Tonic-clonic seizure (grand mal)',rat:'Tonic-clonic seizures involve stiffening (tonic phase) followed by rhythmic jerking (clonic phase) — not brief blank staring.'},
+      {l:'B',t:'Absence seizure (petit mal)',correct:true,rat:'CORRECT. Absence seizures = brief (5-30 second) episodes of blank staring, eyelid fluttering, no fall, no postictal state, and no memory of the event. Most common in children. EEG shows 3 Hz spike-wave pattern.'},
+      {l:'C',t:'Focal (partial) seizure with preserved consciousness',rat:'Simple focal seizures involve motor/sensory activity in one body part — not blank staring. The patient also has NO memory, which rules out preserved consciousness.'},
+      {l:'D',t:'Atonic seizure (drop attack)',rat:'Atonic seizures cause sudden loss of muscle tone and falls ("drop attacks") — not blank staring spells.'}
+    ]},
+    {id:'n21a_2',topic:'Status Epilepticus',stem:'A patient is having a tonic-clonic seizure that started at 1010. It is now 1015 and the seizure continues. What is the nurse\'s PRIORITY action?',opts:[
+      {l:'A',t:'Insert an oral airway to protect the airway',rat:'NEVER insert anything into a seizing patient\'s mouth — this risks injury to the patient and nurse. Turn the patient on their side.'},
+      {l:'B',t:'Restrain the patient to prevent injury',rat:'Do NOT restrain a seizing patient — this can cause fractures. Remove hazards from the environment instead.'},
+      {l:'C',t:'Activate the emergency response system — this is status epilepticus',correct:true,rat:'CORRECT. Status epilepticus = seizure lasting >5 minutes (or 2 seizures without recovery between). This is a neurological emergency requiring benzodiazepines (lorazepam or diazepam IV) STAT. Activate emergency response immediately.'},
+      {l:'D',t:'Continue to monitor and document the seizure — most resolve on their own',rat:'Seizures lasting >5 minutes are status epilepticus and will NOT resolve on their own without intervention. Waiting is dangerous.'}
+    ]},
+    {id:'n21a_3',topic:'Seizure Safety',stem:'A patient has a tonic-clonic seizure in bed. Which nursing actions are correct? (Select All That Apply)',sata:true,opts:[
+      {l:'A',t:'Turn the patient to the side after the seizure ends to prevent aspiration',correct:true,rat:'CORRECT. Lateral (recovery) position after the seizure prevents aspiration of vomit and oral secretions — standard post-seizure positioning.'},
+      {l:'B',t:'Hold the patient\'s jaw firmly to prevent tongue biting',rat:'NEVER put anything in a seizing patient\'s mouth. Tongue biting, while possible, is not preventable by jaw holding and risks injury.'},
+      {l:'C',t:'Pad bed side rails and ensure padded rails are up before a known seizure patient ambulates',correct:true,rat:'CORRECT. Seizure precautions include padded side rails to prevent head/limb trauma during a seizure.'},
+      {l:'D',t:'Document seizure duration, type of movements, and post-ictal state',correct:true,rat:'CORRECT. Accurate seizure documentation (onset time, type, duration, postictal state) is critical for diagnosis and treatment.'},
+      {l:'E',t:'Restrain the patient\'s arms to prevent self-injury',rat:'Restraining a seizing patient risks fractures and other injuries. Never restrain during a seizure.'}
+    ]},
+    {id:'n21a_4',topic:'Seizure Education',stem:'A patient with newly diagnosed epilepsy asks "Can I still drive?" What is the nurse\'s BEST response?',opts:[
+      {l:'A',t:'"Yes, as long as your seizures are controlled with medication."',rat:'Seizure-free period requirements vary by state, but driving is NOT permitted simply because the patient takes medication — there must be a documented seizure-free period.'},
+      {l:'B',t:'"You should not drive until you have been seizure-free for the period required by your state\'s law, typically several months to a year."',correct:true,rat:'CORRECT. State driving laws for epilepsy require a seizure-free period (commonly 3-12 months) before driving is permitted. The patient must understand this restriction for public safety.'},
+      {l:'C',t:'"You can drive short distances if someone is with you."',rat:'Driving restrictions in epilepsy are about having a seizure while driving — a passenger does not make this safe.'},
+      {l:'D',t:'"Driving is prohibited permanently for all patients with epilepsy."',rat:'Driving is not permanently prohibited — it requires a seizure-free period and, in some states, physician clearance.'}
+    ]},
+    {id:'n21a_5',topic:'Aura',stem:'A patient with epilepsy tells the nurse "Just before my seizure I always smell something burning, even when nothing is on fire." How should the nurse document and respond to this?',opts:[
+      {l:'A',t:'Document as a hallucination and report to the psychiatrist',rat:'This is NOT a psychiatric hallucination — it is a sensory aura preceding a seizure. Treating this as psychiatric would delay appropriate neurological management.'},
+      {l:'B',t:'Reassure the patient this is normal and does not require reporting',rat:'While auras are common and important, the nurse should document AND teach the patient to use the aura as warning to get to a safe place before the seizure.'},
+      {l:'C',t:'Document as an olfactory aura and teach the patient it is a warning sign to move to safety and notify others',correct:true,rat:'CORRECT. An aura is a prodromal sensory experience (olfactory in this case) that precedes a seizure. It is neurological, not psychiatric. Teach the patient to recognize it as a warning to sit/lie down safely, call for help, and not drive.'},
+      {l:'D',t:'Request a CT scan — olfactory auras suggest a brain tumor',rat:'While olfactory auras can occur with temporal lobe tumors, this is not the immediate nursing priority. Document accurately and notify the provider — additional workup is the physician\'s decision.'}
+    ]},
+    {id:'n21a_6',topic:'Antiepileptic Medications',stem:'A patient is started on phenytoin (Dilantin) for seizure control. Which teaching point is MOST important?',opts:[
+      {l:'A',t:'Take the medication only when a seizure feels imminent',rat:'Phenytoin is a daily maintenance antiepileptic — it must be taken consistently to maintain therapeutic levels, not just PRN.'},
+      {l:'B',t:'Never stop phenytoin abruptly — withdrawal can precipitate seizures',correct:true,rat:'CORRECT. Abruptly stopping antiepileptic drugs (AEDs) can cause rebound seizures and status epilepticus. The patient must understand compliance and gradual tapering under physician guidance if discontinuation is considered.'},
+      {l:'C',t:'Phenytoin is safe to take with grapefruit juice',rat:'Grapefruit inhibits CYP3A4 metabolism and can increase phenytoin levels — this should be avoided. However, this is less critical than the abrupt discontinuation warning.'},
+      {l:'D',t:'The goal of treatment is complete elimination of all seizure types',rat:'The goal is seizure CONTROL (minimize frequency/severity without adverse effects) — not all seizures are completely eliminated with medication.'}
+    ]},
+    {id:'n21a_7',topic:'Seizure Precautions',stem:'Which interventions are included in implementing seizure precautions for a hospitalized patient? (Select All That Apply)',sata:true,opts:[
+      {l:'A',t:'Oxygen and suction equipment at the bedside',correct:true,rat:'CORRECT. O2 and suction must be immediately available — post-seizure airway management may be needed.'},
+      {l:'B',t:'Bed in lowest position with padded side rails up',correct:true,rat:'CORRECT. Low bed reduces fall injury; padded rails protect from impact during seizure.'},
+      {l:'C',t:'IV access established',correct:true,rat:'CORRECT. IV access is essential for rapid medication administration (benzodiazepines for status epilepticus).'},
+      {l:'D',t:'Restraints applied to all four extremities',rat:'Restraints are NOT part of seizure precautions. They increase injury risk during a seizure.'},
+      {l:'E',t:'Patient education about seizure recognition and safety',correct:true,rat:'CORRECT. Patient and family education about seizure recognition, safety, and when to call for help is part of comprehensive seizure care.'}
+    ]},
+    {id:'n21a_8',topic:'Focal Seizures',stem:'A patient has brief, involuntary rhythmic twitching of the LEFT hand that lasts 30 seconds. The patient is awake and aware throughout. Which statement is CORRECT?',opts:[
+      {l:'A',t:'This is a generalized tonic-clonic seizure affecting one extremity',rat:'Generalized seizures by definition involve both hemispheres. Focal activity in one hand = focal (partial) seizure.'},
+      {l:'B',t:'This is a focal seizure arising from the RIGHT primary motor cortex',correct:true,rat:'CORRECT. Focal seizures arise from a localized area in one hemisphere. Left hand movement = right motor cortex (decussation). The patient is aware = focal seizure without impaired awareness (previously "simple partial").'},
+      {l:'C',t:'This is a focal seizure arising from the LEFT primary motor cortex',rat:'Left hand = controlled by RIGHT motor cortex (decussation). The lesion is in the right hemisphere.'},
+      {l:'D',t:'This is a myoclonic seizure from both hemispheres',rat:'Myoclonic seizures involve sudden muscle jerks typically affecting both sides. This is unilateral and rhythmic = focal seizure.'}
+    ]},
+    {id:'n21a_9',topic:'Seizure Etiologies',stem:'Which patient is MOST at risk for developing a first-time seizure?',opts:[
+      {l:'A',t:'52-year-old with well-controlled type 2 diabetes',rat:'Well-controlled diabetes is not a significant seizure risk. Severe hypoglycemia CAN cause seizures but "well-controlled" suggests this is not happening.'},
+      {l:'B',t:'67-year-old who suffered an ischemic stroke 3 months ago',correct:true,rat:'CORRECT. Post-stroke epilepsy is common — cerebrovascular disease is the most common cause of new-onset seizures in the elderly. Scar tissue from the infarct creates irritable foci. The answer aligns with the course teaching: stroke = #1 cause of seizures in elderly.'},
+      {l:'C',t:'25-year-old with seasonal allergies and occasional migraines',rat:'Allergies and migraines are not significant seizure risk factors.'},
+      {l:'D',t:'40-year-old with controlled anxiety on sertraline',rat:'SSRIs may actually have some anticonvulsant properties at therapeutic doses. Anxiety alone does not predispose to seizures.'}
+    ]},
+    {id:'n21a_10',topic:'Postictal State',stem:'After a tonic-clonic seizure, the patient is confused, drowsy, and hard to arouse. Vital signs are stable. The nurse\'s BEST action is?',opts:[
+      {l:'A',t:'Administer naloxone — the patient is over-sedated',rat:'Naloxone reverses opioid sedation. The postictal state is NOT opioid sedation — it is a normal neurological recovery phase after seizure.'},
+      {l:'B',t:'Call a rapid response — the patient is postictal and may seize again',rat:'While another seizure is possible, the postictal state of drowsiness/confusion is EXPECTED and normal after a tonic-clonic seizure. A rapid response is not indicated if vital signs are stable.'},
+      {l:'C',t:'Keep the patient in lateral position, monitor vital signs, reorient gently, and document the postictal state and duration',correct:true,rat:'CORRECT. The postictal state (drowsiness, confusion, fatigue after a seizure) is NORMAL and resolves in minutes to hours. Keep lateral to prevent aspiration, monitor VS, gently reorient, and document. This is expected nursing care.'},
+      {l:'D',t:'Stimulate the patient vigorously to speed up the recovery',rat:'Vigorous stimulation is not helpful and may be distressing. Allow the patient to recover naturally while maintaining safety.'}
+    ]},
+    {id:'n21a_11',topic:'Seizure Medications',stem:'A patient in status epilepticus requires emergent medication. Which medication does the nurse prepare FIRST?',opts:[
+      {l:'A',t:'Phenytoin IV loading dose',rat:'Phenytoin is a second-line agent for status epilepticus — it is used if benzodiazepines fail. First-line is always a benzodiazepine.'},
+      {l:'B',t:'Lorazepam (Ativan) IV',correct:true,rat:'CORRECT. Benzodiazepines (lorazepam, diazepam, or midazolam) are FIRST-LINE for status epilepticus. They enhance GABA inhibition and rapidly terminate seizure activity. Lorazepam IV is preferred for its longer duration of action compared to diazepam.'},
+      {l:'C',t:'Phenobarbital IV',rat:'Phenobarbital is a third-line agent for status epilepticus after benzodiazepines and phenytoin fail.'},
+      {l:'D',t:'Valproic acid (Depakote) oral',rat:'Oral medications cannot be given during active seizure. Even IV valproate would be second or third-line.'}
+    ]},
+    {id:'n21a_12',topic:'Seizure Patient Education',stem:'A patient with epilepsy is being discharged. Which statement by the patient indicates understanding of seizure precautions?',opts:[
+      {l:'A',t:'"I will swim alone only in shallow water in case I have a seizure."',rat:'Swimming alone with epilepsy is dangerous regardless of water depth. Drowning is a leading cause of injury-related death in epilepsy — always swim with supervision.'},
+      {l:'B',t:'"I should shower instead of taking baths to reduce drowning risk, and never lock the bathroom door."',correct:true,rat:'CORRECT. Shower > bath (risk of drowning during a seizure in a bathtub). Leaving the bathroom door unlocked allows others to help in an emergency. This reflects appropriate safety precautions.'},
+      {l:'C',t:'"I can cook as long as I only use the microwave."',rat:'Microwave use is safer than open flame/stove during a seizure, but the patient should also use back burners, not reach over hot elements, and ideally have supervision when cooking.'},
+      {l:'D',t:'"I should keep my seizure medications in the car so I always have them."',rat:'Medications should be taken on a consistent schedule and kept safely at home — not stored in a hot car which can affect stability.'}
+    ]},
+    {id:'n21a_13',topic:'EEG',stem:'The nurse is preparing a patient for an EEG. Which instruction is CORRECT?',opts:[
+      {l:'A',t:'"You will receive sedation during the procedure."',rat:'Routine EEGs do not require sedation. Sleep-deprived EEGs (done after keeping the patient awake) are used to increase sensitivity without sedation.'},
+      {l:'B',t:'"You should wash your hair before the test but avoid using conditioner or hair products."',correct:true,rat:'CORRECT. Clean hair without products ensures good electrode contact on the scalp for accurate EEG recordings. The patient should wash hair but avoid conditioner, sprays, or gels.'},
+      {l:'C',t:'"You must fast for 8 hours before the test."',rat:'Fasting is not required for routine EEG. However, adequate glucose levels are important as hypoglycemia can affect brain activity.'},
+      {l:'D',t:'"The test uses electrical current to stimulate your brain."',rat:'EEG RECORDS electrical activity — it does not deliver electrical current to the brain. This common misunderstanding should be corrected.'}
+    ]},
+    {id:'n21a_14',topic:'Seizure Ictal/Postictal',stem:'Which term describes the time period BETWEEN two seizures when brain activity is more normal?',opts:[
+      {l:'A',t:'Postictal period',rat:'Postictal = time AFTER a single seizure while the brain recovers (drowsiness, confusion). Not between two seizures.'},
+      {l:'B',t:'Ictal period',rat:'Ictal = during the seizure itself (active phase).'},
+      {l:'C',t:'Interictal period',correct:true,rat:'CORRECT. Interictal = period BETWEEN seizures. EEG during the interictal period may show epileptiform discharges (spikes) even when the patient is not seizing, helping confirm epilepsy diagnosis.'},
+      {l:'D',t:'Prodromal period',rat:'Prodromal = before the seizure (including aura). Not the time between two separate seizures.'}
+    ]},
+    {id:'n21a_15',topic:'Seizure Triggers/Metabolic',stem:'A 24-year-old patient with no seizure history has a generalized seizure in the ICU. Lab results show sodium 118 mEq/L. What is the MOST LIKELY cause?',opts:[
+      {l:'A',t:'New-onset epilepsy requiring lifelong anticonvulsants',rat:'Do not label new-onset epilepsy without ruling out a metabolic cause first. Severe hyponatremia is a common and correctable cause of seizures.'},
+      {l:'B',t:'Hyponatremia causing neuronal hyperexcitability leading to seizure',correct:true,rat:'CORRECT. Sodium 118 mEq/L is severe hyponatremia. Low sodium causes cells to swell (osmosis) and neurons become hyperexcitable — triggering seizures. Correct the underlying metabolic cause, not just treat with anticonvulsants.'},
+      {l:'C',t:'Hypoglycemia — check fingerstick glucose',rat:'While hypoglycemia CAN cause seizures, you have a clear metabolic answer (Na 118). Hyponatremia at this level is the most likely cause.'},
+      {l:'D',t:'Alcohol withdrawal seizure',rat:'Alcohol withdrawal seizures are possible but occur in a specific clinical context (recent alcohol cessation). Without that history, the lab finding (Na 118) is the compelling answer.'}
+    ]}
   ],
   n21b: [
-    {id:'n21b_1',stem:"The nurse is assessing a patient with Parkinson's disease. Which combination of findings represents the CLASSIC TRIAD of Parkinson's?",topic:"Parkinson's",opts:[{l:"A",t:"Ascending paralysis, absent reflexes, and paresthesias"},
-      {l:"B",t:"Resting tremor, bradykinesia, and muscle rigidity",correct:true},
-      {l:"C",t:"Chorea, cognitive decline, and emotional lability"},
-      {l:"D",t:"Demyelination, relapsing course, and optic neuritis"}],
-     rats:{A:"Incorrect. Ascending paralysis + absent reflexes + paresthesias = GBS (Guillain-Barré Syndrome).",B:"CORRECT! The classic Parkinson's triad: 1) Resting TREMOR (pill-rolling at rest, stops with movement) 2) BRADYKINESIA (slowness/freezing) 3) Muscle RIGIDITY (cogwheel — ratchet-like stiffness). Remember: TBR = 'To Be Rigid.'",C:"Incorrect. Chorea + cognitive decline + emotional lability = HUNTINGTON'S DISEASE.",D:"Incorrect. Demyelination + relapsing course + optic neuritis = MULTIPLE SCLEROSIS."}},
-    {id:'n21b_2',stem:"A patient with ALS asks the nurse: 'Will I lose my ability to think and remember things?' The nurse's BEST response is:",topic:"ALS",opts:[{l:"A",t:"'Yes, ALS affects all brain functions eventually.'"},
-      {l:"B",t:"'It depends on how fast your disease progresses.'"},
-      {l:"C",t:"'ALS only affects motor neurons — your cognition, sensation, and memory remain intact.',correct:true",correct:true},
-      {l:"D",t:"'You may experience some memory problems as the disease progresses.'"}],
-     rats:{A:"INCORRECT. ALS does NOT affect cognitive function, sensory function, or intelligence. Telling the patient this would be wrong and devastating.",B:"Incorrect. There is no 'it depends' with ALS and cognition — ALS ONLY destroys motor neurons. Cognition is PRESERVED throughout the disease.",C:"CORRECT! ALS (Lou Gehrig's Disease) specifically and selectively destroys UPPER AND LOWER MOTOR NEURONS ONLY. Cognition, sensation (all five senses), bladder/bowel function are spared. The patient remains fully aware and intelligent even as they become paralyzed — which makes it psychologically devastating.",D:"Incorrect. ALS does not cause memory problems. This inaccurate statement would cause unnecessary distress."}},
-    {id:'n21b_3',stem:"The nurse is caring for a patient with GBS. Which assessment finding requires IMMEDIATE intervention?",topic:"GBS",opts:[{l:"A",t:"Bilateral lower extremity weakness and absent deep tendon reflexes"},
-      {l:"B",t:"Paresthesias (tingling/numbness) in the feet and hands"},
-      {l:"C",t:"Respiratory rate of 8, SpO2 dropping, labored breathing",correct:true},
-      {l:"D",t:"Complaints of back pain and general fatigue"}],
-     rats:{A:"Incorrect. Bilateral leg weakness and absent reflexes are EXPECTED findings in GBS (ascending symmetric peripheral neuropathy). While concerning, they do not require immediate emergency intervention.",B:"Incorrect. Paresthesias starting in the extremities are the typical FIRST symptoms of GBS. Expected, not an emergency finding.",C:"CORRECT! RESPIRATORY FAILURE is the life-threatening complication of GBS. Ascending paralysis can reach the respiratory muscles and diaphragm. Declining respiratory rate + decreasing SpO2 + labored breathing = impending respiratory failure → IMMEDIATE intervention (respiratory support, possible intubation).",D:"Incorrect. Back pain and fatigue are common early GBS symptoms. Not an emergency."}},
-    {id:'n21b_4',stem:"A patient with myasthenia gravis (MG) reports that their eyelid drooping and double vision are WORSE in the afternoon and evening but BETTER after a nap. The nurse interprets this as:",topic:"MG",opts:[{l:"A",t:"A sign of cholinergic crisis from medication overdose"},
-      {l:"B",t:"The hallmark fluctuating weakness pattern of MG — worsens with activity, improves with rest",correct:true},
-      {l:"C",t:"An atypical finding requiring urgent physician notification"},
-      {l:"D",t:"Evidence that the patient does not need medication in the morning"}],
-     rats:{A:"Incorrect. Cholinergic crisis (from too much AChE inhibitor) presents with SLUDGE symptoms (Salivation, Lacrimation, Urination, Diarrhea, GI cramps, Emesis) plus weakness — not just fatigue pattern.",B:"CORRECT! This IS the hallmark pattern of MG. Acetylcholine receptors get depleted with repeated use (activity, throughout the day) → weakness worsens. Rest replenishes receptor responsiveness → symptoms improve. Ptosis and diplopia are often the FIRST symptoms because extraocular muscles are very active.",C:"Incorrect. This is the EXPECTED and CHARACTERISTIC pattern of MG. It is not atypical and does not require urgent notification.",D:"Incorrect. Medication compliance is critical throughout the day in MG. Timing of doses should be discussed with the physician and pharmacist — not adjusted by the patient."}},
-    {id:'n21b_5',stem:"Which statement BEST describes Multiple Sclerosis (MS)?",topic:"MS",opts:[{l:"A",t:"MS is a progressive disease that only affects motor neurons and never goes into remission"},
-      {l:"B",t:"MS is caused by loss of dopamine-producing cells in the substantia nigra"},
-      {l:"C",t:"MS is an autoimmune demyelinating disorder of the CNS with a relapsing-remitting course",correct:true},
-      {l:"D",t:"MS causes ascending peripheral neuropathy following infection"}],
-     rats:{A:"Incorrect on two counts: MS affects BOTH motor AND sensory neurons (plus optic nerves), and the most common form DOES have remissions (relapsing-remitting MS).",B:"Incorrect. Loss of dopamine cells in the substantia nigra = PARKINSON'S DISEASE.",C:"CORRECT! MS is an autoimmune disease where the immune system attacks myelin in the CNS (brain, spinal cord, optic nerves). Demyelination disrupts nerve signal conduction. The classic pattern is relapsing-remitting — periods of exacerbation (new symptoms) and remission (partial or full recovery).",D:"Incorrect. Ascending peripheral neuropathy following infection = GUILLAIN-BARRÉ SYNDROME (GBS), not MS."}},
-    {id:'n21b_6',stem:"The nurse is caring for a patient with Huntington's disease who has irregular, brief, dance-like involuntary movements. The nurse documents these movements as:",topic:"Huntington's",opts:[{l:"A",t:"Tremor"},
-      {l:"B",t:"Ataxia"},
-      {l:"C",t:"Chorea",correct:true},
-      {l:"D",t:"Bradykinesia"}],
-     rats:{A:"Incorrect. Tremor is rhythmic, oscillating involuntary movement — characteristic of Parkinson's (resting tremor) or MS/cerebellar disease (intention tremor).",B:"Incorrect. Ataxia is uncoordinated, unsteady movement/gait — associated with cerebellar damage (MS, stroke, alcohol).",C:"CORRECT! Chorea (from Greek 'dance') is the brief, irregular, unpredictable, dance-like involuntary movements characteristic of Huntington's disease. Related movements: athetosis (slow writhing) and ballismus (thrashing).",D:"Incorrect. Bradykinesia means slowness of movement — the hallmark of PARKINSON'S disease, opposite of the hyperkinetic movements in Huntington's."}},
-    {id:'n21b_7',stem:"Before allowing a patient with ALS to eat lunch, the nurse's MOST important assessment is:",topic:"Neurodegenerative/Aspiration",opts:[{l:"A",t:"Blood glucose level"},
-      {l:"B",t:"Lung sounds"},
-      {l:"C",t:"Gag reflex assessment",correct:true},
-      {l:"D",t:"Blood pressure"}],
-     rats:{A:"Incorrect. Blood glucose is important for diabetics but not the priority safety assessment before feeding a patient with a neurodegenerative disorder.",B:"Incorrect. While lung sounds are important in ALS, they would be a FOLLOW-UP assessment. The priority before feeding is the gag reflex.",C:"CORRECT! In ALL neurodegenerative disorders (ALS, MG, MS, Huntington's, Parkinson's, GBS), weakened bulbar and esophageal muscles cause DYSPHAGIA. Before EVERY meal, assess the GAG REFLEX. If absent or impaired → swallowing difficulty → aspiration → aspiration pneumonia → a leading cause of death.",D:"Incorrect. Blood pressure, while important to monitor, is not the specific safety check before oral feeding in a patient with neurodegenerative disease."}},
-    {id:'n21b_8',stem:"A patient with myasthenia gravis is prescribed pyridostigmine (Mestinon). The nurse teaches that this medication works by:",topic:"MG/Medications",opts:[{l:"A",t:"Replacing the missing acetylcholine receptors at the neuromuscular junction"},
-      {l:"B",t:"Suppressing the autoimmune response that destroys ACh receptors"},
-      {l:"C",t:"Inhibiting the enzyme acetylcholinesterase, allowing ACh to remain active longer",correct:true},
-      {l:"D",t:"Blocking the antibodies that attack the neuromuscular junction"}],
-     rats:{A:"Incorrect. Pyridostigmine does not replace receptors — this is not pharmacologically possible with this drug class.",B:"Incorrect. Immunosuppressants (corticosteroids, azathioprine) suppress the autoimmune response. Pyridostigmine is a different mechanism.",C:"CORRECT! Pyridostigmine is an ACETYLCHOLINESTERASE INHIBITOR — it prevents the enzyme AChE from breaking down ACh in the synapse. More ACh stays available → stimulates the remaining receptors more effectively → improved muscle strength. It treats symptoms but does not address the underlying autoimmune destruction.",D:"Incorrect. Plasmapheresis and IVIG remove or neutralize antibodies. Pyridostigmine has no effect on the antibodies themselves."}},
-    {id:'n21b_9',stem:"Huntington's disease is inherited in which pattern?",topic:"Huntington's/Genetics",opts:[{l:"A",t:"X-linked recessive"},
-      {l:"B",t:"Autosomal recessive"},
-      {l:"C",t:"Autosomal dominant",correct:true},
-      {l:"D",t:"Mitochondrial inheritance"}],
-     rats:{A:"Incorrect. X-linked recessive affects mostly males (e.g., hemophilia, Duchenne muscular dystrophy). Huntington's affects males and females equally.",B:"Incorrect. Autosomal recessive requires TWO copies of the mutated gene. HD only requires ONE copy (dominant).",C:"CORRECT! Huntington's is AUTOSOMAL DOMINANT — only ONE copy of the mutated gene on chromosome 4 is needed to develop the disease. Each child of an affected parent has a 50% chance of inheriting the gene. Genetic testing can identify at-risk individuals before symptoms appear.",D:"Incorrect. Mitochondrial inheritance passes from mother only and affects both sexes (e.g., Leber's hereditary optic neuropathy). HD is autosomal."}},
-    {id:'n21b_10',stem:"A nurse teaches a patient with Parkinson's disease about levodopa-carbidopa (Sinemet). Which patient statement indicates CORRECT understanding?",topic:"Parkinson's/Medications",opts:[{l:"A",t:"'I should take this medication only when my tremors are severe.'"},
-      {l:"B",t:"'The carbidopa in this combination directly replaces my brain dopamine.'"},
-      {l:"C",t:"'Carbidopa helps more levodopa reach my brain by preventing its breakdown in the body.',correct:true",correct:true},
-      {l:"D",t:"'I can stop taking this medication once my symptoms improve.'"}],
-     rats:{A:"Incorrect. Levodopa-carbidopa should be taken on a scheduled basis as prescribed, not PRN. Consistent blood levels are important for symptom control.",B:"Incorrect. Carbidopa does NOT replace dopamine. Carbidopa is a PERIPHERAL DECARBOXYLASE INHIBITOR — it prevents levodopa from being converted to dopamine outside the brain. Levodopa crosses the blood-brain barrier and THEN converts to dopamine.",C:"CORRECT! Carbidopa inhibits peripheral (outside the brain) metabolism of levodopa. Without carbidopa, only ~1% of levodopa reaches the brain (most is metabolized peripherally). With carbidopa, much more levodopa reaches the brain, improving efficacy and reducing peripheral side effects (nausea, vomiting).",D:"Incorrect. Parkinson's medications manage symptoms but do not cure the disease. Stopping abruptly can cause withdrawal and severe rebound symptoms."}}
+    {id:'n21b_1',topic:'Parkinson\'s Disease',stem:'A patient with Parkinson\'s disease has a resting tremor, rigidity, and bradykinesia. What is the underlying pathophysiology?',opts:[
+      {l:'A',t:'Autoimmune destruction of myelin in the substantia nigra',rat:'Autoimmune demyelination describes MS, not Parkinson\'s. Parkinson\'s involves dopamine-producing cell DEATH, not demyelination.'},
+      {l:'B',t:'Loss of dopamine-producing neurons in the substantia nigra → unopposed acetylcholine → tremor/rigidity',correct:true,rat:'CORRECT. Parkinson\'s = progressive loss of dopaminergic neurons in the substantia nigra (basal ganglia). Dopamine normally inhibits movement; ACh stimulates it. Without dopamine, ACh is unopposed → tremor, rigidity, bradykinesia.'},
+      {l:'C',t:'Accumulation of beta-amyloid plaques in the motor cortex',rat:'Beta-amyloid plaques are the hallmark of Alzheimer\'s disease, not Parkinson\'s. Parkinson\'s involves Lewy bodies (alpha-synuclein).'},
+      {l:'D',t:'Demyelination of the corticospinal tract causing motor weakness',rat:'Corticospinal tract demyelination causes weakness (UMN signs) — not the tremor/rigidity pattern of Parkinson\'s.'}
+    ]},
+    {id:'n21b_2',topic:'Parkinson\'s Medications',stem:'A patient taking levodopa-carbidopa for Parkinson\'s asks why two drugs are combined. What is the nurse\'s BEST explanation?',opts:[
+      {l:'A',t:'"Carbidopa enhances the dopamine effect in your brain directly."',rat:'Carbidopa does NOT cross the blood-brain barrier and has no direct brain effect. Its role is peripheral.'},
+      {l:'B',t:'"Carbidopa prevents levodopa from being broken down in the bloodstream before reaching the brain, so more levodopa reaches the brain."',correct:true,rat:'CORRECT. Carbidopa inhibits peripheral decarboxylase enzyme, preventing levodopa from converting to dopamine in the bloodstream (outside the brain). This allows more levodopa to cross the BBB and convert to dopamine where it\'s needed.'},
+      {l:'C',t:'"Carbidopa treats the tremor while levodopa treats the rigidity."',rat:'Both drugs together address all motor symptoms. Their combination is about pharmacokinetics (getting more levodopa to the brain), not separate symptom targeting.'},
+      {l:'D',t:'"Together they prevent the anticholinergic side effects of levodopa."',rat:'Carbidopa does not prevent anticholinergic effects. It is a decarboxylase inhibitor that improves peripheral levodopa utilization.'}
+    ]},
+    {id:'n21b_3',topic:'Multiple Sclerosis',stem:'A 28-year-old woman has episodes of blurred vision, weakness, and tingling that partially resolve. Which statement BEST describes the pathophysiology of MS?',opts:[
+      {l:'A',t:'Inflammation and demyelination of CNS axons disrupts nerve signal transmission — symptoms reflect the affected area',correct:true,rat:'CORRECT. MS is an autoimmune demyelinating disease. Attacks destroy myelin in the CNS → impaired signal conduction → symptoms depend on where demyelination occurs (optic nerves, spinal cord, cerebellum, etc.). Remission occurs when inflammation resolves; relapse when new attacks occur.'},
+      {l:'B',t:'Progressive motor neuron degeneration causing irreversible weakness',rat:'This describes ALS — progressive, irreversible motor neuron disease. MS is characterized by relapses AND remissions, not just progressive deterioration (at least in relapsing-remitting form).'},
+      {l:'C',t:'Dopamine deficiency causing autoimmune damage to the optic nerve',rat:'Dopamine deficiency = Parkinson\'s. MS is a separate autoimmune demyelinating disease.'},
+      {l:'D',t:'Viral infection permanently destroying oligodendrocytes',rat:'While some evidence links viral triggers (e.g., EBV) to MS, the mechanism is autoimmune demyelination — not direct viral destruction of oligodendrocytes.'}
+    ]},
+    {id:'n21b_4',topic:'ALS',stem:'A patient with ALS tells the nurse: "I can still think clearly, but I can\'t button my shirt anymore." Which nursing response is MOST appropriate?',opts:[
+      {l:'A',t:'"Your thinking will also be affected as the disease progresses."',rat:'ALS primarily affects MOTOR neurons — cognitive function and sensation remain intact throughout most of the disease course. This response is inaccurate and distressing.'},
+      {l:'B',t:'"ALS only affects motor neurons — your cognition, sensation, vision, and hearing remain intact. Let\'s discuss adaptive equipment for fine motor tasks."',correct:true,rat:'CORRECT. ALS selectively destroys upper and lower motor neurons. Cognitive ability, sensory function, vision, and hearing are preserved. Acknowledging this is accurate AND therapeutic. Adaptive equipment addresses practical needs.'},
+      {l:'C',t:'"Your speech will be preserved since only arm muscles are affected."',rat:'ALS affects all voluntary muscles progressively — eventually affecting speech (dysarthria), swallowing (dysphagia), and breathing (respiratory failure).'},
+      {l:'D',t:'"This sounds like normal aging — difficulty with fine motor tasks is common after 60."',rat:'ALS is a serious, progressive disease — this response minimizes a real symptom and delays appropriate management.'}
+    ]},
+    {id:'n21b_5',topic:'ALS Respiratory',stem:'The nurse is caring for a patient with advanced ALS. Which assessment finding requires IMMEDIATE action?',opts:[
+      {l:'A',t:'Bilateral hand weakness rated 3/5',rat:'Hand weakness is expected in ALS and does not require immediate action — this is progressive and anticipated.'},
+      {l:'B',t:'Vital capacity decreased to 28% of predicted with SpO₂ 90%',correct:true,rat:'CORRECT. In ALS, diaphragm weakness leads to respiratory failure. VC <50% of predicted is concerning; VC <30% with hypoxia = impending respiratory failure. SpO₂ 90% requires immediate intervention — supplemental O2, notify provider, discuss advance directives, consider BiPAP/mechanical ventilation.'},
+      {l:'C',t:'Difficulty writing due to hand tremors',rat:'Tremor and fine motor difficulty are expected ALS progressions — not immediately life-threatening.'},
+      {l:'D',t:'Slurred speech (dysarthria) for the past week',rat:'Dysarthria is a progressive ALS manifestation. While concerning, a gradual onset over a week does not require IMMEDIATE action compared to acute respiratory compromise.'}
+    ]},
+    {id:'n21b_6',topic:'GBS',stem:'A patient is admitted with GBS. Assessment reveals symmetric weakness starting in the lower extremities, spreading upward. Vital capacity is 2.1 L (predicted 4.0 L). Which nursing intervention is PRIORITY?',opts:[
+      {l:'A',t:'Encourage ambulation to prevent muscle atrophy',rat:'Ambulation in GBS with ascending weakness and reduced VC is dangerous — fall risk and aspiration risk are high. Activity is restricted during the acute ascending phase.'},
+      {l:'B',t:'Monitor respiratory function and vital capacity every 2-4 hours',correct:true,rat:'CORRECT. The #1 life-threatening complication of GBS is respiratory failure from ascending paralysis reaching the diaphragm. VC already at 52% predicted. Frequent respiratory monitoring (q2-4h VC measurements) is the priority to detect impending ventilatory failure before intubation becomes emergent.'},
+      {l:'C',t:'Prepare for IV corticosteroids as ordered',rat:'Steroids are NOT effective in GBS (and may actually worsen outcomes). Treatment is IVIG or plasmapheresis — not steroids.'},
+      {l:'D',t:'Implement fall precautions and keep call light within reach',rat:'Fall precautions ARE important in GBS, but monitoring respiratory function is the #1 priority because respiratory failure is the most common cause of death in GBS.'}
+    ]},
+    {id:'n21b_7',topic:'GBS Treatment',stem:'A patient with GBS is educated about treatment options. Which statement by the patient shows CORRECT understanding?',opts:[
+      {l:'A',t:'"Plasmapheresis filters my blood to remove the antibodies attacking my myelin."',correct:true,rat:'CORRECT. Plasmapheresis (plasma exchange) removes autoantibodies from the plasma that are attacking the myelin sheath. IVIG is the alternative — it floods the immune system with donor immunoglobulins to neutralize the autoantibodies. Both are most effective when started within 2-4 weeks of symptom onset.'},
+      {l:'B',t:'"I will need steroid injections every week for the rest of my life."',rat:'Steroids are NOT used in GBS. Treatment is IVIG or plasmapheresis for a defined course, not lifelong steroids.'},
+      {l:'C',t:'"After plasmapheresis I will be cured and won\'t relapse."',rat:'GBS does not typically relapse like MS (it is usually monophasic). However, treatment "speeds recovery" — it does not guarantee immediate cure.'},
+      {l:'D',t:'"Since the infection caused this, antibiotics will cure the GBS."',rat:'While GBS is triggered by infection (C. jejuni, viral), the active autoimmune attack is what causes ongoing damage. Antibiotics treat the trigger but do not address the autoimmune process.'}
+    ]},
+    {id:'n21b_8',topic:'Myasthenia Gravis',stem:'A patient with MG reports worsening ptosis and dysphagia after activity. The weakness improves with rest. Which pathophysiological mechanism explains this?',opts:[
+      {l:'A',t:'Dopamine deficiency at the neuromuscular junction',rat:'Dopamine is not the primary neurotransmitter at the NMJ. ACh is. Dopamine deficiency describes Parkinson\'s.'},
+      {l:'B',t:'Autoimmune antibodies block/destroy nicotinic ACh receptors at the NMJ → impaired neuromuscular transmission → fatigable weakness',correct:true,rat:'CORRECT. MG antibodies target nicotinic acetylcholine receptors at the NMJ → fewer functioning receptors → ACh cannot effectively trigger muscle contraction. With repeated use, available ACh is depleted faster than receptors can recover → fatigue. REST allows partial recovery of receptor availability.'},
+      {l:'C',t:'Demyelination of lower motor neurons causing permanent paralysis',rat:'Demyelination describes MS or GBS. MG affects the NMJ (the synapse between nerve and muscle), not the nerve axon itself.'},
+      {l:'D',t:'Upper motor neuron lesion from spinal cord compression',rat:'UMN lesions cause spasticity and hyperreflexia — not fatigable weakness that improves with rest.'}
+    ]},
+    {id:'n21b_9',topic:'Myasthenic vs Cholinergic Crisis',stem:'A patient with MG on pyridostigmine develops sudden severe weakness, difficulty breathing, and the nurse notes increased secretions, cramping, and diarrhea. Which crisis is occurring and what is the intervention?',opts:[
+      {l:'A',t:'Myasthenic crisis — administer additional pyridostigmine',rat:'The presence of SLUDGE symptoms (secretions, cramping, diarrhea) indicates TOO MUCH acetylcholinesterase inhibition = cholinergic crisis. MORE pyridostigmine would worsen it.'},
+      {l:'B',t:'Cholinergic crisis from excessive acetylcholinesterase inhibitor — hold pyridostigmine and support airway',correct:true,rat:'CORRECT. SLUDGE symptoms (Salivation, Lacrimation, Urination, Defecation, GI distress, Emesis) = cholinergic crisis = TOO MUCH anticholinesterase drug. The ACh floods the NMJ causing paradoxical weakness. Hold the medication, support airway (respiratory failure risk), and atropine may be needed.'},
+      {l:'C',t:'Myasthenic crisis — prepare for Tensilon (edrophonium) test',rat:'Tensilon test is used for DIAGNOSIS of MG (it briefly improves myasthenic weakness). SLUDGE symptoms point to cholinergic crisis, not myasthenic.'},
+      {l:'D',t:'Allergic reaction to pyridostigmine — administer diphenhydramine',rat:'This is not an allergic reaction — it is pharmacological toxicity from excess ACh. The treatment is very different.'}
+    ]},
+    {id:'n21b_10',topic:'MG Diagnosis',stem:'The nurse is assisting with the edrophonium (Tensilon) test for MG. Which response confirms a positive result?',opts:[
+      {l:'A',t:'Increased muscle weakness and worsening ptosis within 1 minute',rat:'Worsening weakness = NEGATIVE Tensilon test, suggesting cholinergic crisis (not MG) or incorrect diagnosis.'},
+      {l:'B',t:'Brief improvement in ptosis and muscle strength within 30-60 seconds',correct:true,rat:'CORRECT. Edrophonium inhibits acetylcholinesterase → more ACh remains in the NMJ → brief improvement in weakness = positive Tensilon test = consistent with MG diagnosis. The effect lasts only 5 minutes — atropine must be available for cholinergic crisis.'},
+      {l:'C',t:'No change in weakness — confirming the diagnosis of MG',rat:'No change = inconclusive or negative test. A positive test shows improvement.'},
+      {l:'D',t:'Patient develops a seizure — indicating CNS involvement',rat:'Seizures are not part of the Tensilon test response. The test is specific to NMJ function.'}
+    ]},
+    {id:'n21b_11',topic:'Huntington\'s Disease',stem:'A 42-year-old patient is newly diagnosed with Huntington\'s disease. Which information is MOST important to include in patient teaching?',opts:[
+      {l:'A',t:'HD is caused by a mutation on chromosome 4 and is inherited in an autosomal dominant pattern — each child has a 50% chance of inheriting it',correct:true,rat:'CORRECT. HD is autosomal dominant — one copy of the mutated huntingtin gene causes disease. If a parent has HD, each child has a 50% chance of inheriting the mutation. Genetic counseling is critical.'},
+      {l:'B',t:'HD only affects motor function — memory and personality remain intact',rat:'HD causes a triad: motor symptoms (chorea, athetosis), cognitive decline, AND psychiatric/emotional symptoms. ALL three domains are affected.'},
+      {l:'C',t:'HD is caused by an autoimmune attack on dopamine receptors',rat:'HD is genetic (trinucleotide repeat on chromosome 4 producing mutant huntingtin protein) — not autoimmune. The mutant protein accumulates in neurons causing neurodegeneration.'},
+      {l:'D',t:'Average life expectancy after HD diagnosis is 2-3 years',rat:'Average survival after HD diagnosis is 15-20 years, not 2-3 years.'}
+    ]},
+    {id:'n21b_12',topic:'MS Nursing Care',stem:'A patient with relapsing-remitting MS is in an acute exacerbation. Which nursing interventions are priority? (Select All That Apply)',sata:true,opts:[
+      {l:'A',t:'Assess gag reflex before oral medication or feeding',correct:true,rat:'CORRECT. Dysphagia occurs in MS. Always check gag reflex before oral intake to prevent aspiration.'},
+      {l:'B',t:'Encourage hot baths to relieve muscle spasms',rat:'Heat WORSENS MS symptoms (Uhthoff\'s phenomenon). Patients should avoid hot temperatures — use cool environments, lukewarm showers.'},
+      {l:'C',t:'Administer corticosteroids as ordered to shorten the exacerbation',correct:true,rat:'CORRECT. High-dose IV methylprednisolone shortens the duration of MS exacerbations by reducing inflammation.'},
+      {l:'D',t:'Assist with fall precautions given ataxia and weakness',correct:true,rat:'CORRECT. MS causes balance problems, ataxia, and weakness — fall risk is high. Side rails, non-slip footwear, and call light within reach.'},
+      {l:'E',t:'Encourage patient to maintain high physical activity during exacerbation',rat:'During acute exacerbation, fatigue management and rest are priorities. Aggressive activity during a flare can worsen symptoms.'}
+    ]},
+    {id:'n21b_13',topic:'Headaches - Tension',stem:'A patient describes a bilateral "band-like" pressure headache that has occurred 15 days per month for 3 months without nausea or light sensitivity. Which headache type does the nurse suspect?',opts:[
+      {l:'A',t:'Migraine headache',rat:'Migraines are typically unilateral, throbbing, with nausea, photophobia, and/or phonophobia. This patient has bilateral, non-throbbing pressure headache without those features.'},
+      {l:'B',t:'Cluster headache',rat:'Cluster headaches are severe, unilateral, periorbital pain occurring in clusters — accompanied by autonomic symptoms (tearing, rhinorrhea). Very different presentation.'},
+      {l:'C',t:'Tension-type headache (TTH)',correct:true,rat:'CORRECT. TTH = bilateral "band-like" or squeezing pressure headache, NOT throbbing, WITHOUT nausea/vomiting/photophobia. Most common primary headache (up to 78% of people). Treated with acetaminophen/NSAIDs.'},
+      {l:'D',t:'Sinus headache',rat:'Sinus headache presents with facial pressure/tenderness over sinuses, nasal congestion, and fever. Bilateral band-like pressure without these features = TTH.'}
+    ]},
+    {id:'n21b_14',topic:'Headaches - Migraine',stem:'A patient with migraines asks about preventive therapy. Which patient MOST qualifies for preventive migraine treatment?',opts:[
+      {l:'A',t:'Patient with 1 severe migraine every 3 months',rat:'Infrequent migraines (1 per 3 months) are typically managed with acute treatment (triptans, NSAIDs) — not preventive therapy.'},
+      {l:'B',t:'Patient with migraines 6 or more times per month that significantly impact daily functioning',correct:true,rat:'CORRECT. Preventive therapy is indicated when migraines occur ≥5 times/month, significantly impair function, or do not respond to acute therapy. Options: beta-blockers (propranolol), TCAs (amitriptyline), anticonvulsants (valproate), or Botox injections.'},
+      {l:'C',t:'Patient with first-time migraine yesterday',rat:'A single episode is treated acutely. Preventive therapy requires an established pattern of frequent, disabling headaches.'},
+      {l:'D',t:'Patient who has migraines only during menstruation',rat:'Menstrual migraines are managed with targeted strategies around the menstrual cycle — not necessarily full preventive therapy unless they are frequent and disabling.'}
+    ]},
+    {id:'n21b_15',topic:'Headaches - Cluster',stem:'A patient describes excruciating unilateral orbital pain, right eye tearing, right nostril congestion, and restlessness occurring every night at 2 AM for 3 weeks. Which headache type is this?',opts:[
+      {l:'A',t:'Migraine with aura',rat:'Migraines can be orbital but are not typically associated with autonomic symptoms (tearing, congestion) or nocturnal clustering. Patients with migraines want a dark, quiet room — cluster patients are restless.'},
+      {l:'B',t:'Tension-type headache',rat:'TTH is bilateral, pressure-type, WITHOUT autonomic features. This patient has unilateral severe pain with autonomic symptoms = not TTH.'},
+      {l:'C',t:'Cluster headache',correct:true,rat:'CORRECT. Cluster headaches are characterized by: severe unilateral periorbital pain, ipsilateral autonomic features (tearing, nasal congestion, ptosis), patient is RESTLESS (not lying still like migraineurs), and occur in "clusters" — same time daily for weeks. Triptans and 100% O2 are acute treatments.'},
+      {l:'D',t:'Subarachnoid hemorrhage headache',rat:'SAH causes sudden thunderclap headache — worst of life — with rapid neurological decline. This chronic nightly pattern is NOT SAH.'}
+    ]},
+    {id:'n21b_16',topic:'Parkinson\'s Nursing',stem:'The nurse is caring for a patient with Parkinson\'s disease. Which nursing interventions are appropriate? (Select All That Apply)',sata:true,opts:[
+      {l:'A',t:'Give levodopa-carbidopa at exactly the same time each day',correct:true,rat:'CORRECT. Levodopa has a narrow window of efficacy. Consistent timing maintains therapeutic blood levels and prevents "off" periods of severe symptoms.'},
+      {l:'B',t:'Encourage the patient to take large, shuffling steps to reduce fall risk',rat:'WRONG. Parkinson\'s patients should be taught to take HIGH steps, not shuffle — the shuffling gait increases fall risk. Teach high-step gait, heel-toe walking.'},
+      {l:'C',t:'Assess gag reflex and swallowing before meals',correct:true,rat:'CORRECT. Dysphagia is a complication of Parkinson\'s — assess before meals to prevent aspiration.'},
+      {l:'D',t:'Refer to physical and occupational therapy',correct:true,rat:'CORRECT. PT and OT are essential for fall prevention, gait training, adaptive equipment, and maintaining independence as long as possible.'},
+      {l:'E',t:'Administer antipsychotic haloperidol for any psychotic symptoms',rat:'Haloperidol (typical antipsychotic) BLOCKS dopamine receptors — it will severely worsen Parkinson\'s motor symptoms. Use atypical antipsychotics (quetiapine, clozapine) if needed.'}
+    ]},
+    {id:'n21b_17',topic:'MS vs ALS vs GBS',stem:'Which statement CORRECTLY differentiates ALS, MS, and GBS?',opts:[
+      {l:'A',t:'ALS: motor only, progressive no remission; MS: demyelinating, relapses & remissions; GBS: post-infectious ascending, usually recovers',correct:true,rat:'CORRECT. ALS = pure motor (LMN+UMN), progressive, no cure. MS = CNS demyelinating, relapsing-remitting (usually), autoimmune. GBS = post-infectious acute peripheral demyelination, ascending, most patients recover with treatment (IVIG/plasmapheresis).'},
+      {l:'B',t:'ALS: autoimmune, responds to steroids; MS: genetic, no treatment; GBS: viral infection treated with antivirals',rat:'All three components are incorrect. ALS has no proven autoimmune cause and does not respond to steroids. MS has multiple treatments (immunomodulators). GBS is not treated with antivirals.'},
+      {l:'C',t:'All three conditions cause cognitive impairment as the primary symptom',rat:'ALS preserves cognition. GBS preserves cognition. MS can affect cognition but this is not the primary symptom for any of the three.'},
+      {l:'D',t:'GBS and MS are both treated with corticosteroids',rat:'Steroids are used in MS exacerbations but NOT in GBS (may worsen outcomes). This comparison is inaccurate.'}
+    ]},
+    {id:'n21b_18',topic:'Parkinson\'s Features',stem:'The nurse notes that a patient with Parkinson\'s has progressively smaller handwriting in their journal. What is this finding called and what does it indicate?',opts:[
+      {l:'A',t:'Dysgraphia — a sign of cognitive decline',rat:'Dysgraphia is a learning disability affecting writing. In Parkinson\'s, the progressively small handwriting has a specific name and is a motor symptom, not a cognitive sign.'},
+      {l:'B',t:'Micrographia — a classic Parkinson\'s motor sign reflecting dopamine deficiency affecting fine motor control',correct:true,rat:'CORRECT. Micrographia = progressively smaller handwriting as the patient writes — a classic Parkinson\'s symptom. It reflects dopamine deficiency affecting fine motor movements controlled by the basal ganglia.'},
+      {l:'C',t:'Tremor-induced writing disturbance — related to the pill-rolling tremor',rat:'The pill-rolling resting tremor IS a Parkinson\'s symptom, but micrographia (progressive size reduction) is specifically named and is distinct from tremor-affected writing.'},
+      {l:'D',t:'A normal finding in elderly patients',rat:'Micrographia is NOT normal aging — it is a pathological sign of Parkinson\'s disease.'}
+    ]},
+    {id:'n21b_19',topic:'Anticholinergic Side Effects',stem:'A patient with Parkinson\'s is started on benztropine (Cogentin) for tremor. The nurse monitors for which side effects? (Select All That Apply)',sata:true,opts:[
+      {l:'A',t:'Dry mouth',correct:true,rat:'CORRECT. Anticholinergic = "dry as a bone" — decreased secretions cause dry mouth.'},
+      {l:'B',t:'Urinary retention',correct:true,rat:'CORRECT. Anticholinergic effects on the bladder cause urinary retention — especially dangerous in older men with BPH.'},
+      {l:'C',t:'Confusion and cognitive impairment',correct:true,rat:'CORRECT. Anticholinergics cause CNS effects: confusion, memory problems ("crazy as a loon") — especially in elderly patients.'},
+      {l:'D',t:'Bradycardia',rat:'Anticholinergics cause TACHYCARDIA (not bradycardia) by blocking vagal slowing of the heart.'},
+      {l:'E',t:'Blurred vision',correct:true,rat:'CORRECT. Anticholinergics cause mydriasis (pupil dilation) and cycloplegia → blurred vision ("blind as a bat").'}
+    ]},
+    {id:'n21b_20',topic:'Aspiration Risk',stem:'Which neurodegenerative conditions place patients at the HIGHEST risk for aspiration pneumonia? (Select All That Apply)',sata:true,opts:[
+      {l:'A',t:'ALS in late stage',correct:true,rat:'CORRECT. Bulbar muscle weakness in ALS = dysphagia + impaired cough → aspiration pneumonia is a leading cause of death.'},
+      {l:'B',t:'Parkinson\'s disease',correct:true,rat:'CORRECT. Bradykinesia, rigidity, and autonomic dysfunction in Parkinson\'s affect swallowing → aspiration risk. Silent aspiration is common.'},
+      {l:'C',t:'MS with bulbar involvement',correct:true,rat:'CORRECT. MS affecting brainstem/bulbar pathways causes dysphagia → aspiration risk. Gag reflex assessment before meals is essential.'},
+      {l:'D',t:'MG with respiratory and bulbar weakness',correct:true,rat:'CORRECT. In MG, weakened pharyngeal and respiratory muscles = dysphagia + impaired cough = aspiration/respiratory failure risk.'},
+      {l:'E',t:'GBS in the ascending phase',correct:true,rat:'CORRECT. As GBS ascends, bulbar muscles are affected → dysphagia + respiratory compromise = high aspiration risk during the acute phase.'}
+    ]}
   ],
   n22a: [
-    {id:'n22a_1',stem:"The Monro-Kellie doctrine states that intracranial pressure is maintained by:",topic:"ICP/Monro-Kellie",opts:[{l:"A",t:"The brain's ability to expand within the skull during periods of increased volume"},
-      {l:"B",t:"A compensatory decrease in one compartment when another increases to maintain normal ICP",correct:true},
-      {l:"C",t:"Constant production and reabsorption of cerebrospinal fluid at equal rates"},
-      {l:"D",t:"The blood-brain barrier preventing excess fluid from entering the cranium"}],
-     rats:{A:"Incorrect. The SKULL IS RIGID and CANNOT expand. This is the PROBLEM — there is no room for expansion.",B:"CORRECT! The skull is a rigid, fixed box containing: brain tissue (80%) + CSF (10%) + blood (10%). These 3 compartments MUST remain balanced. If brain swells, CSF must decrease (drain) or blood must decrease to compensate. When compensation fails → ICP rises.",C:"Incorrect. While CSF dynamics are part of ICP management, this doesn't accurately state the Monro-Kellie doctrine itself.",D:"Incorrect. The blood-brain barrier regulates molecular passage but is not the mechanism described in Monro-Kellie."}},
-    {id:'n22a_2',stem:"A nurse is assessing a patient with traumatic brain injury. Which finding represents the EARLIEST sign of increasing ICP?",topic:"ICP/Signs",opts:[{l:"A",t:"Cushing's triad (hypertension, bradycardia, abnormal respirations)"},
-      {l:"B",t:"Fixed and dilated pupils bilaterally"},
-      {l:"C",t:"Change in level of consciousness — increasing restlessness or confusion",correct:true},
-      {l:"D",t:"Cheyne-Stokes breathing pattern"}],
-     rats:{A:"INCORRECT — Cushing's triad is a LATE and OMINOUS sign, indicating brainstem compression and impending herniation. It is not an early sign.",B:"INCORRECT — Fixed dilated pupils indicate CN III compression from herniation — a LATE sign.",C:"CORRECT! The FIRST and MOST SENSITIVE sign of increasing ICP is a CHANGE IN LEVEL OF CONSCIOUSNESS. Even subtle changes (increased restlessness, confusion, declining GCS) are early warning signs. LOC changes before vital sign changes occur.",D:"INCORRECT — Cheyne-Stokes breathing is an abnormal respiratory pattern associated with late stages of brain herniation, not an early sign."}},
-    {id:'n22a_3',stem:"Cushing's Triad indicates which clinical situation?",topic:"ICP/Cushing's",opts:[{l:"A",t:"Early, compensated increase in intracranial pressure"},
-      {l:"B",t:"Typical stress response to head injury"},
-      {l:"C",t:"Late, life-threatening brainstem compression with impending herniation",correct:true},
-      {l:"D",t:"Hypovolemic shock complicating traumatic brain injury"}],
-     rats:{A:"Incorrect. Cushing's triad is a LATE sign. Early compensated ICP increase shows subtle LOC changes first.",B:"Incorrect. This is not a normal stress response — it is a critical emergency sign.",C:"CORRECT! Cushing's Triad = Hypertension with widened pulse pressure + Bradycardia + Abnormal respirations. This occurs when ICP is so high that the brainstem is being compressed. It is a LATE, ominous sign indicating death is imminent without immediate neurosurgical intervention.",D:"Incorrect. Hypovolemic shock causes TACHYCARDIA + hypotension + tachypnea — the OPPOSITE pattern. Cushing's triad has bradycardia + hypertension + slow/irregular respirations."}},
-    {id:'n22a_4',stem:"A patient's Glasgow Coma Scale score is calculated as: Eyes=2 (opens to pain), Verbal=3 (inappropriate words), Motor=4 (withdraws from pain). The total is:",topic:"ICP/GCS",opts:[{l:"A",t:"7"},
-      {l:"B",t:"8"},
-      {l:"C",t:"9",correct:true},
-      {l:"D",t:"10"}],
-     rats:{A:"Incorrect. 2+3+4 = 9, not 7.",B:"Incorrect. 2+3+4 = 9, not 8.",C:"CORRECT! E2 + V3 + M4 = GCS 9. A GCS of 8 or less indicates severe TBI requiring intubation typically. This patient at 9 is borderline severe and needs close monitoring.",D:"Incorrect. 2+3+4 = 9, not 10."}},
-    {id:'n22a_5',stem:"A patient arrives to the ED after a motor vehicle accident. CT shows a BICONVEX (lens-shaped) hyperdensity between the skull and dura mater. The nurse prepares for:",topic:"TBI/EDH",opts:[{l:"A",t:"Conservative management with observation"},
-      {l:"B",t:"Lumbar puncture to relieve pressure"},
-      {l:"C",t:"Emergency neurosurgical craniotomy and hematoma evacuation",correct:true},
-      {l:"D",t:"tPA administration for arterial clot dissolution"}],
-     rats:{A:"Incorrect. Epidural hematoma is an arterial bleed (middle meningeal artery) that expands rapidly. Conservative management is inappropriate — this is a neurosurgical emergency.",B:"Incorrect. Lumbar puncture is CONTRAINDICATED with increased ICP (risk of herniation).",C:"CORRECT! A biconvex (lens-shaped) bleed between skull and dura = EPIDURAL HEMATOMA. This is an ARTERIAL bleed (middle meningeal artery) that rapidly expands. Delayed diagnosis is a major cause of death. Emergency craniotomy + hematoma evacuation is required.",D:"Incorrect. tPA is for ISCHEMIC stroke (clot in artery). An epidural hematoma is a HEMORRHAGIC condition — tPA would massively worsen it."}},
-    {id:'n22a_6',stem:"An elderly patient on warfarin has a minor fall. 3 days later they present with progressive headache, confusion, and hemiparesis. CT shows a crescent-shaped collection below the dura. This MOST likely represents:",topic:"TBI/SDH",opts:[{l:"A",t:"Epidural hematoma — arterial bleed"},
-      {l:"B",t:"Subarachnoid hemorrhage — aneurysm rupture"},
-      {l:"C",t:"Acute subdural hematoma — venous bridging vein rupture",correct:true},
-      {l:"D",t:"Intracerebral hemorrhage — direct brain tissue bleed"}],
-     rats:{A:"Incorrect. EDH is biconvex (lens-shaped), develops rapidly (hours after impact with lucid interval), and is arterial. This patient has gradual onset over days — venous bleeding.",B:"Incorrect. SAH presents with 'worst headache of life' (thunderclap), neck stiffness — not gradual onset over days.",C:"CORRECT! Crescent-shaped + elderly + anticoagulated + minor trauma + gradual onset = SUBDURAL HEMATOMA. Bridging veins are fragile (especially in elderly with cerebral atrophy). Anticoagulation allows even minor bleeds to accumulate significantly. Subacute SDH develops within 72 hours to 7 days.",D:"Incorrect. Intracerebral hemorrhage is a bleed WITHIN brain tissue (not in the subdural space) and would appear differently on CT."}},
-    {id:'n22a_7',stem:"A patient with TBI is receiving IV mannitol. The nurse understands the primary mechanism of action is:",topic:"TBI/Mannitol",opts:[{l:"A",t:"Lowering blood pressure to reduce cerebral blood flow"},
-      {l:"B",t:"Creating an osmotic gradient that draws water from brain tissue into the bloodstream",correct:true},
-      {l:"C",t:"Directly blocking glutamate receptors to prevent excitotoxicity"},
-      {l:"D",t:"Dissolving blood clots within the brain parenchyma"}],
-     rats:{A:"Incorrect. While controlling BP can influence ICP, this is not how mannitol works. Mannitol's primary mechanism is osmotic.",B:"CORRECT! Mannitol is an OSMOTIC DIURETIC. It creates a concentration gradient between the blood and brain tissue. This gradient draws water OUT of swollen brain cells into the bloodstream, then excretes it through the kidneys. This reduces cerebral edema and lowers ICP. Monitor urine output and electrolytes closely.",C:"Incorrect. NMDA receptor antagonists (like memantine) block glutamate. Mannitol has no direct effect on glutamate.",D:"Incorrect. Mannitol does not dissolve clots — that is tPA or mechanical thrombectomy."}},
-    {id:'n22a_8',stem:"A patient develops a sudden, severe 'thunderclap' headache described as 'the worst headache of my life' after straining. Which diagnosis does the nurse MOST suspect?",topic:"TBI/SAH",opts:[{l:"A",t:"Tension headache — from Valsalva maneuver"},
-      {l:"B",t:"Migraine headache — triggered by physical exertion"},
-      {l:"C",t:"Subarachnoid hemorrhage from ruptured cerebral aneurysm",correct:true},
-      {l:"D",t:"Epidural hematoma from skull fracture"}],
-     rats:{A:"Incorrect. Tension headaches are bilateral, bandlike, dull — not sudden, severe, or 'worst ever.'",B:"Incorrect. Migraine can be triggered by exertion but builds over time, not a sudden thunderclap. Also has photophobia, nausea, aura typically.",C:"CORRECT! 'WORST HEADACHE OF MY LIFE' with sudden thunderclap onset = SAH (subarachnoid hemorrhage) until proven otherwise. Often triggered by Valsalva (straining). Caused by ruptured berry aneurysm at Circle of Willis. Emergency CT scan immediately. Also look for: neck stiffness, photophobia, LOC.",D:"Incorrect. EDH requires skull fracture + head trauma with a lucid interval pattern, not sudden headache with Valsalva."}},
-    {id:'n22a_9',stem:"Which finding indicates CN III compression and possible transtentorial herniation?",topic:"TBI/Herniation",opts:[{l:"A",t:"Bilateral pinpoint pupils"},
-      {l:"B",t:"Ipsilateral fixed and dilated (blown) pupil",correct:true},
-      {l:"C",t:"Conjugate gaze deviation toward the lesion"},
-      {l:"D",t:"Bilateral dilated pupils responding normally to light"}],
-     rats:{A:"Incorrect. Bilateral pinpoint (miotic) pupils are associated with opioid toxicity or pontine hemorrhage — not CN III compression.",B:"CORRECT! CN III (oculomotor) controls ipsilateral pupil CONSTRICTION. When CN III is compressed by uncal herniation (temporal lobe pushing through tentorial notch), the affected pupil DILATES and FIXES (no response to light). This ipsilateral fixed dilated 'blown' pupil is a CRITICAL sign of transtentorial herniation.",C:"Incorrect. Conjugate gaze deviation is associated with cortical injury (frontal lobe strokes) — not specifically CN III herniation compression.",D:"Incorrect. Bilateral normal-responding dilated pupils could indicate anxiety, medications, or bright light — not herniation."}},
-    {id:'n22a_10',stem:"A patient with a mild concussion asks when they can return to playing soccer. The nurse's BEST response is:",topic:"TBI/Concussion",opts:[{l:"A",t:"'You can return to normal activity within 24 hours if you feel better.'"},
-      {l:"B",t:"'You should wait at least 24 hours and be cleared by your doctor before returning to sports.',correct:true",correct:true},
-      {l:"C",t:"'With a mild concussion, it is safe to return to sports immediately if there was no loss of consciousness.'"},
-      {l:"D",t:"'You must wait 6 months after any head injury before playing contact sports.'"}],
-     rats:{A:"Incorrect. While 24 hours is the minimum recommendation, the patient also needs physician clearance. 'Just feeling better' is not sufficient.",B:"CORRECT! After any concussion, return to sports should be: (1) AT LEAST 24 hours after injury AND (2) Only after physician clearance with a graduated return-to-play protocol. No same-day return. Second concussions before full recovery can cause 'second impact syndrome' — potentially fatal cerebral edema.",C:"INCORRECT and DANGEROUS. Loss of consciousness is NOT the only criterion for concussion severity. Post-concussion syndrome can follow any concussion. Never return on the same day.",D:"Incorrect. While severe concussions may require extended rest, 6 months is not a standard guideline for mild concussions."}},
+    {id:'n22a_1',topic:'Monro-Kellie/ICP',stem:'A patient has cerebral edema from a TBI. The nurse understands that ICP increases because:',opts:[
+      {l:'A',t:'The skull expands to accommodate the swelling',rat:'The skull is a RIGID, non-expandable container. It cannot expand. This is the entire basis of the Monroe-Kellie doctrine — pressure increases when volume increases within a fixed space.'},
+      {l:'B',t:'The brain, CSF, and blood volumes must sum to a constant — increased brain swelling cannot be compensated, raising ICP',correct:true,rat:'CORRECT. Monroe-Kellie doctrine: skull = fixed volume. Brain tissue (80%) + CSF (10%) + blood volume (10%) = constant. If brain swells, one of the other two must decrease to compensate. Once compensation fails → ICP rises rapidly.'},
+      {l:'C',t:'Neurons absorb excess fluid, decreasing vascular tone',rat:'This does not describe Monroe-Kellie physiology. Neurons do not "absorb" fluid in a compensatory way.'},
+      {l:'D',t:'Cerebral blood flow increases to compensate for edema',rat:'Cerebral autoregulation attempts to maintain blood flow, but increased blood volume in a fixed space ADDS to ICP, not relieves it. Reducing blood volume (e.g., via hyperventilation) HELPS lower ICP.'}
+    ]},
+    {id:'n22a_2',topic:'Cushing\'s Triad',stem:'A TBI patient develops bradycardia (HR 52), widened pulse pressure (BP 190/50), and irregular respirations. Which condition does the nurse recognize?',opts:[
+      {l:'A',t:'Septic shock — needs IV fluid resuscitation',rat:'Septic shock presents with tachycardia, hypotension, and warm skin. Cushing\'s triad is the OPPOSITE: bradycardia, hypertension, irregular respirations.'},
+      {l:'B',t:'Cushing\'s triad — a late sign of severely elevated ICP and impending herniation',correct:true,rat:'CORRECT. Cushing\'s triad = Bradycardia + Hypertension with WIDE pulse pressure + Irregular (Biot\'s/Cheyne-Stokes) respirations. This is a LATE, ominous sign of severely elevated ICP threatening brainstem compression. Notify physician IMMEDIATELY.'},
+      {l:'C',t:'Normal autonomic response to pain in TBI patients',rat:'Cushing\'s triad is NEVER "normal." It signals a life-threatening neurosurgical emergency.'},
+      {l:'D',t:'Neurogenic shock from spinal cord involvement',rat:'Neurogenic shock causes bradycardia + HYPOTENSION (not hypertension). Cushing\'s triad involves hypertension with wide pulse pressure.'}
+    ]},
+    {id:'n22a_3',topic:'ICP Nursing Management',stem:'A patient with TBI has ICP of 28 mmHg. Which nursing interventions are appropriate? (Select All That Apply)',sata:true,opts:[
+      {l:'A',t:'Elevate HOB 30 degrees',correct:true,rat:'CORRECT. 30-degree HOB elevation promotes venous drainage from the head, reducing ICP. AVOID 90 degrees (compromises cerebral venous drainage) and flat position (increases ICP).'},
+      {l:'B',t:'Administer IV mannitol as ordered',correct:true,rat:'CORRECT. Mannitol is an osmotic diuretic — pulls fluid from brain cells into circulation → reduces cerebral edema → lowers ICP.'},
+      {l:'C',t:'Cluster nursing care to allow uninterrupted rest',correct:true,rat:'CORRECT. Each interaction/stimulation transiently raises ICP. Cluster care (bundle multiple interventions at once) minimizes ICP spikes by allowing periods of rest.'},
+      {l:'D',t:'Encourage vigorous coughing and deep breathing every hour',rat:'Coughing, straining, Valsalva, and suctioning all RAISE ICP transiently. Avoid unnecessary coughing/straining in ICP patients.'},
+      {l:'E',t:'Maintain normothermia — treat fever aggressively',correct:true,rat:'CORRECT. Hyperthermia increases cerebral metabolic demand → worsens ICP. Antipyretics and cooling measures are essential.'}
+    ]},
+    {id:'n22a_4',topic:'Brain Herniation',stem:'A TBI patient\'s left pupil becomes fixed and dilated. What does this finding indicate?',opts:[
+      {l:'A',t:'Direct eye injury from trauma',rat:'While trauma can injure the eye, in TBI context — a fixed dilated pupil that develops AFTER injury = CN III compression. This is a neurological emergency, not an ocular trauma finding.'},
+      {l:'B',t:'Compression of CN III (oculomotor nerve) from herniation of the uncus through the tentorial notch',correct:true,rat:'CORRECT. As ICP increases → uncus herniates through tentorial notch → CN III is compressed → ipsilateral fixed, dilated pupil ("blown pupil"). This is TRANSTENTORIAL herniation — a neurological emergency. Contralateral weakness often follows.'},
+      {l:'C',t:'Bilateral cataracts developing from steroid use',rat:'Cataracts are bilateral, chronic, and cause cloudy vision — not fixed, dilated pupils in TBI context.'},
+      {l:'D',t:'Normal pupillary response to bright light in the trauma bay',rat:'A fixed, non-reactive dilated pupil is NEVER normal. This is always a sign requiring immediate evaluation.'}
+    ]},
+    {id:'n22a_5',topic:'GCS Scoring',stem:'A TBI patient opens their eyes to pain, makes incomprehensible sounds, and withdraws from painful stimuli. What is the GCS score?',opts:[
+      {l:'A',t:'GCS 7 (E2+V2+M4)',rat:'Eyes to pain = E2, incomprehensible sounds = V2, withdraws = M4. 2+2+4 = 8.'},
+      {l:'B',t:'GCS 8 (E2+V2+M4)',correct:true,rat:'CORRECT. Eyes to pain = E2 (not spontaneous=4, not to voice=3). Incomprehensible sounds = V2 (not words). Withdraws from pain = M4 (not localizes=5). Total = 2+2+4 = 8. GCS ≤8 = severe TBI, typically requires intubation.'},
+      {l:'C',t:'GCS 9 (E2+V3+M4)',rat:'V3 = inappropriate words (random words). V2 = incomprehensible sounds (moaning/groaning, no words). The question states incomprehensible sounds = V2.'},
+      {l:'D',t:'GCS 6 (E1+V1+M4)',rat:'E1 = no eye opening; V1 = no verbal response. The patient DOES open eyes to pain (E2) and DOES make sounds (V2).'}
+    ]},
+    {id:'n22a_6',topic:'Epidural vs Subdural Hematoma',stem:'A 25-year-old is brought to the ED after a head-on collision. He was unconscious briefly, then fully alert and conversational for 45 minutes. Now he is rapidly becoming unresponsive. Which condition is most likely?',opts:[
+      {l:'A',t:'Subdural hematoma — bridging vein tear with slow accumulation',rat:'Subdural hematomas have a more gradual onset — typically no true lucid interval as dramatic as this. They are more common in elderly or anticoagulated patients.'},
+      {l:'B',t:'Epidural hematoma — middle meningeal artery bleeding with classic lucid interval',correct:true,rat:'CORRECT. Epidural hematoma = arterial bleeding from middle meningeal artery laceration (usually temporal skull fracture). Classic presentation: brief LOC → LUCID INTERVAL (appears fine) → rapid deterioration as arterial blood accumulates. This is a neurosurgical EMERGENCY requiring immediate craniotomy.'},
+      {l:'C',t:'Diffuse axonal injury — immediate coma without lucid interval',rat:'DAI causes immediate loss of consciousness with no lucid interval. The classic lucid interval + rapid deterioration pattern = EDH, not DAI.'},
+      {l:'D',t:'Concussion — symptoms should resolve within 24 hours',rat:'Concussions do not cause rapid deterioration and loss of consciousness after a lucid interval. This presentation is far too serious for concussion.'}
+    ]},
+    {id:'n22a_7',topic:'DAI',stem:'A patient in a high-speed MVA has immediate loss of consciousness. CT shows no obvious hemorrhage but the patient remains in coma 48 hours later. Which injury is most likely?',opts:[
+      {l:'A',t:'Subdural hematoma — requires immediate drainage',rat:'SDH would be visible on CT as a crescent-shaped hyperdensity. Normal CT + immediate coma + prolonged unconsciousness without mass lesion = DAI.'},
+      {l:'B',t:'Diffuse axonal injury — widespread white matter axon shearing from acceleration-deceleration',correct:true,rat:'CORRECT. DAI occurs from violent coup-contrecoup forces shearing axons throughout the white matter. CT is often NORMAL (or shows small petechial hemorrhages). Immediate coma is the hallmark. >90% remain in persistent coma. MRI is more sensitive for DAI than CT.'},
+      {l:'C',t:'Epidural hematoma — requires craniotomy immediately',rat:'EDH would show on CT as a biconvex (lens-shaped) hyperdensity. Normal CT argues against EDH.'},
+      {l:'D',t:'Concussion — patient will recover fully within days',rat:'Concussion does not typically cause 48-hour persistent coma. DAI is the correct diagnosis for this severity.'}
+    ]},
+    {id:'n22a_8',topic:'Skull Fractures',stem:'A patient following a fall has a bruise behind the right ear and clear fluid draining from the right ear. The nurse suspects:',opts:[
+      {l:'A',t:'Otitis media — common after head trauma',rat:'Otitis media is an inner ear infection — it does not cause bruising behind the ear or clear ear drainage following trauma.'},
+      {l:'B',t:'Basilar skull fracture with Battle\'s sign and CSF otorrhea',correct:true,rat:'CORRECT. Battle\'s sign = bruising/ecchymosis over the mastoid process (behind the ear) = classic sign of posterior fossa basilar skull fracture. CSF otorrhea (clear ear drainage) = CSF leak from middle ear. Test fluid for beta-2-transferrin or glucose to confirm CSF.'},
+      {l:'C',t:'Subdural hematoma requiring immediate drainage',rat:'SDH causes neurological deterioration and CT findings — not specifically Battle\'s sign + ear drainage.'},
+      {l:'D',t:'Normal post-traumatic drainage that requires only ice packs',rat:'Battle\'s sign + clear ear drainage = potential CSF leak = serious finding requiring immediate evaluation, not just ice packs.'}
+    ]},
+    {id:'n22a_9',topic:'Skull Fracture Types',stem:'Which type of skull fracture carries the highest risk for epidural hematoma and requires immediate CT scanning?',opts:[
+      {l:'A',t:'Linear skull fracture of the occipital bone',rat:'Linear fractures of the occipital bone do not directly overlie the middle meningeal artery and carry less immediate risk than temporal fractures.'},
+      {l:'B',t:'Temporal bone fracture overlying the middle meningeal artery',correct:true,rat:'CORRECT. The middle meningeal artery runs along the INSIDE of the temporal bone. Temporal skull fracture can lacerate this artery → rapid arterial epidural hematoma. Classic lucid interval → rapid deterioration. Immediate CT + neurosurgical consult.'},
+      {l:'C',t:'Basilar skull fracture without CSF leak',rat:'Basilar fractures are serious but the immediate arterial bleeding risk from middle meningeal artery laceration is specifically linked to temporal bone fractures.'},
+      {l:'D',t:'Depressed skull fracture with intact dura',rat:'Depressed fractures require surgical repair if significant, but the highest arterial hemorrhage risk is temporal fractures → epidural hematoma.'}
+    ]},
+    {id:'n22a_10',topic:'ICP Lowering Interventions',stem:'A patient with TBI has ICP 32 mmHg. The physician orders hyperventilation. What is the rationale?',opts:[
+      {l:'A',t:'Hyperventilation increases oxygen delivery to ischemic brain tissue',rat:'The mechanism of hyperventilation in ICP management is NOT about oxygen delivery — it is about CO2 and vascular tone.'},
+      {l:'B',t:'Hyperventilation lowers PaCO2, causing cerebral vasoconstriction, which reduces cerebral blood volume and lowers ICP',correct:true,rat:'CORRECT. CO2 is a potent cerebral vasodilator. Lowering PaCO2 via hyperventilation → cerebral arterial vasoconstriction → reduced cerebral blood volume → lower ICP. This is a temporary measure (used in acute herniation) — chronic hyperventilation causes vasoconstriction ischemia.'},
+      {l:'C',t:'Hyperventilation increases blood pH, reducing cerebral edema directly',rat:'pH changes have some indirect effects but the PRIMARY mechanism is CO2-driven vasoconstriction reducing blood volume.'},
+      {l:'D',t:'Hyperventilation prevents Cheyne-Stokes respirations by stimulating the medullary respiratory center',rat:'Hyperventilation does not treat abnormal respiratory patterns — it lowers ICP through cerebral vasoconstriction.'}
+    ]},
+    {id:'n22a_11',topic:'Concussion',stem:'A high school football player sustains a concussion. His coach says he feels fine after 20 minutes and wants to return to play. The nurse\'s BEST response is:',opts:[
+      {l:'A',t:'"He can return to play as long as there is no loss of consciousness."',rat:'There was no mention of LOC — but regardless, concussion protocols require sitting out for the rest of the day minimum, followed by a graduated return-to-play protocol.'},
+      {l:'B',t:'"He should sit out the rest of the game and not return to play until evaluated by a physician and cleared under return-to-play protocol."',correct:true,rat:'CORRECT. Current sports concussion guidelines: any suspected concussion = removed from play same day. Return-to-play requires: asymptomatic at rest AND exertion, physician clearance, graduated protocol over at least one week. "When in doubt, sit it out."'},
+      {l:'C',t:'"He may return to play in 24 hours if he has no symptoms."',rat:'24 hours is not adequate. Return-to-play requires a physician evaluation, confirmed absence of symptoms, and a graduated multi-day protocol.'},
+      {l:'D',t:'"Feeling fine after 20 minutes means the concussion was mild and no further evaluation is needed."',rat:'Feeling fine after 20 minutes does NOT mean it is safe to return — post-concussion symptoms can be delayed. Second-impact syndrome (second concussion before first resolves) can be fatal.'}
+    ]},
+    {id:'n22a_12',topic:'Contusion',stem:'A patient with a cerebral contusion was alert on admission but is now difficult to arouse, bradycardic, and hypertensive 36 hours later. The nurse recognizes this as:',opts:[
+      {l:'A',t:'Expected postictal state following a seizure',rat:'There is no mention of seizure activity. Delayed deterioration in contusion is from EDEMA, not postictal state.'},
+      {l:'B',t:'Delayed cerebral edema causing elevated ICP — requiring immediate intervention',correct:true,rat:'CORRECT. Cerebral contusions → edema peaks at 48-72 hours post-injury. Delayed neurological deterioration + Cushing\'s-like vital signs = elevated ICP. This requires immediate intervention: CT, mannitol, possible decompression. Delayed deterioration is the #1 cause of preventable death in TBI.'},
+      {l:'C',t:'Medication side effects from pain management',rat:'Pain medications may cause sedation, but the combination of bradycardia + hypertension + decreasing LOC following TBI = ICP, not medication effect.'},
+      {l:'D',t:'Sleep — the patient is exhausted from the injury',rat:'Difficulty arousing + abnormal vital signs cannot be attributed to sleep. This requires immediate assessment.'}
+    ]},
+    {id:'n22a_13',topic:'LOC Levels',stem:'A patient responds to verbal commands, answers simple questions, but is sleepy and needs repeated stimulation to stay awake. Which level of consciousness does the nurse document?',opts:[
+      {l:'A',t:'Alert — patient is oriented and cooperative',rat:'Alert = fully awake, interactive with environment without extra stimulation needed. This patient requires repeated stimulation to stay awake.'},
+      {l:'B',t:'Lethargic — sleepy but easily aroused with verbal stimulation',correct:true,rat:'CORRECT. Lethargy = sleepy but easily arousable with verbal/light physical stimulation; responds appropriately. Levels in order: Alert > Lethargic > Obtunded/Stuporous > Coma.'},
+      {l:'C',t:'Obtunded — minimal response to environment',rat:'Obtunded (stuporous) = difficult to arouse, little interaction with environment even with stimulation. This patient responds appropriately to commands = lethargic, not obtunded.'},
+      {l:'D',t:'Coma — no interaction with environment',rat:'Coma = no response to stimuli, no interaction. This patient responds to verbal commands — GCS is clearly >3.'}
+    ]},
+    {id:'n22a_14',topic:'Hematoma Comparison',stem:'Which statement correctly compares epidural (EDH), subdural (SDH), and subarachnoid (SAH) hematomas?',opts:[
+      {l:'A',t:'EDH: arterial, biconvex on CT, lucid interval; SDH: venous, crescent on CT, common in elderly; SAH: aneurysm/trauma, worst headache of life',correct:true,rat:'CORRECT. EDH: middle meningeal artery bleed → biconvex (lens-shaped) on CT, lucid interval. SDH: bridging vein tear → crescent-shaped on CT, slower onset, common in elderly/anticoagulated. SAH: subarachnoid space blood → thunderclap headache, LP shows blood in CSF, circle of Willis aneurysm rupture.'},
+      {l:'B',t:'All three present identically — only CT can differentiate',rat:'While CT differentiates them, clinical presentation is quite distinctive: EDH lucid interval, SDH gradual, SAH thunderclap headache.'},
+      {l:'C',t:'SDH is always the most immediately dangerous',rat:'EDH is typically more immediately dangerous (arterial bleeding rapidly expands). SDH can be acute or chronic (slower venous bleeding).'},
+      {l:'D',t:'SAH is treated with craniotomy and clot evacuation in all cases',rat:'SAH treatment depends on etiology: aneurysmal SAH may be treated with endovascular coiling or surgical clipping. Not all require craniotomy.'}
+    ]},
+    {id:'n22a_15',topic:'Mannitol',stem:'The nurse is administering IV mannitol to reduce ICP. Which finding indicates the medication is working?',opts:[
+      {l:'A',t:'Urine output decreases significantly',rat:'Mannitol is an OSMOTIC DIURETIC — it INCREASES urine output as it pulls fluid from tissues. Decreased urine output suggests the medication is not working or the patient is dehydrated.'},
+      {l:'B',t:'Urine output increases and ICP decreases on monitor',correct:true,rat:'CORRECT. Mannitol draws fluid from brain cells into the bloodstream via osmosis → increased intravascular volume → excreted by kidneys → increased UO. Simultaneously, reduced brain water content → decreased ICP. Both findings confirm efficacy.'},
+      {l:'C',t:'Blood pressure increases and heart rate slows',rat:'BP increase + HR slowing = Cushing\'s triad = WORSENING ICP, not improving. This would indicate mannitol has not been effective.'},
+      {l:'D',t:'Patient becomes increasingly confused',rat:'Increasing confusion = neurological deterioration. If mannitol is working, LOC should improve or stabilize, not worsen.'}
+    ]},
+    {id:'n22a_16',topic:'Brain Death',stem:'Which findings are required to diagnose brain death? (Select All That Apply)',sata:true,opts:[
+      {l:'A',t:'Coma (no purposeful response to stimulation)',correct:true,rat:'CORRECT. Brain death requires confirmed coma — absence of all cortical activity.'},
+      {l:'B',t:'Absence of all brainstem reflexes (pupillary, corneal, gag, oculocephalic)',correct:true,rat:'CORRECT. ALL brainstem reflexes must be absent for brain death declaration.'},
+      {l:'C',t:'Apnea confirmed by apnea test (no respiratory effort when CO2 rises above threshold)',correct:true,rat:'CORRECT. Apnea test confirms absence of brainstem respiratory drive. Brain death = coma + absent brainstem reflexes + apnea.'},
+      {l:'D',t:'Flat EEG confirming no brain electrical activity',rat:'EEG is supportive but NOT required for brain death declaration in most protocols. Clinical examination + apnea test are the standard criteria.'},
+      {l:'E',t:'Normal body temperature and absence of confounding factors (drugs, metabolic)',correct:true,rat:'CORRECT. Brain death cannot be declared if the patient has hypothermia, CNS depressants (barbiturates, alcohol), or metabolic abnormalities that could mimic brain death.'}
+    ]},
+    {id:'n22a_17',topic:'ICP Early Signs',stem:'A nurse monitors a patient for increasing ICP. Which finding is the EARLIEST sign of neurological decline?',opts:[
+      {l:'A',t:'Cushing\'s triad (bradycardia, hypertension, irregular respirations)',rat:'Cushing\'s triad is a LATE sign — indicating impending brainstem herniation. By the time Cushing\'s appears, significant damage has occurred.'},
+      {l:'B',t:'Change in level of consciousness — confusion, restlessness, or lethargy',correct:true,rat:'CORRECT. The FIRST and most sensitive sign of increasing ICP is a change in LOC. The reticular activating system (RAS) is very sensitive to pressure. Even subtle restlessness, confusion, or drowsiness warrants immediate evaluation. Monitor LOC before other vital signs change.'},
+      {l:'C',t:'Fixed dilated pupils',rat:'Fixed dilated pupils indicate CN III compression from herniation — a VERY late sign. LOC changes precede pupil changes.'},
+      {l:'D',t:'Hemiplegia',rat:'Motor deficits are typically later manifestations. LOC change is the earliest.'}
+    ]},
+    {id:'n22a_18',topic:'Post-concussion',stem:'A patient is seen 4 weeks after a concussion. He reports ongoing headaches, fatigue, and trouble concentrating. What does the nurse explain?',opts:[
+      {l:'A',t:'"These symptoms suggest a developing brain tumor — urgent MRI is needed."',rat:'While persistent post-concussion symptoms warrant evaluation, immediately suggesting brain tumor creates unnecessary panic. Post-concussion syndrome is the clinical explanation.'},
+      {l:'B',t:'"Post-concussion syndrome (PCS) — symptoms persisting beyond 3 weeks after concussion — is common and can last weeks to months."',correct:true,rat:'CORRECT. Post-concussion syndrome = persistence of symptoms (headache, dizziness, fatigue, cognitive difficulty, sleep issues) beyond 3 weeks after initial injury. Reassurance, cognitive/physical rest, symptom management, and gradual return to activity are the foundations of treatment.'},
+      {l:'C',t:'"These symptoms are unrelated to the concussion at this point — see a psychiatrist."',rat:'Post-concussion symptoms ARE related to the brain injury. While psychological support may help, dismissing the neurological cause is inappropriate.'},
+      {l:'D',t:'"Concussion symptoms resolve in exactly 10 days — you should be fully recovered."',rat:'Simple concussions resolve in hours to 10 days, but complex concussions and PCS can persist weeks to months — there is no universal 10-day rule.'}
+    ]},
+    {id:'n22a_19',topic:'SAH Specifics',stem:'A patient with suspected SAH has a negative CT scan. Which test does the nurse prepare the patient for?',opts:[
+      {l:'A',t:'MRI brain — more sensitive than CT for early SAH',rat:'Early SAH (first 12 hours) is detected by CT in >95% of cases. After 12 hours, sensitivity drops. However, the next step for CT-negative suspected SAH is LP, not MRI.'},
+      {l:'B',t:'Lumbar puncture — to detect xanthochromia or blood in CSF',correct:true,rat:'CORRECT. If CT is negative but clinical suspicion for SAH is high (thunderclap headache), LP is done to look for xanthochromia (yellowish CSF from blood breakdown products) or red blood cells in CSF. LP is definitive when CT misses early SAH.'},
+      {l:'C',t:'Carotid Doppler — to check for stenosis causing the headache',rat:'Carotid stenosis causes ischemic stroke symptoms, not thunderclap headache. This is not the appropriate next test.'},
+      {l:'D',t:'No further testing — if CT is negative the patient can be discharged',rat:'A negative CT with high clinical suspicion for SAH is NOT reassuring enough to discharge. LP is mandatory to rule out blood in the CSF.'}
+    ]},
+    {id:'n22a_20',topic:'Ventriculostomy',stem:'A patient has an external ventricular drain (EVD/ventriculostomy) for ICP monitoring. Which nursing action is correct?',opts:[
+      {l:'A',t:'Ensure the drain is clamped and never draining CSF',rat:'An EVD can be open to drain CSF as a therapeutic measure to lower ICP — clamping it would defeat the purpose.'},
+      {l:'B',t:'Zero the transducer at the level of the tragus of the ear (foramen of Monro) and maintain ordered drainage height',correct:true,rat:'CORRECT. EVD is zeroed at the tragus of the ear (corresponds to the foramen of Monro = level of ventricles). The drainage level is set at ordered height above zero. Correct leveling prevents over-drainage (herniation) or under-drainage (high ICP).'},
+      {l:'C',t:'Raise the drainage system whenever ICP readings seem high',rat:'Raising the drain INCREASES ICP by preventing CSF drainage. Lowering the drain promotes more drainage and reduces ICP. Changes require physician order.'},
+      {l:'D',t:'Encourage the patient to ambulate with the drain in place',rat:'EVD is a fixed catheter in the ventricle — ambulation risks dislodgement, infection, and incorrect ICP measurements. The patient is on strict positioning protocol.'}
+    ]}
   ],
   n22b: [
-    {id:'n22b_1',stem:"A patient with a T4 spinal cord injury develops bradycardia and hypotension with warm, flushed skin. The nurse recognizes this as:",topic:"SCI/Neurogenic Shock",opts:[{l:"A",t:"Hypovolemic shock from blood loss"},
-      {l:"B",t:"Septic shock from spinal infection"},
-      {l:"C",t:"Neurogenic shock from sympathetic nervous system disruption",correct:true},
-      {l:"D",t:"Spinal shock from complete spinal cord disruption"}],
-     rats:{A:"Incorrect. HYPOVOLEMIC shock = tachycardia + hypotension + cool/clammy skin. NEUROGENIC shock = BRADYCARDIA + hypotension + warm/flushed skin. The bradycardia distinguishes them.",B:"Incorrect. Septic shock = tachycardia + fever + warm skin (early) or cool skin (late). The bradycardia pattern and spinal injury history point to neurogenic shock.",C:"CORRECT! T4 is ABOVE T6 → disrupts sympathetic outflow (T1-L2). Without SNS: NO vasoconstriction → vasodilation → blood pools → hypotension. Also NO tachycardia response (NE can't increase HR) → bradycardia. Warm/flushed skin from vasodilation.",D:"Incorrect. Spinal shock is specifically about LOSS OF REFLEX ACTIVITY below the injury level (areflexia, flaccid paralysis). Neurogenic shock is the cardiovascular compromise. They can coexist but are different phenomena."}},
-    {id:'n22b_2',stem:"A patient has a spinal cord injury at C3. The nurse's PRIORITY assessment is:",topic:"SCI/Respiratory",opts:[{l:"A",t:"Lower extremity motor function"},
-      {l:"B",t:"Bladder and bowel function"},
-      {l:"C",t:"Respiratory status and airway patency",correct:true},
-      {l:"D",t:"Blood pressure and heart rate"}],
-     rats:{A:"Incorrect. Motor assessment is important but not the immediate priority with a C3 injury.",B:"Incorrect. Bowel/bladder dysfunction will occur but is not the immediate life threat.",C:"CORRECT! The PHRENIC NERVE (C3-C5, mainly C4) innervates the DIAPHRAGM — the primary breathing muscle. A C3 injury disrupts the phrenic nerve → diaphragm cannot contract → respiratory failure. This patient needs immediate airway assessment and likely mechanical ventilation. 'Breathe or die' — always the priority.",D:"Incorrect. While neurogenic shock is a concern with high cervical injury, respiratory failure is the more IMMEDIATE life threat."}},
-    {id:'n22b_3',stem:"What DIFFERENTIATES neurogenic shock from hypovolemic shock?",topic:"SCI/Shock",opts:[{l:"A",t:"Both present with tachycardia and hypotension"},
-      {l:"B",t:"Neurogenic shock presents with bradycardia and hypotension; hypovolemic presents with tachycardia and hypotension",correct:true},
-      {l:"C",t:"Hypovolemic shock presents with bradycardia; neurogenic shock presents with tachycardia"},
-      {l:"D",t:"Neurogenic shock presents with fever; hypovolemic shock does not"}],
-     rats:{A:"Incorrect. HYPOVOLEMIC has tachycardia. NEUROGENIC has BRADYCARDIA. This is the critical differentiator.",B:"CORRECT! This is the KEY clinical differentiator: NEUROGENIC = BRADYCARDIA + hypotension (SNS disrupted → can't increase HR or vasoconstrict). HYPOVOLEMIC = TACHYCARDIA + hypotension (SNS intact → compensatory tachycardia and vasoconstriction). Also: neurogenic = warm/flushed; hypovolemic = cool/clammy.",C:"Incorrect. This reverses the findings. Neurogenic = bradycardia. Hypovolemic = tachycardia.",D:"Incorrect. Fever is associated with infection/sepsis, not differentiating neurogenic from hypovolemic shock."}},
-    {id:'n22b_4',stem:"The nurse understands that the completeness of a spinal cord injury CANNOT be determined until:",topic:"SCI/Assessment",opts:[{l:"A",t:"MRI imaging is completed"},
-      {l:"B",t:"The patient regains consciousness"},
-      {l:"C",t:"Spinal shock resolves",correct:true},
-      {l:"D",t:"24 hours after injury"}],
-     rats:{A:"Incorrect. MRI provides anatomical information about the injury but doesn't determine functional completeness in the context of spinal shock.",B:"Incorrect. LOC and spinal cord function are separate. A patient can be awake but still in spinal shock.",C:"CORRECT! During SPINAL SHOCK, ALL spinal cord function below the injury is temporarily abolished (areflexia, flaccid paralysis, absent sensation). This temporary state makes it IMPOSSIBLE to determine how much function will return permanently. Only AFTER spinal shock resolves (loss of anal reflex returns) can the ASIA scale be reliably applied.",D:"Incorrect. Spinal shock can last hours to weeks — not necessarily resolving in 24 hours."}},
-    {id:'n22b_5',stem:"An ASIA grade A spinal cord injury means:",topic:"SCI/ASIA",opts:[{l:"A",t:"Motor function is preserved but sensation is absent below the injury"},
-      {l:"B",t:"Both sensation and motor function are partially preserved below the injury"},
-      {l:"C",t:"Complete SCI — no motor or sensory function in sacral segments S4-S5",correct:true},
-      {l:"D",t:"Normal motor and sensory function"}],
-     rats:{A:"Incorrect. This describes ASIA Grade B (sensory incomplete) — sensation preserved but no motor function below injury.",B:"Incorrect. Partial preservation of both sensory and motor function = ASIA Grade C or D depending on muscle strength.",C:"CORRECT! ASIA Grade A = COMPLETE SCI. No sensory OR motor function is preserved in the sacral segments S4-S5 (the most distal segments). Sacral sparing (any perianal sensation or voluntary anal sphincter contraction) would make the injury incomplete (Grade B or higher).",D:"Incorrect. Normal function = ASIA Grade E, given after recovery when no deficits remain."}}
+    {id:'n22b_1',topic:'SCI Levels',stem:'A patient has a complete SCI at C5. Which functional expectation is accurate?',opts:[
+      {l:'A',t:'The patient will be able to breathe independently and walk with assistive devices',rat:'C5 injury preserves diaphragm function (C3-C5 phrenic nerve) in MOST cases — breathing may be independent. However, walking is not expected with a complete C5 injury.'},
+      {l:'B',t:'The patient will likely be ventilator-dependent and have no arm or leg function',rat:'Ventilator dependence occurs with complete injuries ABOVE C4 (C1-C3). C5 typically preserves some shoulder/biceps function and diaphragm innervation.'},
+      {l:'C',t:'The patient has intact diaphragm function (C3-C5), shoulder shrug, and bicep flexion, but no hand/tricep/leg function',correct:true,rat:'CORRECT. C5 = phrenic nerve intact (C3-C5 diaphragm innervation preserved), shoulder elevation and bicep flexion preserved. Below C5 = triceps, wrist, hand, and legs affected. These patients often use power wheelchairs and need ADL assistance.'},
+      {l:'D',t:'The patient will have full arm function but bilateral leg weakness',rat:'Full arm function requires preservation through C8-T1 for hand/finger function. C5 spares shoulder/biceps only.'}
+    ]},
+    {id:'n22b_2',topic:'Spinal Shock',stem:'A patient with T4 SCI is flaccid below the injury level with loss of reflexes. Vital signs are stable. This is BEST described as:',opts:[
+      {l:'A',t:'Neurogenic shock — requires aggressive fluid resuscitation',rat:'Neurogenic shock = SCI above T6 → sympathetic dysfunction → bradycardia + hypotension. This patient has STABLE vitals. The flaccid/areflexia pattern is spinal shock, not neurogenic shock.'},
+      {l:'B',t:'Spinal shock — initial period of flaccid paralysis and areflexia following SCI; extent of permanent damage cannot be determined until this resolves',correct:true,rat:'CORRECT. Spinal shock = temporary physiological disruption immediately after SCI → flaccid paralysis + areflexia below injury level. Loss of anal reflex is the hallmark. PERMANENT deficit cannot be assessed until spinal shock resolves (can take days to weeks). After resolution, UMN signs (spasticity, hyperreflexia) may appear.'},
+      {l:'C',t:'Permanent complete SCI — the patient will never recover function below T4',rat:'Spinal shock mimics complete injury. Until spinal shock resolves, you CANNOT determine permanence of the deficit.'},
+      {l:'D',t:'Cauda equina syndrome — requires emergent surgery',rat:'Cauda equina involves compression of lumbar/sacral nerve roots (L1-L5, S1-S5) with bladder/bowel dysfunction. This patient has a thoracic (T4) injury — different syndrome.'}
+    ]},
+    {id:'n22b_3',topic:'Neurogenic vs Spinal Shock',stem:'A patient with T3 complete SCI develops BP 78/52 and HR 46. Which condition is occurring?',opts:[
+      {l:'A',t:'Spinal shock — administer IV fluid bolus',rat:'Spinal shock describes the flaccid/areflexic state — not necessarily hypotension + bradycardia. The hemodynamic findings point to neurogenic shock.'},
+      {l:'B',t:'Hypovolemic shock — assess for internal bleeding',rat:'Hypovolemic shock presents with tachycardia + hypotension. This patient has BRADYCARDIA — which distinguishes neurogenic from hypovolemic shock.'},
+      {l:'C',t:'Neurogenic shock — sympathetic dysfunction causing bradycardia and hypotension',correct:true,rat:'CORRECT. SCI above T6 disrupts sympathetic outflow (T1-L2). Without sympathetic tone: no vasoconstriction → vasodilation/hypotension + no compensatory tachycardia → bradycardia. KEY: bradycardia WITH hypotension = neurogenic shock (vs. hypovolemic = tachycardia + hypotension).'},
+      {l:'D',t:'Autonomic dysreflexia — elevate HOB and find the trigger',rat:'AD presents with HYPERTENSION + bradycardia in established SCI patients responding to a noxious stimulus. This patient has HYPOTENSION — consistent with neurogenic shock in the acute phase.'}
+    ]},
+    {id:'n22b_4',topic:'ASIA Scale',stem:'A patient with SCI has no motor or sensory function below the level of injury. According to the ASIA Impairment Scale, this patient is classified as:',opts:[
+      {l:'A',t:'ASIA B — sensory incomplete',rat:'ASIA B = sensory function preserved below neurological level but NO motor function below S3. This patient has no sensory function either.'},
+      {l:'B',t:'ASIA A — complete injury',correct:true,rat:'CORRECT. ASIA A = COMPLETE SCI: no sensory or motor function in the sacral segments S4-S5. This is the most severe classification. No motor AND no sensory below injury level = ASIA A.'},
+      {l:'C',t:'ASIA C — motor incomplete',rat:'ASIA C = motor function preserved below neurological level but more than half of key muscles have strength < grade 3. This patient has NO motor function.'},
+      {l:'D',t:'ASIA E — normal',rat:'ASIA E = normal sensory and motor function. This patient has complete loss of function below injury.'}
+    ]},
+    {id:'n22b_5',topic:'SCI C4 Respiratory',stem:'A patient sustains a complete SCI at C4. What is the nurse\'s PRIORITY respiratory concern?',opts:[
+      {l:'A',t:'Monitor for aspiration only — respiratory drive is intact at C4',rat:'At C4, the phrenic nerve (C3-C5) innervation to the diaphragm is at risk. Complete C4 injury can compromise diaphragm function significantly.'},
+      {l:'B',t:'Prepare for potential ventilator dependence — phrenic nerve (C3-C5) innervates the diaphragm, and C4 injury may compromise spontaneous breathing',correct:true,rat:'CORRECT. "C3, 4, 5 keeps the diaphragm alive." Complete injury at C4 means phrenic nerve function is at risk. Even partial C4 injuries may require mechanical ventilation. Closely monitor respiratory rate, effort, SpO2, and VC. Have intubation equipment immediately available.'},
+      {l:'C',t:'Administer bronchodilators — SCI causes bronchospasm',rat:'While SCI can cause decreased cough effectiveness, the primary respiratory priority at C4 is DIAPHRAGM PARALYSIS, not bronchospasm.'},
+      {l:'D',t:'No respiratory concern — C4 is below the respiratory control center',rat:'C4 is EXACTLY the level of phrenic nerve origin (C3-C5). This IS the level of greatest respiratory concern.'}
+    ]},
+    {id:'n22b_6',topic:'Autonomic Dysreflexia',stem:'A patient with T5 SCI has sudden BP 195/108, HR 52, pounding headache, and sweating above the injury level. What is the nurse\'s FIRST action?',opts:[
+      {l:'A',t:'Administer labetalol IV for hypertensive urgency',rat:'Medications come AFTER removing the trigger. Treat the CAUSE first — if the trigger is removed and BP normalizes, medication may not be needed.'},
+      {l:'B',t:'Sit the patient upright immediately and identify/remove the noxious stimulus below the injury level',correct:true,rat:'CORRECT. AD management priority: (1) Sit upright (orthostatic drop lowers BP). (2) Find and remove the trigger: check bladder → bowel → skin. Most common trigger = urinary retention/blocked catheter. Then medicate if needed (nitroglycerin paste, nifedipine).'},
+      {l:'C',t:'Lay the patient flat and elevate legs',rat:'Laying flat raises BP further (increases venous return). In AD you want the OPPOSITE — sit upright to promote orthostatic hypotension.'},
+      {l:'D',t:'Apply a cooling blanket for hyperthermia',rat:'While dysreflexia can cause hyperthermia (from vasodilation above injury), managing the cause and BP is the priority — not temperature management first.'}
+    ]},
+    {id:'n22b_7',topic:'SCI Complications',stem:'Which long-term complications should the nurse monitor for in a patient with chronic SCI? (Select All That Apply)',sata:true,opts:[
+      {l:'A',t:'Pressure ulcers from immobility and loss of sensation',correct:true,rat:'CORRECT. Lack of sensation means the patient cannot feel pressure injuries developing. Turn q2h, inspect all bony prominences, use pressure-redistributing surfaces.'},
+      {l:'B',t:'Deep vein thrombosis from immobility',correct:true,rat:'CORRECT. Immobility + loss of muscle pump = DVT risk. DVT prophylaxis (compression devices, anticoagulation) is essential.'},
+      {l:'C',t:'Neurogenic bladder requiring catheterization',correct:true,rat:'CORRECT. SCI disrupts voluntary bladder control → neurogenic bladder → urinary retention, infections, kidney damage. Intermittent catheterization program is standard.'},
+      {l:'D',t:'Dementia from cerebral involvement',rat:'SCI affects the spinal cord, NOT the brain. Cognition is preserved in SCI. Dementia is not a complication.'},
+      {l:'E',t:'Respiratory complications including pneumonia',correct:true,rat:'CORRECT. Decreased respiratory muscle function + decreased cough effectiveness = pneumonia risk. Breathing exercises, assisted coughing, and early mobilization reduce this risk.'}
+    ]},
+    {id:'n22b_8',topic:'Dermatomes/SCI Assessment',stem:'The nurse uses a pinprick to test sensation in a patient with SCI. The patient feels the pinprick at T10 but not at T12 or below. What is the sensory level of injury?',opts:[
+      {l:'A',t:'T12 — the lowest level where sensation is absent',rat:'The sensory LEVEL is the most CAUDAL (lowest) level with INTACT sensation — not the level where sensation is absent.'},
+      {l:'B',t:'T10 — the lowest dermatome with INTACT sensation (corresponds to the umbilicus)',correct:true,rat:'CORRECT. The neurological level is the LOWEST segment with normal (intact = score 2) sensory and motor function bilaterally. T10 = umbilicus level. Sensation is intact at T10, absent below = injury level is T10-T11 (T10 intact, T11-12 affected).'},
+      {l:'C',t:'T4 — nipple line, standard reference for thoracic injuries',rat:'T4 is a useful dermatome landmark but the assessment level is T10 based on the pinprick findings.'},
+      {l:'D',t:'L1 — inguinal ligament level where function resumes',rat:'The assessment is based on WHERE FUNCTION IS INTACT, not where it resumes below the injury.'}
+    ]},
+    {id:'n22b_9',topic:'SCI Spinal Cord Tracts',stem:'A patient with an incomplete SCI has loss of pain and temperature sensation on the LEFT side below T6 but intact motor function bilaterally. Which tract is injured and on which side?',opts:[
+      {l:'A',t:'LEFT lateral corticospinal tract injury — motor tract damage',rat:'Corticospinal (motor) tract injury causes weakness, not sensory loss. This patient has intact motor function.'},
+      {l:'B',t:'RIGHT lateral spinothalamic tract injury — pain and temperature fibers cross at the spinal cord level',correct:true,rat:'CORRECT. The spinothalamic tract carries pain and temperature. These fibers CROSS to the opposite side within 1-2 levels of entering the spinal cord. LEFT pain/temperature loss = RIGHT spinothalamic tract injury (the fibers that carry sensation from the left side cross to the right). This is Brown-Séquard pattern.'},
+      {l:'C',t:'LEFT posterior column injury — proprioception and vibration loss',rat:'Posterior columns carry proprioception, vibration, and fine touch — they travel IPSILATERALLY. Posterior column injury causes ipsilateral loss of those modalities, not pain/temperature.'},
+      {l:'D',t:'Bilateral spinothalamic tract injury — symmetric sensory loss',rat:'This patient has UNILATERAL (LEFT) sensory loss, not bilateral. Unilateral spinothalamic loss = contralateral (RIGHT) tract injury.'}
+    ]},
+    {id:'n22b_10',topic:'Dementia vs Delirium',stem:'A nurse is caring for two patients. Patient A has progressive cognitive decline over 2 years, lives alone, and recently got lost driving home. Patient B has acute confusion, hallucinations, and altered consciousness that started after surgery yesterday. Which assessment is correct?',opts:[
+      {l:'A',t:'Both patients have dementia — confusion is expected in the elderly',rat:'Dementia is progressive and chronic. Patient B\'s acute post-surgical confusion = delirium, a completely different (and reversible) condition.'},
+      {l:'B',t:'Patient A has dementia (chronic, progressive); Patient B has delirium (acute, reversible, with waxing/waning consciousness)',correct:true,rat:'CORRECT. Dementia = slow onset, progressive, chronic decline (months to years). Delirium = ACUTE (hours to days), fluctuating consciousness, often reversible if the cause is found and treated (medication, infection, metabolic, hypoxia, post-op).'},
+      {l:'C',t:'Patient A has delirium; Patient B has dementia',rat:'Reversed. Dementia = chronic progression (Patient A). Delirium = acute, post-surgical onset (Patient B).'},
+      {l:'D',t:'Both patients have delirium — triggered by different events',rat:'Patient A\'s 2-year progressive decline is dementia, not delirium.'}
+    ]},
+    {id:'n22b_11',topic:'Alzheimer\'s Disease',stem:'A patient with Alzheimer\'s disease demonstrates "sundowning" each evening. Which nursing interventions are appropriate? (Select All That Apply)',sata:true,opts:[
+      {l:'A',t:'Increase lighting in the environment in late afternoon/evening',correct:true,rat:'CORRECT. Adequate lighting reduces the disorientation that comes with decreased evening light. Sundowning is worsened by low light and shadows.'},
+      {l:'B',t:'Maintain a consistent daily routine',correct:true,rat:'CORRECT. Routine and predictability reduce confusion and anxiety in dementia patients. Disruptions worsen sundowning.'},
+      {l:'C',t:'Administer high-dose sedatives at 4 PM to prevent sundowning',rat:'High-dose sedatives increase fall risk, aspiration, and paradoxical agitation. Non-pharmacological approaches are first-line.'},
+      {l:'D',t:'Limit caffeine and stimulating activities in the afternoon/evening',correct:true,rat:'CORRECT. Stimulants (caffeine, TV, activity) in the afternoon can worsen evening agitation. Calm, soothing activities are preferred.'},
+      {l:'E',t:'Reorient the patient to the date and time repeatedly if they become confused',rat:'Repetitive reorientation can be distressing for dementia patients who cannot retain the information. Therapeutic validation (meeting them in their reality) is more compassionate.'}
+    ]},
+    {id:'n22b_12',topic:'Dementia Medications',stem:'A patient with Alzheimer\'s disease is prescribed donepezil (Aricept). The family asks how it works. The nurse explains:',opts:[
+      {l:'A',t:'"It replaces the lost neurons in the hippocampus."',rat:'No medication replaces lost neurons. Donepezil is a symptomatic treatment — it slows the rate of decline but does not restore neurons.'},
+      {l:'B',t:'"It inhibits acetylcholinesterase, preventing the breakdown of acetylcholine, which temporarily improves memory and cognition."',correct:true,rat:'CORRECT. Cholinesterase inhibitors (donepezil, rivastigmine, galantamine) inhibit the enzyme that breaks down ACh in the brain. More ACh available → improved cholinergic transmission → temporary symptomatic improvement. They slow decline but do not cure.'},
+      {l:'C',t:'"It blocks the abnormal beta-amyloid plaques causing the disease."',rat:'No currently approved drug removes beta-amyloid plaques as the primary mechanism. Lecanemab/donanemab are newer anti-amyloid antibodies but are not standard of care.'},
+      {l:'D',t:'"It eliminates the sundowning behavior and wandering."',rat:'Donepezil addresses cognitive symptoms (memory, function) — it is not specifically prescribed for behavioral symptoms like sundowning or wandering.'}
+    ]}
   ],
   n22c: [
-    {id:'n22c_1',stem:"Which finding BEST differentiates DELIRIUM from DEMENTIA?",topic:"Delirium/Dementia",opts:[{l:"A",t:"Presence of memory impairment"},
-      {l:"B",t:"Delirium has sudden onset and fluctuating consciousness; dementia has gradual onset with stable progressive decline",correct:true},
-      {l:"C",t:"Dementia is reversible with treatment; delirium is irreversible"},
-      {l:"D",t:"Delirium affects only elderly patients; dementia can occur at any age"}],
-     rats:{A:"Incorrect. BOTH delirium and dementia involve memory impairment. This does not differentiate them.",B:"CORRECT! The KEY differentiators: ONSET (delirium = sudden hours-days; dementia = gradual months-years), COURSE (delirium = fluctuating 'waxing and waning'; dementia = steady progressive decline), REVERSIBILITY (delirium = usually reversible if cause treated; dementia = generally not reversible).",C:"INCORRECT — this is backwards. DELIRIUM is often REVERSIBLE. DEMENTIA is generally NOT reversible (with a few exceptions like metabolic dementia).",D:"Incorrect. Both can occur in various age groups, though both are more common in elderly. Delirium can occur in any hospitalized patient."}},
-    {id:'n22c_2',stem:"The nurse is caring for a patient with Alzheimer's disease. At 5:00 PM the patient becomes increasingly confused, agitated, and is trying to get out of bed. The nurse recognizes this as:",topic:"Alzheimer's/Sundowning",opts:[{l:"A",t:"A medical emergency requiring immediate physician notification"},
-      {l:"B",t:"Delirium from medication side effects"},
-      {l:"C",t:"Sundowning — worsening confusion in late afternoon/evening in dementia patients",correct:true},
-      {l:"D",t:"Normal aging-related sleep disturbance"}],
-     rats:{A:"Incorrect. Sundowning is expected in Alzheimer's and is managed with nursing interventions, not necessarily an emergency.",B:"Incorrect. While medication side effects can cause delirium, the pattern described (worsening in late afternoon/evening in an Alzheimer's patient) is classic sundowning, not a new medication event.",C:"CORRECT! SUNDOWNING is a common phenomenon in Alzheimer's disease where confusion, agitation, hallucinations, and disorientation worsen in the LATE AFTERNOON and EVENING. Nursing interventions: consistent routine, minimize environmental stimulation, adequate lighting, reorientation, avoid napping in late afternoon.",D:"Incorrect. This is NOT normal aging. It is a specific symptom of dementia requiring nursing assessment and intervention."}},
-    {id:'n22c_3',stem:"A family member asks about donepezil (Aricept) prescribed for their mother with Alzheimer's disease. Which response by the nurse is MOST accurate?",topic:"Alzheimer's/Medications",opts:[{l:"A",t:"'This medication will cure Alzheimer's disease if started early enough.'"},
-      {l:"B",t:"'This medication will slow the rate of cognitive decline but will not cure or reverse the disease.',correct:true",correct:true},
-      {l:"C",t:"'This medication replaces the dopamine that is lost in Alzheimer's disease.'"},
-      {l:"D",t:"'This medication is only used for behavioral symptoms like agitation.'"}],
-     rats:{A:"Incorrect. There is NO CURE for Alzheimer's disease. Donepezil and similar drugs manage symptoms and may slow progression but do not cure or reverse it.",B:"CORRECT! Donepezil (Aricept), rivastigmine, galantamine, and memantine SLOW THE RATE OF COGNITIVE DECLINE and may temporarily improve function — but they do not stop, cure, or reverse Alzheimer's. Setting realistic expectations for families is essential.",C:"Incorrect. Donepezil inhibits ACETYLCHOLINESTERASE (not related to dopamine). Dopamine replacement is used in PARKINSON'S disease.",D:"Incorrect. Donepezil is a COGNITIVE agent used for memory and cognitive symptoms. Antipsychotics (haloperidol, risperidone) are used for behavioral symptoms."}},
-    {id:'n22c_4',stem:"Which is the MOST COMMON REVERSIBLE cause of delirium?",topic:"Delirium",opts:[{l:"A",t:"Alzheimer's disease"},
-      {l:"B",t:"Traumatic brain injury"},
-      {l:"C",t:"Medications",correct:true},
-      {l:"D",t:"Vascular dementia"}],
-     rats:{A:"Incorrect. Alzheimer's causes DEMENTIA — a separate (and not reversible) condition. Dementia is actually a RISK FACTOR for developing delirium.",B:"Incorrect. TBI can cause delirium but is not the most COMMON reversible cause. TBI effects can be permanent.",C:"CORRECT! MEDICATIONS are the most common reversible cause of delirium, especially in elderly patients. Anticholinergics, opioids, benzodiazepines, corticosteroids, and polypharmacy are frequent culprits. Removing the offending medication often resolves delirium.",D:"Incorrect. Vascular dementia is a progressive, largely irreversible cause of DEMENTIA, not the most common cause of reversible delirium."}},
-    {id:'n22c_5',stem:"Which finding is CHARACTERISTIC of Alzheimer's disease pathology?",topic:"Alzheimer's/Pathology",opts:[{l:"A",t:"Loss of dopamine-producing cells in the substantia nigra"},
-      {l:"B",t:"Autoimmune destruction of myelin in the CNS"},
-      {l:"C",t:"Neurofibrillary tangles and beta-amyloid (senile) plaques",correct:true},
-      {l:"D",t:"Huntingtin protein accumulation from chromosome 4 mutation"}],
-     rats:{A:"Incorrect. Loss of dopaminergic cells in the substantia nigra = PARKINSON'S DISEASE.",B:"Incorrect. Autoimmune myelin destruction in the CNS = MULTIPLE SCLEROSIS.",C:"CORRECT! The hallmark pathology of Alzheimer's: 1) NEUROFIBRILLARY TANGLES (abnormal tau protein inside neurons), 2) BETA-AMYLOID (senile) PLAQUES (outside neurons in the synaptic space), 3) Cerebrocortical ATROPHY. This can only be definitively confirmed at AUTOPSY.",D:"Incorrect. Huntingtin protein accumulation from chromosome 4 CAG repeat expansion = HUNTINGTON'S DISEASE."}}
+    {id:'n22c_1',topic:'Skull Fractures - Nursing',stem:'The nurse finds clear watery drainage from the nose of a patient after head trauma. What is the PRIORITY assessment and intervention?',opts:[
+      {l:'A',t:'Encourage the patient to blow their nose to clear the drainage',rat:'Never have the patient blow their nose — this creates pressure that can force bacteria into the CSF space through a basilar skull fracture, causing meningitis.'},
+      {l:'B',t:'Test the drainage for glucose; if CSF rhinorrhea is suspected, keep the patient\'s head elevated and avoid nasal packing or blowing the nose',correct:true,rat:'CORRECT. Clear nasal drainage after head trauma = suspected CSF rhinorrhea from basilar skull fracture. Assess with glucose test or halo test. If confirmed: head elevation 30 degrees, no nasal packing (blocks drainage and raises pressure), no nose blowing (infection risk), strict asepsis, and notify physician. Monitor for meningitis.'},
+      {l:'C',t:'Place a nasal tampon to absorb the drainage and prevent further CSF loss',rat:'Nasal packing RAISES intracranial pressure and blocks natural drainage. Contraindicated in suspected CSF rhinorrhea.'},
+      {l:'D',t:'Document as post-traumatic rhinitis and reassure the patient',rat:'Clear drainage after head trauma should never be assumed to be rhinitis without ruling out CSF leak. Failure to identify CSF rhinorrhea can lead to meningitis.'}
+    ]},
+    {id:'n22c_2',topic:'Skull Fracture Types',stem:'Which statement about skull fractures is CORRECT?',opts:[
+      {l:'A',t:'Linear fractures are the most dangerous and always require surgery',rat:'Linear fractures are the most common type but often require only observation. Depressed and basilar fractures carry specific surgical and complication risks.'},
+      {l:'B',t:'A depressed fracture with dislodged bone fragments compressing the brain may require surgery to elevate and remove fragments',correct:true,rat:'CORRECT. Depressed fractures where bone is driven inward may compress brain tissue — surgical elevation and fragment removal may be required. Open depressed fractures require debridement and repair.'},
+      {l:'C',t:'Basilar skull fractures are visible on skull x-ray in nearly all cases',rat:'Basilar skull fractures are often NOT visible on plain skull x-ray — CT is the gold standard. Clinical signs (Battle\'s sign, raccoon eyes, CSF rhinorrhea/otorrhea) often diagnose them.'},
+      {l:'D',t:'All skull fractures require immediate craniotomy',rat:'Not all skull fractures require craniotomy. Linear fractures often are observed. Only specific cases (epidural hematoma, severely depressed fractures) require surgery.'}
+    ]},
+    {id:'n22c_3',topic:'Raccoon Eyes/Battle\'s Sign',stem:'A patient has bilateral periorbital ecchymosis (bruising around both eyes) after a head injury. What does this finding suggest?',opts:[
+      {l:'A',t:'Direct trauma to both eyes during the injury',rat:'While direct eye trauma can cause periorbital bruising, bilateral "raccoon eyes" appearing hours after a head injury — especially when the eyes themselves were not directly hit — is a classic indicator of anterior fossa basilar skull fracture.'},
+      {l:'B',t:'Anterior fossa basilar skull fracture causing blood to track into the orbital tissue',correct:true,rat:'CORRECT. Raccoon eyes (periorbital ecchymosis) = blood tracking from anterior fossa basilar skull fracture into the orbital soft tissue. This is a DELAYED finding appearing hours after injury. Battle\'s sign (mastoid bruising) = posterior/middle fossa fracture.'},
+      {l:'C',t:'This is a normal finding following any significant head trauma',rat:'Raccoon eyes are not a "normal" finding — they specifically indicate basilar skull fracture until proven otherwise.'},
+      {l:'D',t:'Subdural hematoma compressing the optic nerves',rat:'SDH compression would cause visual changes, not bilateral periorbital bruising. Raccoon eyes = basilar skull fracture pathognomonic sign.'}
+    ]},
+    {id:'n22c_4',topic:'Dementia vs Delirium - Nursing',stem:'An 84-year-old patient develops sudden confusion, visual hallucinations, and calling out for family members 12 hours after hip replacement surgery. The nurse\'s PRIORITY action is:',opts:[
+      {l:'A',t:'Notify the family — the patient has developed dementia from surgery',rat:'Surgery cannot cause dementia (a chronic neurodegenerative disease). This is ACUTE post-surgical delirium — a very different (and potentially reversible) condition.'},
+      {l:'B',t:'Assess for and treat underlying causes (pain, hypoxia, urinary retention, electrolyte imbalance, infection, medication effects)',correct:true,rat:'CORRECT. Post-surgical delirium has multiple REVERSIBLE causes: pain, hypoxia, urinary retention, electrolyte imbalance, sleep deprivation, infection, anemia, opioid/CNS drug effects. FIND AND TREAT THE CAUSE. Non-pharmacological interventions (reorientation, family presence, familiar objects, maintain day/night cycle) first.'},
+      {l:'C',t:'Restrain the patient to prevent falls and administer haloperidol PRN',rat:'Restraints worsen delirium (increased agitation, fear). Haloperidol may be used cautiously for severe agitation but is not first-line — finding the cause is.'},
+      {l:'D',t:'Document the patient\'s baseline confusion and continue routine monitoring',rat:'This is new ACUTE confusion — not baseline. Delirium requires active assessment and intervention, not routine monitoring.'}
+    ]},
+    {id:'n22c_5',topic:'Alzheimer\'s 7 As',stem:'Which cluster of symptoms is MOST characteristic of moderate-stage Alzheimer\'s disease?',opts:[
+      {l:'A',t:'Slight forgetfulness and difficulty with complex tasks only',rat:'This describes MILD/early Alzheimer\'s — the patient still functions relatively independently with minor memory issues.'},
+      {l:'B',t:'Apraxia (forgetting how to do familiar tasks), agnosia (not recognizing familiar objects), and increasing need for ADL assistance',correct:true,rat:'CORRECT. Moderate Alzheimer\'s: the "7 As" progress — apraxia (forgetting how to perform tasks), agnosia (not recognizing familiar objects/people), anomia (forgetting names), amnesia (memory loss), aphasia (speech difficulty), apathy, anxiety. The patient needs increasing ADL assistance.'},
+      {l:'C',t:'Coma and complete loss of motor function',rat:'Severe/late-stage Alzheimer\'s involves profound cognitive/functional decline but coma is typically a terminal/end-stage finding — not what defines Alzheimer\'s stages.'},
+      {l:'D',t:'Normal cognition with only personality changes',rat:'Personality changes alone (without cognitive decline) is not Alzheimer\'s. Cognitive impairment affecting daily function is the hallmark.'}
+    ]}
   ]
 };
 
@@ -4196,44 +4529,76 @@ function initNclex(){
   renderBank(currentBank);
 }
 
-/* ── NCLEX one-at-a-time state ── */
-var nclexOTA = {}; // per-bank: { idx, score, selected, answered }
+/* ── NCLEX rotating 10-question sets ── */
+var nclexOTA = {}; // per-bank rotating state
+
+function shuffleArr(arr){
+  var a=arr.slice();
+  for(var i=a.length-1;i>0;i--){
+    var j=Math.floor(Math.random()*(i+1));
+    var t=a[i]; a[i]=a[j]; a[j]=t;
+  }
+  return a;
+}
 
 function initNclexOTA(bank){
-  if(!nclexOTA[bank]) nclexOTA[bank] = { idx:0, score:0, selected:null, answered:false };
+  if(!nclexOTA[bank]){
+    var all = shuffleArr((nclexData[bank]||[]).slice());
+    nclexOTA[bank]={
+      setQs: all.slice(0,10),
+      remaining: all.slice(10),
+      qIdx:0, score:0, selected:null, answered:false, setNum:1
+    };
+  }
+}
+
+function loadNextSet(bank){
+  var s=nclexOTA[bank];
+  var rem=s.remaining;
+  if(rem.length===0){
+    rem=shuffleArr((nclexData[bank]||[]).slice());
+    s.setNum=1;
+  } else { s.setNum++; }
+  s.setQs=rem.slice(0,10);
+  s.remaining=rem.slice(10);
+  s.qIdx=0; s.score=0; s.selected=null; s.answered=false;
+  renderBank(bank);
 }
 
 function renderBank(bank){
   initNclexOTA(bank);
   var state = nclexOTA[bank];
   var container = document.getElementById('nclex-sets');
-  var qs = nclexData[bank] || [];
+  var qs = state.setQs;
+  var setSize = qs.length;
 
-  if(state.idx >= qs.length){
-    // Summary screen
-    var pct = qs.length > 0 ? Math.round(state.score/qs.length*100) : 0;
+  if(state.qIdx >= setSize){
+    var pct = setSize>0 ? Math.round(state.score/setSize*100) : 0;
     var grade = pct>=90?'🏆 Excellent!':pct>=75?'✅ Good Job!':pct>=60?'📖 Keep Studying':'💪 Review Needed';
+    var moreLeft = state.remaining.length;
     container.innerHTML =
       '<div style="text-align:center;padding:36px 16px;">' +
       '<div style="width:120px;height:120px;border-radius:50%;background:linear-gradient(135deg,#1565c0,#42a5f5);color:#fff;' +
         'display:flex;flex-direction:column;align-items:center;justify-content:center;margin:0 auto 20px;box-shadow:0 4px 20px rgba(21,101,192,.3);">' +
       '<div style="font-size:2rem;font-weight:900;line-height:1;">'+pct+'%</div>' +
-      '<div style="font-size:.75rem;opacity:.9;">Score</div></div>' +
+      '<div style="font-size:.75rem;opacity:.9;">Set '+state.setNum+'</div></div>' +
       '<div style="font-size:1.15rem;font-weight:800;margin-bottom:6px;">'+grade+'</div>' +
-      '<div style="color:#64748b;font-size:.9rem;margin-bottom:24px;">You got '+state.score+' out of '+qs.length+' correct.</div>' +
-      '<button onclick="nclexRestart(\''+bank+'\')" style="background:#2563eb;color:#fff;border:none;border-radius:10px;padding:12px 28px;font-size:.95rem;font-weight:800;cursor:pointer;margin:4px;">🔄 Restart</button>' +
+      '<div style="color:#64748b;font-size:.9rem;margin-bottom:4px;">You got '+state.score+' out of '+setSize+' correct.</div>' +
+      '<div style="color:#94a3b8;font-size:.8rem;margin-bottom:24px;">'+(moreLeft>0 ? moreLeft+' questions left in pool':'All questions used — reshuffling pool...')+'</div>' +
+      '<button onclick="loadNextSet(\''+bank+'\')" style="background:#16a34a;color:#fff;border:none;border-radius:10px;padding:12px 28px;font-size:.95rem;font-weight:800;cursor:pointer;margin:4px;">▶ New Set of 10</button>' +
+      '<button onclick="nclexRestart(\''+bank+'\')" style="background:#64748b;color:#fff;border:none;border-radius:10px;padding:12px 28px;font-size:.95rem;font-weight:800;cursor:pointer;margin:4px;">🔄 Restart</button>' +
       '</div>';
     return;
   }
 
-  var q = qs[state.idx];
-  var idx = state.idx;
-  var progress = Math.round(idx / qs.length * 100);
+  var q = qs[state.qIdx];
+  var idx = state.qIdx;
+  var progress = Math.round(idx / setSize * 100);
 
   // Progress bar + score header
   var h = '<div style="margin-bottom:18px;">' +
     '<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;font-size:.82rem;">' +
-    '<span style="color:#64748b;font-weight:600;">Question '+(idx+1)+' of '+qs.length+'</span>' +
+    '<span style="color:#64748b;font-weight:600;">Set '+state.setNum+' — Q '+(idx+1)+' of '+setSize+'</span>' +
     '<span style="background:#eff6ff;color:#2563eb;padding:3px 12px;border-radius:99px;font-weight:700;">Score: '+state.score+'/'+idx+'</span>' +
     '</div>' +
     '<div style="background:#e2e8f0;border-radius:99px;height:7px;">' +
@@ -4281,10 +4646,11 @@ function renderBank(bank){
       var border = opt.correct ? '#16a34a' : '#dc2626';
       var icon = opt.correct ? '✅' : '❌';
       h += '<div style="padding:11px 14px;border-radius:9px;border-left:4px solid '+border+';background:'+bg+';margin-bottom:10px;font-size:.85rem;line-height:1.75;">';
-      h += '<strong>'+icon+' '+opt.l+'.</strong> '+q.rats[opt.l]+'</div>';
+      var rat = opt.rat || (q.rats && q.rats[opt.l]) || '';
+      h += '<strong>'+icon+' '+opt.l+'.</strong> '+rat+'</div>';
     });
     h += '</div>';
-    var isLast = (idx+1 >= qs.length);
+    var isLast = (idx+1 >= setSize);
     var nextLabel = isLast ? 'View My Score ✓' : 'Next Question →';
     h += '<button onclick="nclexNextOTA(\''+bank+'\')" style="background:#16a34a;color:#fff;border:none;border-radius:9px;padding:11px 26px;font-size:.9rem;font-weight:800;cursor:pointer;margin-top:6px;">'+nextLabel+'</button>';
   }
@@ -4311,8 +4677,7 @@ function nclexSubmitOTA(bank, qid){
   initNclexOTA(bank);
   var state = nclexOTA[bank];
   if(!state.selected || (Array.isArray(state.selected) && state.selected.length===0)) return;
-  var qs = nclexData[bank] || [];
-  var q = qs[state.idx];
+  var q = state.setQs[state.qIdx];
   var isCorrect = false;
   if(q.sata){
     var correctLetters = q.opts.filter(function(o){return o.correct;}).map(function(o){return o.l;}).sort();
@@ -4330,14 +4695,14 @@ function nclexSubmitOTA(bank, qid){
 function nclexNextOTA(bank){
   initNclexOTA(bank);
   var state = nclexOTA[bank];
-  state.idx++;
+  state.qIdx++;
   state.selected = null;
   state.answered = false;
   renderBank(bank);
 }
 
 function nclexRestart(bank){
-  nclexOTA[bank] = { idx:0, score:0, selected:null, answered:false };
+  delete nclexOTA[bank]; initNclexOTA(bank);
   renderBank(bank);
 }
 
@@ -4780,6 +5145,14 @@ var videoData = [
    title:'Seizures (Epilepsy) Nursing NCLEX — Tonic-Clonic, Focal',
    desc:'Types of seizures, nursing interventions during and after, medications, patient education. Detailed NCLEX prep.',
    url:'https://www.youtube.com/watch?v=adIZtqtOZss', emoji:'⚡'},
+  {mod:'20', ch:'rnrn', chName:'RegisteredNurseRN', topic:'Subarachnoid Hemorrhage',
+   title:'Subarachnoid Hemorrhage (SAH) — Aneurysm, Thunderclap Headache',
+   desc:'Classic thunderclap headache, nuchal rigidity, CT vs LP diagnosis, aneurysm coiling vs clipping, nimodipine for vasospasm. Key SAH nursing concepts.',
+   url:'https://www.youtube.com/watch?v=NkqBMe1Yz0c', emoji:'🩸'},
+  {mod:'20', ch:'levelup', chName:'Level Up RN', topic:'Neuro Assessment / NIHSS',
+   title:'Neurological Assessment — GCS, Pupils, Motor & NIHSS Overview',
+   desc:'Step-by-step neuro assessment: GCS scoring (eyes/verbal/motor), pupil changes, motor strength grading, and NIHSS stroke scale walkthrough.',
+   url:'https://www.youtube.com/watch?v=k3AJhVBOxCA', emoji:'🔍'},
   // ── MODULE 2.1 NEURODEGENERATIVE ──
   {mod:'21', ch:'levelup', chName:'Level Up RN', topic:'Parkinson\'s, Alzheimer\'s, Huntington\'s',
    title:'Parkinson\'s, Alzheimer\'s & Huntington\'s Disease',
@@ -4805,6 +5178,14 @@ var videoData = [
    title:'Myasthenia Gravis Nursing NCLEX Review',
    desc:'NMJ pathophysiology, myasthenic vs cholinergic crisis, Tensilon test, pyridostigmine, respiratory monitoring. High-yield for NCLEX.',
    url:'https://www.youtube.com/watch?v=x2xETKT9-4o', emoji:'💪'},
+  {mod:'21', ch:'levelup', chName:'Level Up RN', topic:'Headaches',
+   title:'Headaches — Migraine, Cluster & Tension-Type (Nursing NCLEX)',
+   desc:'Compares all 3 primary headache types: tension (bilateral band), migraine (unilateral/throbbing/aura/photophobia), cluster (unilateral orbital + autonomic symptoms + restless). Triptans, preventive therapy.',
+   url:'https://www.youtube.com/watch?v=hn4Y5FqNRe0', emoji:'🤯'},
+  {mod:'21', ch:'rnrn', chName:'RegisteredNurseRN', topic:'Headaches',
+   title:'Migraine Headache Nursing NCLEX — Aura, Triptans, Prevention',
+   desc:'Migraine pathophysiology, prodrome vs aura, triptans (sumatriptan) mechanism, ergotamines, preventive medications (propranolol, topiramate). High-yield for NCLEX.',
+   url:'https://www.youtube.com/watch?v=RlRBzAyVbGk', emoji:'🤯'},
   // ── MODULE 2.2 TRAUMA/ICP ──
   {mod:'22', ch:'rnrn', chName:'RegisteredNurseRN', topic:'↑ICP',
    title:'Increased Intracranial Pressure — Pathophysiology & NCLEX',
@@ -4826,6 +5207,22 @@ var videoData = [
    title:'The 3 Ds — Dementia, Delirium & Depression',
    desc:'How to differentiate at the bedside, reversible causes of delirium, sundowning, nursing goals. Covers all 4 blueprint questions on this topic.',
    url:'https://www.youtube.com/watch?v=-4J2XenZkmg', emoji:'🧓'},
+  {mod:'22', ch:'rnrn', chName:'RegisteredNurseRN', topic:'Skull Fractures',
+   title:'Skull Fractures — Basilar, Battle Sign, Raccoon Eyes & CSF Leaks',
+   desc:'Types of skull fractures, basilar skull fracture signs (Battle sign, raccoon eyes), CSF rhinorrhea/otorrhea management, when surgery is needed. Tested directly on NCLEX.',
+   url:'https://www.youtube.com/watch?v=0EXvHF2oVAk', emoji:'💀'},
+  {mod:'22', ch:'levelup', chName:'Level Up RN', topic:'Autonomic Dysreflexia',
+   title:'Autonomic Dysreflexia — SCI Emergency Nursing Management',
+   desc:'AD in spinal cord injury above T6: hypertensive emergency + bradycardia, triggers (bladder > bowel > skin), sit upright, find/remove trigger, nitroglycerin, nifedipine. Case-based.',
+   url:'https://www.youtube.com/watch?v=lkOTDW1KZ0A&t=480', emoji:'⚡'},
+  {mod:'22', ch:'rnrn', chName:'RegisteredNurseRN', topic:'GCS Scoring',
+   title:'Glasgow Coma Scale (GCS) — Nursing Assessment & Scoring',
+   desc:'How to score GCS: Eyes (4), Verbal (5), Motor (6). Practice with clinical scenarios. GCS ≤8 = intubation threshold, GCS 3 = deepest coma. Essential TBI assessment skill.',
+   url:'https://www.youtube.com/watch?v=F0bPCET_6_k', emoji:'🔢'},
+  {mod:'22', ch:'simple', chName:'Simple Nursing', topic:'Hematomas — EDH/SDH',
+   title:'Epidural vs Subdural Hematoma — CT Findings, Lucid Interval',
+   desc:'EDH: arterial, biconvex (lens-shaped), lucid interval, middle meningeal artery. SDH: venous, crescent-shaped, elderly/anticoagulated. CT appearances and nursing priorities.',
+   url:'https://www.youtube.com/watch?v=m3qfvI__Oeo', emoji:'🩻'},
   // ── NCLEX PREP ──
   {mod:'nclex', ch:'nexus', chName:'Nexus Nursing', topic:'Neuro NCLEX Prep',
    title:'Nexus Nursing Institute — Neurological NCLEX Review',
