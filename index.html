@@ -5551,6 +5551,7 @@ window.switchStroke = window.showStroke;
     <button class="case-sel-btn active" style="background:var(--c20);border-color:var(--c20);" onclick="selectCase(0,this)">🫀 Case 1: Stroke</button>
     <button class="case-sel-btn" onclick="selectCase(1,this)">🧠 Case 2: ↑ICP / TBI</button>
     <button class="case-sel-btn" onclick="selectCase(2,this)">⚡ Case 3: GBS</button>
+    <button class="case-sel-btn" onclick="selectCase(3,this)">⚠️ Case 4: Autonomic Dysreflexia</button>
   </div>
 
   <div id="caseDisplay"></div>
@@ -5695,7 +5696,78 @@ Every intervention either <strong>↓ICP</strong> (mannitol, HOB, hyperventilati
       }
     ]
   }
-];
+  ,
+  {
+    title: "Mr. White, 17 years old",
+    badge: "MODULE 2.2 — AUTONOMIC DYSREFLEXIA / SCI",
+    color: "#7c3aed",
+    colorLight: "#f5f3ff",
+    colorDark: "#5b21b6",
+    scenarioBg: "#f5f3ff",
+    answerBg: "#ede9fe",
+    answerBorder: "#7c3aed",
+    scenario: `Mr. White is a 17-year-old male admitted 3 weeks ago after a snowboarding accident. He sustained a complete spinal cord injury at T7, stabilized with rods and screws. He is being prepared for discharge home in 3 days. The CNA reports that Mr. White's bath is complete and there was no BM or incontinence. However, his BP is now 189/100 mmHg and HR is 56 bpm. You immediately go to assess him.`,
+    steps: [
+      {
+        phase: "Recognize Cues",
+        question: "You walk into Mr. White's room. His BP is 189/100, HR 56. He says he feels anxious and his head is pounding. What cues are MOST concerning and what condition should you immediately suspect?",
+        answer: `<strong>Most concerning cues:</strong>
+<ul>
+<li><strong>Hypertension (189/100)</strong> — severe, sudden-onset = red flag</li>
+<li><strong>Bradycardia (HR 56)</strong> — reflex bradycardia from baroreceptor response</li>
+<li><strong>Headache + anxiety</strong> — classic subjective symptoms</li>
+<li><strong>SCI at T7</strong> — at or above T6 = autonomic dysreflexia (AD) risk</li>
+</ul>
+<strong>Suspected condition: Autonomic Dysreflexia (AD)</strong> — a life-threatening hypertensive emergency in SCI patients with injuries at T6 or above. The sympathetic nervous system fires excessively in response to a noxious stimulus below the level of injury, and the normal inhibitory signals cannot get past the cord injury to dampen the response.`
+      },
+      {
+        phase: "Analyze Cues",
+        question: "What are the common TRIGGERS of autonomic dysreflexia you need to systematically assess for? List at least 4 categories of triggers.",
+        answer: `<strong>Common AD Triggers (assess systematically — head to toe, below level of injury):</strong>
+<ul>
+<li>🚽 <strong>Bladder:</strong> Urinary retention, kinked/blocked catheter, UTI — MOST COMMON trigger</li>
+<li>💩 <strong>Bowel:</strong> Constipation, fecal impaction, rectal stimulation</li>
+<li>🩹 <strong>Skin:</strong> Pressure ulcers, tight clothing, wrinkled sheets, objects left under patient, ingrown toenail</li>
+<li>🌡️ <strong>Infection/Inflammation:</strong> UTI, skin infection, fracture below level of injury</li>
+<li>👕 <strong>Other:</strong> Painful stimuli, menstruation, sexual activity, invasive procedures</li>
+</ul>
+<strong>Assessment order:</strong> Check bladder first (most common) → bowel → skin/positioning.`
+      },
+      {
+        phase: "Prioritize & Act",
+        question: "You palpate his abdomen — soft, non-distended. Bladder not distended. Temperature is 103.6°F. You turn Mr. White and find a washcloth left under his back. What are your IMMEDIATE nursing actions in priority order?",
+        answer: `<strong>Priority Nursing Actions for Autonomic Dysreflexia:</strong>
+<ol>
+<li>🚨 <strong>Sit patient UPRIGHT</strong> immediately — head elevated, legs dependent. This lowers BP by promoting orthostatic drop and venous pooling in legs.</li>
+<li>🔍 <strong>REMOVE THE TRIGGER</strong> — remove the washcloth, straighten sheets, reposition. Remove any constricting clothing/devices below the level of injury.</li>
+<li>📊 <strong>Monitor BP every 2–5 minutes</strong> — this is a hypertensive emergency.</li>
+<li>🌡️ <strong>Passive cooling</strong> — cool cloths to forehead, ice packs to axillae (for hyperthermia).</li>
+<li>💊 <strong>Administer medications as ordered:</strong>
+  <ul>
+  <li>Nitroglycerin paste (apply ABOVE the level of SCI, e.g., chest)</li>
+  <li>Nifedipine (calcium channel blocker) — chewable/sublingual for rapid effect</li>
+  </ul>
+</li>
+<li>📞 <strong>Notify provider STAT</strong> if BP does not drop within 5 minutes of trigger removal.</li>
+</ol>
+<div style="background:#fde8e6;border-radius:8px;padding:8px 10px;margin-top:8px;font-size:.83rem;"><strong>⚠️ Danger:</strong> Untreated AD can cause stroke, seizure, myocardial infarction, or death from hypertensive crisis.</div>`
+      },
+      {
+        phase: "Evaluate & Teach",
+        question: "After removing the washcloth and giving nitroglycerin, Mr. White's BP decreases to 142/90 and HR is 70 in 5 minutes. He is preparing for discharge in 3 days. What MUST you teach Mr. White and his family before discharge? List the 5 key teaching points.",
+        answer: `<strong>Discharge Education — Autonomic Dysreflexia:</strong>
+<ol>
+<li>🚨 <strong>Recognize the symptoms:</strong> Sudden severe headache, elevated BP, sweating/flushing above injury, pallor below injury, anxiety, nasal congestion, bradycardia.</li>
+<li>🔍 <strong>Find and remove the trigger immediately:</strong> Check bladder first (catheterize if needed), then bowel (disimpact with lidocaine jelly), then skin/positioning.</li>
+<li>⬆️ <strong>Sit upright immediately</strong> — gravity helps lower BP while searching for trigger.</li>
+<li>💊 <strong>Use emergency medications:</strong> Nitroglycerin paste (above SCI level) or chewable nifedipine as prescribed. Family must know where meds are stored and how to administer.</li>
+<li>📞 <strong>When to call 911:</strong> If symptoms do not resolve within 10 minutes of trigger removal — this is a stroke-level emergency.</li>
+</ol>
+<strong>Additional discharge topics:</strong> prevention of pressure ulcers (turning q2h, padded surfaces), DVT prophylaxis (compression, hydration), bowel/bladder routine, ROM exercises, signs of pneumonia, and vital sign monitoring.`
+      }
+    ]
+  }
+]
 
 let caseState = { idx: 0, step: 0, phase: 'question' };
 let caseRecog = null;
@@ -6225,6 +6297,77 @@ function showNMJPart(part) {
       <strong>Pronator Drift Test:</strong> Have patient hold both arms out, palms up, eyes closed for 10 seconds. Downward drift + pronation of one arm = contralateral cortical lesion (upper motor neuron sign — common in stroke).
     </div>
   </div>
+
+  <!-- Dermatome Map for SCI Assessment -->
+  <div class="card" style="margin-top:0;">
+    <h3 style="margin-bottom:6px;color:#7c3aed;">🗺️ Sensory Dermatome Map — SCI Level Assessment</h3>
+    <p style="font-size:.83rem;color:var(--muted);margin-bottom:14px;">Used to determine the <strong>neurological level of a spinal cord injury</strong>. The nurse uses pinprick (sharp/dull) and light touch to find the most caudal (lowest) dermatome with intact sensation. This determines the sensory level of injury.</p>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:14px;margin-bottom:16px;">
+
+      <!-- Cervical -->
+      <div style="background:#f0f4ff;border-radius:10px;padding:12px;border-left:4px solid #3b82f6;">
+        <div style="font-weight:800;color:#1d4ed8;font-size:.9rem;margin-bottom:8px;">🔵 Cervical (C1–C8)</div>
+        <table style="width:100%;font-size:.8rem;border-collapse:collapse;">
+          <tr style="background:#dbeafe;"><td style="padding:4px 7px;font-weight:700;">C3–C5</td><td style="padding:4px 7px;"><strong style="color:#dc2626;">Phrenic nerve → Diaphragm</strong><br>Injury here = VENTILATOR DEPENDENT</td></tr>
+          <tr><td style="padding:4px 7px;font-weight:700;">C5–C6</td><td style="padding:4px 7px;">Shoulder abduction, biceps, lateral forearm</td></tr>
+          <tr style="background:#dbeafe;"><td style="padding:4px 7px;font-weight:700;">C7</td><td style="padding:4px 7px;">Triceps, wrist extensors, middle finger</td></tr>
+          <tr><td style="padding:4px 7px;font-weight:700;">C8–T1</td><td style="padding:4px 7px;">Intrinsic hand muscles, finger flexors, pinky</td></tr>
+        </table>
+      </div>
+
+      <!-- Thoracic -->
+      <div style="background:#fff7ed;border-radius:10px;padding:12px;border-left:4px solid #f59e0b;">
+        <div style="font-weight:800;color:#b45309;font-size:.9rem;margin-bottom:8px;">🟡 Thoracic (T1–T12)</div>
+        <table style="width:100%;font-size:.8rem;border-collapse:collapse;">
+          <tr style="background:#fef3c7;"><td style="padding:4px 7px;font-weight:700;">T4</td><td style="padding:4px 7px;">Nipple line</td></tr>
+          <tr><td style="padding:4px 7px;font-weight:700;">T6</td><td style="padding:4px 7px;"><strong style="color:#dc2626;">Autonomic dysreflexia risk if SCI ≥ T6</strong></td></tr>
+          <tr style="background:#fef3c7;"><td style="padding:4px 7px;font-weight:700;">T10</td><td style="padding:4px 7px;">Umbilicus (belly button) level</td></tr>
+          <tr><td style="padding:4px 7px;font-weight:700;">T12</td><td style="padding:4px 7px;">Inguinal ligament / groin</td></tr>
+        </table>
+      </div>
+
+      <!-- Lumbar -->
+      <div style="background:#f0fdf4;border-radius:10px;padding:12px;border-left:4px solid #10b981;">
+        <div style="font-weight:800;color:#065f46;font-size:.9rem;margin-bottom:8px;">🟢 Lumbar (L1–L5)</div>
+        <table style="width:100%;font-size:.8rem;border-collapse:collapse;">
+          <tr style="background:#d1fae5;"><td style="padding:4px 7px;font-weight:700;">L3–L4</td><td style="padding:4px 7px;">Quadriceps, knee jerk reflex, anterior thigh/knee</td></tr>
+          <tr><td style="padding:4px 7px;font-weight:700;">L4</td><td style="padding:4px 7px;">Medial foot, ankle dorsiflexion (tibialis anterior)</td></tr>
+          <tr style="background:#d1fae5;"><td style="padding:4px 7px;font-weight:700;">L5</td><td style="padding:4px 7px;">Dorsal foot / big toe dorsiflexion — <em>foot drop if injured</em></td></tr>
+        </table>
+      </div>
+
+      <!-- Sacral -->
+      <div style="background:#fdf4ff;border-radius:10px;padding:12px;border-left:4px solid #8b5cf6;">
+        <div style="font-weight:800;color:#6d28d9;font-size:.9rem;margin-bottom:8px;">🟣 Sacral (S1–S5)</div>
+        <table style="width:100%;font-size:.8rem;border-collapse:collapse;">
+          <tr style="background:#ede9fe;"><td style="padding:4px 7px;font-weight:700;">S1</td><td style="padding:4px 7px;">Plantar foot / little toe, ankle jerk reflex, plantar flexion</td></tr>
+          <tr><td style="padding:4px 7px;font-weight:700;">S2–S4</td><td style="padding:4px 7px;"><strong style="color:#dc2626;">Bladder, bowel, sexual function</strong> — injury here = neurogenic bladder/bowel</td></tr>
+          <tr style="background:#ede9fe;"><td style="padding:4px 7px;font-weight:700;">S4–S5</td><td style="padding:4px 7px;">Perianal sensation — loss = hallmark of cauda equina syndrome</td></tr>
+        </table>
+      </div>
+    </div>
+
+    <!-- Key Clinical Landmarks -->
+    <div style="background:#1a2e45;border-radius:10px;padding:13px 16px;margin-bottom:12px;">
+      <div style="color:#f59e0b;font-weight:800;font-size:.82rem;margin-bottom:8px;">⚡ HIGH-YIELD DERMATOME LANDMARKS FOR NCLEX</div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:8px;">
+        <div style="background:rgba(255,255,255,.07);border-radius:8px;padding:8px 10px;font-size:.79rem;color:#e2e8f0;"><span style="color:#f59e0b;font-weight:700;">C3–C5</span> — "C3, 4, 5 keeps the diaphragm alive"</div>
+        <div style="background:rgba(255,255,255,.07);border-radius:8px;padding:8px 10px;font-size:.79rem;color:#e2e8f0;"><span style="color:#f59e0b;font-weight:700;">T4</span> — Nipple line (easy landmark)</div>
+        <div style="background:rgba(255,255,255,.07);border-radius:8px;padding:8px 10px;font-size:.79rem;color:#e2e8f0;"><span style="color:#f59e0b;font-weight:700;">T6</span> — Autonomic dysreflexia threshold</div>
+        <div style="background:rgba(255,255,255,.07);border-radius:8px;padding:8px 10px;font-size:.79rem;color:#e2e8f0;"><span style="color:#f59e0b;font-weight:700;">T10</span> — Umbilicus landmark</div>
+        <div style="background:rgba(255,255,255,.07);border-radius:8px;padding:8px 10px;font-size:.79rem;color:#e2e8f0;"><span style="color:#f59e0b;font-weight:700;">L4</span> — Knee jerk (patellar) reflex</div>
+        <div style="background:rgba(255,255,255,.07);border-radius:8px;padding:8px 10px;font-size:.79rem;color:#e2e8f0;"><span style="color:#f59e0b;font-weight:700;">S1</span> — Ankle jerk (Achilles) reflex</div>
+        <div style="background:rgba(255,255,255,.07);border-radius:8px;padding:8px 10px;font-size:.79rem;color:#e2e8f0;"><span style="color:#f59e0b;font-weight:700;">S2–S4</span> — Bladder/bowel/sexual control</div>
+        <div style="background:rgba(255,255,255,.07);border-radius:8px;padding:8px 10px;font-size:.79rem;color:#e2e8f0;"><span style="color:#f59e0b;font-weight:700;">ASIA A</span> — Complete SCI; no motor/sensory below level</div>
+      </div>
+    </div>
+
+    <div style="background:#fef9c3;border-radius:8px;padding:10px 12px;font-size:.82rem;color:#713f12;">
+      <strong>📌 Assessment Tip:</strong> In a complete SCI, the sensory level is determined by pinprick — find the <em>lowest dermatome with normal (intact) sensation</em>. Scoring: 0 = absent, 1 = impaired, 2 = intact. The injury level is documented as the <strong>highest level with normal function</strong> bilaterally.
+    </div>
+  </div>
+
 </div>
 
 </body>
