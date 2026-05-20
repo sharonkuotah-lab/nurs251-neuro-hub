@@ -3431,6 +3431,238 @@ tr:last-child td{border-bottom:none;}
 <div id="tab-teachback" class="panel" style="padding:16px">
   <div style="max-width:860px;margin:0 auto">
 
+    <!-- ═══ 15-MINUTE EXAM CRAM ═══ -->
+    <div class="card" style="border:2px solid #3b82f6;margin-bottom:0">
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:6px;flex-wrap:wrap">
+        <span style="font-size:1.5rem">🎧</span>
+        <div>
+          <h3 style="margin:0;color:#1e293b">15-Minute Exam Cram</h3>
+          <div style="font-size:.8rem;color:#64748b;margin-top:2px">Read aloud on your drive to school &mdash; covers every blueprint topic</div>
+        </div>
+        <div id="cramTimerDisplay" style="margin-left:auto;background:#eff6ff;color:#2563eb;padding:4px 14px;border-radius:99px;font-size:.85rem;font-weight:800;font-family:monospace">0:00 / ~15:00</div>
+      </div>
+
+      <!-- TTS controls -->
+      <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px">
+        <button onclick="cramPlay()" id="cramPlayBtn"
+          style="background:#2563eb;color:#fff;border:none;border-radius:8px;padding:9px 20px;font-weight:700;cursor:pointer;font-size:.9rem;">
+          &#9654; Read Aloud
+        </button>
+        <button onclick="cramPause()" id="cramPauseBtn"
+          style="background:#f1f5f9;color:#475569;border:none;border-radius:8px;padding:9px 18px;font-weight:700;cursor:pointer;font-size:.9rem;">
+          &#9646;&#9646; Pause
+        </button>
+        <button onclick="cramStop()"
+          style="background:#f1f5f9;color:#475569;border:none;border-radius:8px;padding:9px 18px;font-weight:700;cursor:pointer;font-size:.9rem;">
+          &#9632; Stop
+        </button>
+        <div style="display:flex;align-items:center;gap:6px;margin-left:4px">
+          <span style="font-size:.8rem;color:#94a3b8">Speed:</span>
+          <select id="cramRate" onchange="cramSetRate()" style="padding:5px 8px;border-radius:6px;border:1px solid #e2e8f0;font-size:.85rem;cursor:pointer">
+            <option value="0.85">Slow</option>
+            <option value="0.95" selected>Normal</option>
+            <option value="1.1">Fast</option>
+            <option value="1.25">Very Fast</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Progress bar -->
+      <div style="background:#e2e8f0;border-radius:99px;height:6px;margin-bottom:16px">
+        <div id="cramProgressBar" style="background:linear-gradient(90deg,#2563eb,#60a5fa);height:6px;border-radius:99px;width:0%;transition:.4s"></div>
+      </div>
+
+      <!-- Section jump buttons -->
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:16px;font-size:.78rem">
+        <button onclick="cramJump(0)" class="cram-jump">&#128194; Intro</button>
+        <button onclick="cramJump(1)" class="cram-jump">&#128197; 2.0 Stroke</button>
+        <button onclick="cramJump(2)" class="cram-jump">&#9889; 2.1 Seizures</button>
+        <button onclick="cramJump(3)" class="cram-jump">&#129327; Headaches</button>
+        <button onclick="cramJump(4)" class="cram-jump">&#128138; Neurodegen.</button>
+        <button onclick="cramJump(5)" class="cram-jump">&#129504; 2.2 TBI/ICP</button>
+        <button onclick="cramJump(6)" class="cram-jump">&#129460; SCI</button>
+        <button onclick="cramJump(7)" class="cram-jump">&#129432; Dementia/Delirium</button>
+      </div>
+
+      <!-- The script -->
+      <div id="cramScriptBox" style="font-size:.88rem;line-height:1.9;color:#334155;max-height:520px;overflow-y:auto;padding-right:6px">
+
+        <div class="cram-section" data-section="0">
+          <div class="cram-section-header">&#127941; INTRO</div>
+          <p class="cram-para">Hey Kenna. This is your 15-minute neuro exam cram. You are going to do great. We are covering Stroke, Seizures, Headaches, all the Neurodegenerative disorders, Traumatic Brain Injury, Intracranial Pressure, Skull Fractures, Spinal Cord Injury, and Dementia versus Delirium. That is the entire exam. Let&rsquo;s lock it in.</p>
+        </div>
+
+        <div class="cram-section" data-section="1">
+          <div class="cram-section-header">&#128325; UNIT 2.0 &mdash; STROKE (8 exam questions)</div>
+          <p class="cram-para">The single most important concept in stroke is decussation. The brain crosses over at the medulla. This means a LEFT hemisphere stroke causes RIGHT-sided deficits, and a RIGHT hemisphere stroke causes LEFT-sided deficits. It always crosses. Never forget this.</p>
+          <p class="cram-para">There are two major types of stroke. Ischemic, which is caused by a clot blocking blood flow, and Hemorrhagic, which is caused by a blood vessel bursting. The vast majority of strokes are ischemic. Within ischemic strokes, a thrombotic stroke happens when a clot forms directly inside a blood vessel, usually due to atherosclerosis. An embolic stroke happens when a clot travels from somewhere else, most commonly the heart in patients with atrial fibrillation.</p>
+          <p class="cram-para">The ischemic penumbra is the ring of still-viable neurons surrounding the dead core of the stroke. These neurons CAN be saved if blood flow is restored quickly. That is the entire reason why time equals brain. Every minute of delay kills more penumbra cells.</p>
+          <p class="cram-para">Use BEFAST to recognize stroke: B is for sudden Balance loss. E is for Eyes, meaning sudden vision changes. F is for Face drooping. A is for Arm weakness. S is for Speech difficulty. T is for Time, meaning call 911 immediately. This is the stroke recognition tool nurses and the public both use.</p>
+          <p class="cram-para">Left hemisphere stroke: right-sided hemiparesis, right facial droop, and aphasia. Speech centers, both Broca&rsquo;s area for expression and Wernicke&rsquo;s area for comprehension, live in the left hemisphere for most people. Broca&rsquo;s aphasia means the patient understands you but cannot get the words out. Wernicke&rsquo;s aphasia means the patient speaks fluently but it makes no sense. Right hemisphere stroke: left-sided weakness, left facial droop, but speech is usually spared.</p>
+          <p class="cram-para">The most commonly affected artery in stroke is the Middle Cerebral Artery, the MCA. Cerebral aneurysms most commonly form at the Circle of Willis, specifically at arterial branch points.</p>
+          <p class="cram-para">Treatment for ischemic stroke is tPA, tissue plasminogen activator. The window is 4.5 hours from when symptoms started. Before giving tPA, you MUST get a non-contrast CT scan to rule out hemorrhage, because tPA in a hemorrhagic stroke would be fatal. Contraindications to tPA include: INR greater than 1.7, meaning the patient is anticoagulated, recent surgery or active bleeding, unknown symptom onset time, and severely elevated blood pressure. After tPA, monitor BP every 15 minutes, hold aspirin for 24 hours, and watch for hemorrhagic transformation, which presents as new severe headache, dropping level of consciousness, or sudden neurological worsening.</p>
+          <p class="cram-para">A TIA, transient ischemic attack, has the exact same symptoms as a stroke but they fully resolve within 24 hours, usually within one hour. A TIA is a serious warning sign. Up to 15 percent of TIA patients have a full stroke within 90 days, with the highest risk in the first 48 hours. Never dismiss a TIA as nothing.</p>
+        </div>
+
+        <div class="cram-section" data-section="2">
+          <div class="cram-section-header">&#9889; UNIT 2.1 &mdash; SEIZURES (8 exam questions)</div>
+          <p class="cram-para">A seizure is abnormal, excessive electrical firing in the brain. Know your seizure types. Absence seizures are brief blank-staring episodes lasting 5 to 30 seconds with eyelid fluttering and NO postictal confusion afterward. They are most common in children. Tonic-clonic, formerly called grand mal, has two phases: the tonic phase where the body stiffens, then the clonic phase of rhythmic jerking. Focal seizures start in one hemisphere. Simple focal seizures preserve consciousness. Complex focal seizures impair consciousness and awareness.</p>
+          <p class="cram-para">Status Epilepticus is a seizure lasting MORE than 5 minutes, or back-to-back seizures without regaining consciousness between them. This is a neurological emergency. First-line treatment is IV lorazepam or IV diazepam, which are benzodiazepines. If benzodiazepines fail, give IV fosphenytoin or IV valproate. During any active seizure: never put anything in the patient&rsquo;s mouth, do not restrain them, clear the environment, time the seizure, and turn them on their side after it stops to prevent aspiration.</p>
+          <p class="cram-para">An aura is a sensory warning that precedes a seizure. It might be an unusual smell, a visual flash, tingling, or a feeling of deja vu. The clinical importance is that an aura gives the patient a warning. Teach patients: the moment you feel your aura, sit down immediately, do not drive, call for help, and get to a safe place before the seizure starts.</p>
+          <p class="cram-para">Seizure precautions in the hospital: padded side rails up, bed in the lowest position, oxygen and suction equipment at the bedside, and IV access established and ready. Patient discharge education: never stop antiepileptic drugs abruptly because this can trigger status epilepticus. Do not drive until you have been seizure-free for the state-required period, which is typically 3 to 12 months. Take showers instead of baths to reduce drowning risk. Do not swim alone. Leave the bathroom door unlocked so others can help in an emergency.</p>
+          <p class="cram-para">One more thing on neuro assessment: a positive Babinski reflex in an adult is ABNORMAL. When you stroke the lateral sole of the foot and the big toe extends upward, that signals upper motor neuron damage. In a baby it is normal, but in an adult, it is not.</p>
+        </div>
+
+        <div class="cram-section" data-section="3">
+          <div class="cram-section-header">&#129327; UNIT 2.1 &mdash; HEADACHES (6 exam questions)</div>
+          <p class="cram-para">The exam tests three headache types and you need to differentiate them clearly. Tension-type headache is the most common headache in the world. It is BILATERAL, meaning both sides of the head. It feels like a band or vice squeezing the head. There is NO nausea, no photophobia, and no aura. Treat with acetaminophen or NSAIDs.</p>
+          <p class="cram-para">Migraine headache is UNILATERAL, meaning one side. It is throbbing or pulsating. It comes WITH nausea, photophobia which is light sensitivity, and phonophobia which is sound sensitivity. Up to one third of migraineurs have an aura beforehand, often visual disturbances like zigzag lines or flashing lights. The patient wants to lie still in a dark, quiet room. Acute treatment is triptans, like sumatriptan. If migraines happen 5 or more times per month, add preventive therapy with propranolol, amitriptyline, or topiramate.</p>
+          <p class="cram-para">Cluster headache is the most severe of the three. It is UNILATERAL periorbital pain, meaning around one eye, and it is excruciating. It comes with ipsilateral, same-side, autonomic symptoms: tearing eye, runny nose, ptosis, and red eye. The patient is RESTLESS, pacing the room, which is the opposite of a migraineur who wants to lie still. Clusters happen at the same time every day for weeks. Acute treatment is 100 percent oxygen and subcutaneous sumatriptan.</p>
+        </div>
+
+        <div class="cram-section" data-section="4">
+          <div class="cram-section-header">&#128138; UNIT 2.1 &mdash; NEURODEGENERATIVE DISORDERS (12 exam questions)</div>
+          <p class="cram-para">Parkinson&rsquo;s Disease. Pathophysiology: progressive loss of dopamine-producing neurons in the substantia nigra, which is part of the basal ganglia. Dopamine normally inhibits unnecessary movement. Without it, acetylcholine is unopposed and causes movement. The classic triad is: resting tremor that improves with movement, rigidity or stiffness, and bradykinesia which is slowness of movement. Other signs include micrographia, which is progressively smaller handwriting, masked facies, a fixed expressionless face, and a shuffling gait. Treatment goal is symptom management, NOT cure. The gold standard drug is levodopa-carbidopa. Carbidopa prevents levodopa from being broken down in the bloodstream before it reaches the brain, so more of it actually gets where it needs to go. Nursing: give medications at the EXACT same times every day to prevent off periods. Assess swallowing before every meal. Teach high-step gait, not shuffling. NEVER give haloperidol, it blocks dopamine receptors and will catastrophically worsen Parkinson&rsquo;s symptoms.</p>
+          <p class="cram-para">Multiple Sclerosis, MS. Pathophysiology: autoimmune demyelination of axons in the central nervous system. Where the plaque forms determines the symptoms, so MS can look like almost anything: optic neuritis causing vision loss, limb weakness, tingling, ataxia, or bladder dysfunction. The most common form is relapsing-remitting MS. Key trigger to avoid: heat, called Uhthoff&rsquo;s phenomenon, where elevated body temperature temporarily worsens symptoms. No hot baths. Treat acute exacerbations with high-dose IV methylprednisolone, which reduces inflammation and shortens the flare.</p>
+          <p class="cram-para">ALS, Amyotrophic Lateral Sclerosis. Pathophysiology: progressive destruction of BOTH upper and lower motor neurons. The critical teaching point: ALS affects ONLY motor neurons. Cognition, sensation, vision, and hearing are ALL preserved. The patient is trapped in a failing body with a fully intact mind. As the disease progresses, voluntary muscles fail including the diaphragm. The nursing priority as ALS advances is respiratory failure. Monitor vital capacity regularly. When it drops below 50 percent of predicted, begin discussions about respiratory support including BiPAP and eventually mechanical ventilation.</p>
+          <p class="cram-para">GBS, Guillain-Barr&eacute; Syndrome. Pathophysiology: post-infectious acute demyelination of peripheral nerves. Triggered most commonly by Campylobacter jejuni or viral illness 1 to 4 weeks before onset. Presentation: symmetric ascending weakness starting in the feet and legs, climbing upward. The life-threatening concern is that the ascending paralysis reaches the diaphragm causing respiratory failure. Nursing priority: monitor vital capacity every 2 to 4 hours in the acute phase. If VC falls below 20 mL per kilogram, intubation is likely needed. Treatment is IVIG or plasmapheresis. NOT steroids, which have no benefit and may worsen GBS. The good news: most patients recover fully with treatment.</p>
+          <p class="cram-para">Myasthenia Gravis, MG. Pathophysiology: autoimmune antibodies attack and destroy nicotinic acetylcholine receptors at the neuromuscular junction. Fewer working receptors mean muscle contraction becomes weaker with repeated use. The hallmark is fatigable weakness, meaning it gets worse with activity and better with rest. Classic presenting sign is ptosis, drooping of the eyelids. The Tensilon test, using edrophonium chloride, is diagnostic. It temporarily inhibits acetylcholinesterase, flooding the synapse with more ACh. If strength briefly improves, the test is positive for MG. Treatment is pyridostigmine, which is also an acetylcholinesterase inhibitor used chronically.</p>
+          <p class="cram-para">The two crises of MG. Myasthenic crisis means TOO LITTLE medication or disease worsening. The patient is severely weak with respiratory compromise. Cholinergic crisis means TOO MUCH acetylcholinesterase inhibitor medication. Recognize it by SLUDGE symptoms: Salivation, Lacrimation, Urination, Defecation, GI distress, and Emesis. These are signs of excessive acetylcholine everywhere. For cholinergic crisis: hold the pyridostigmine, support the airway, administer atropine if needed.</p>
+          <p class="cram-para">Huntington&rsquo;s Disease. Pathophysiology: autosomal dominant genetic mutation on chromosome 4, a CAG trinucleotide repeat expansion. Each child of an affected parent has exactly a 50 percent chance of inheriting the mutation. Triad of symptoms: chorea, which is involuntary dance-like movements throughout the body, cognitive decline, and psychiatric symptoms including depression, anxiety, and psychosis. No cure exists. Average survival after diagnosis is 15 to 20 years.</p>
+          <p class="cram-para">One principle applies to ALL neurodegenerative diseases: aspiration risk. Parkinson&rsquo;s, ALS, MS, MG, GBS, and Huntington&rsquo;s all cause dysphagia at some stage. Always assess gag reflex and swallowing before oral intake. Aspiration pneumonia is one of the leading causes of death in this patient population.</p>
+        </div>
+
+        <div class="cram-section" data-section="5">
+          <div class="cram-section-header">&#129504; UNIT 2.2 &mdash; TBI, INCREASED ICP &amp; SKULL FRACTURES (18 exam questions)</div>
+          <p class="cram-para">The Monroe-Kellie Doctrine is the foundation of everything in this unit. The skull is a rigid, fixed box. Inside it are three compartments: brain tissue at 80 percent, cerebrospinal fluid at 10 percent, and blood at 10 percent. These three must always sum to a constant total volume. If one increases, at least one other must decrease to compensate. When compensation is exhausted, intracranial pressure rises dangerously. This is why cerebral edema is life-threatening.</p>
+          <p class="cram-para">Normal ICP is 5 to 15 millimeters of mercury. Above 20 is elevated. Above 30 is a crisis requiring immediate intervention. The FIRST and most sensitive sign of rising ICP is a change in level of consciousness. Before any vital sign change, before any pupil change, the patient becomes restless, confused, or difficult to arouse. Always assess LOC first in a neuro patient.</p>
+          <p class="cram-para">Cushing&rsquo;s Triad is the late emergency warning that brain herniation is imminent. Three findings together: bradycardia, hypertension with a WIDE pulse pressure meaning a big gap between systolic and diastolic, and irregular respirations. When you see Cushing&rsquo;s Triad, notify the physician IMMEDIATELY. This is not a drill, this is herniation happening in real time.</p>
+          <p class="cram-para">A blown pupil, meaning a fixed and dilated pupil that does not react to light, means cranial nerve 3, the oculomotor nerve, is being compressed by the herniating uncus. The most common type of brain herniation is transtentorial herniation, where the uncus herniates through the tentorium cerebelli. It presents with ipsilateral blown pupil and contralateral hemiparesis.</p>
+          <p class="cram-para">Glasgow Coma Scale. Eyes: spontaneous equals 4, to voice equals 3, to pain equals 2, none equals 1. Verbal: oriented equals 5, confused equals 4, inappropriate words equals 3, incomprehensible sounds equals 2, none equals 1. Motor: obeys commands equals 6, localizes pain equals 5, withdraws equals 4, abnormal flexion equals 3, extension equals 2, none equals 1. Maximum is 15. GCS of 8 or below equals severe TBI and the patient typically needs intubation. Practice example: eyes open to pain equals 2, incomprehensible sounds equals 2, withdraws from pain equals 4. Total equals 8.</p>
+          <p class="cram-para">Nursing interventions to lower ICP: Elevate the head of bed 30 degrees, not flat and not 90 degrees, to promote venous drainage. Cluster nursing care to minimize stimulation spikes. Maintain normothermia because fever increases cerebral metabolic demand. Administer IV mannitol as ordered. Mannitol is an osmotic diuretic that pulls fluid out of brain cells through osmosis and excretes it in urine. You know it is working when urine output significantly increases and the ICP monitor shows a decrease. Short-term controlled hyperventilation lowers PaCO2, which causes cerebral vasoconstriction, which reduces blood volume inside the skull and temporarily lowers ICP. This is only a bridge measure, not a long-term solution.</p>
+          <p class="cram-para">Know your hematoma types. Epidural hematoma: arterial bleeding from the middle meningeal artery, most commonly from a temporal skull fracture. On CT it looks like a biconvex or lens-shaped hyperdensity. The classic story is brief loss of consciousness, then a lucid interval where the patient seems fine, then rapid deterioration as the arterial blood accumulates and ICP shoots up. This is a surgical emergency requiring immediate craniotomy. Subdural hematoma: venous bleeding from torn bridging veins. On CT it looks like a crescent-shaped hyperdensity. Onset is more gradual. Common in elderly patients and those on anticoagulants. Subarachnoid hemorrhage: blood enters the subarachnoid space, most commonly from a ruptured aneurysm. The classic presentation is the worst headache of my life, often described as a thunderclap, plus neck stiffness and photophobia. CT first, then lumbar puncture if CT is negative to look for xanthochromia, which is yellow CSF from blood breakdown products.</p>
+          <p class="cram-para">Diffuse Axonal Injury, DAI. This occurs from high-speed acceleration-deceleration trauma shearing axons throughout the white matter. CT scan is often NORMAL or shows only tiny petechial hemorrhages. The hallmark is immediate loss of consciousness that persists. MRI is more sensitive than CT for DAI. Prognosis is poor with most patients remaining in a persistent vegetative state.</p>
+          <p class="cram-para">Concussion. Temporary neurological dysfunction from impact. Symptoms include headache, dizziness, memory gaps, confusion, and nausea. Post-concussion syndrome is persistence of symptoms beyond 3 weeks, which can last months. Return to play requires being asymptomatic at rest AND with exertion, followed by physician clearance and a graduated multi-day protocol. Second-impact syndrome, receiving a second concussion before the first has healed, can be rapidly fatal. When in doubt, sit it out.</p>
+          <p class="cram-para">Basilar skull fracture. Two classic signs the exam loves. Battle&rsquo;s sign is bruising behind the ear over the mastoid process, indicating a posterior fossa fracture. Raccoon eyes are bilateral periorbital ecchymosis, bruising around both eyes, indicating an anterior fossa fracture. Both are DELAYED signs appearing hours after injury, not immediately. CSF may leak from the nose, rhinorrhea, or from the ear, otorrhea. Nursing priorities: do NOT pack the nose or ears, this increases ICP and introduces infection. Do NOT let the patient blow their nose. Elevate HOB 30 degrees. Monitor for meningitis.</p>
+        </div>
+
+        <div class="cram-section" data-section="6">
+          <div class="cram-section-header">&#129460; UNIT 2.2 &mdash; SPINAL CORD INJURY</div>
+          <p class="cram-para">Remember the mnemonic: C3, C4, C5 keeps the diaphragm alive. The phrenic nerve, which controls the diaphragm, originates at C3, C4, and C5. Complete injury at C4 puts diaphragm function at serious risk. Complete injury at C5 usually preserves the diaphragm but loses hand function, triceps, and all leg function. Complete injury at C3 or above means full ventilator dependence.</p>
+          <p class="cram-para">Spinal shock occurs immediately after a spinal cord injury and causes flaccid paralysis and complete loss of reflexes below the injury level. This is temporary. The critical nursing implication: you CANNOT determine whether the neurological damage is permanent until spinal shock fully resolves, which takes days to several weeks. The loss of the bulbocavernosus reflex indicates ongoing spinal shock.</p>
+          <p class="cram-para">Neurogenic shock occurs in SCI above T6 because the injury disrupts sympathetic outflow from T1 through L2. Without sympathetic tone: blood vessels cannot constrict, causing hypotension. And the heart has no compensatory tachycardia, causing bradycardia. So neurogenic shock presents as hypotension PLUS bradycardia, with warm skin from vasodilation. This is the key differentiator from hypovolemic shock, which presents with hypotension plus TACHYCARDIA and cool clammy skin. Treat neurogenic shock with vasopressors and atropine for the bradycardia.</p>
+          <p class="cram-para">Autonomic dysreflexia is a life-threatening emergency in patients with established SCI at T6 or above. A noxious stimulus below the injury level, most commonly a distended bladder or blocked urinary catheter, triggers a massive sympathetic surge causing sudden extreme hypertension. The patient gets a pounding headache, bradycardia, sweating and flushing above the injury, and pallor below. FIRST ACTION: sit the patient upright immediately to cause an orthostatic blood pressure drop. Then find and remove the trigger. Check the foley catheter first. Then check for bowel impaction. Then check for skin pressure areas. If BP remains dangerously high, use nitroglycerin paste applied above the level of injury, or nifedipine. This is one of the most tested SCI nursing topics.</p>
+          <p class="cram-para">The ASIA Impairment Scale classifies SCI severity. ASIA A is complete: no sensory or motor function below the injury including the sacral segments. ASIA B is sensory incomplete: some sensation preserved but no motor function below. ASIA C and D are motor incomplete with varying degrees of preserved strength. ASIA E is normal.</p>
+        </div>
+
+        <div class="cram-section" data-section="7">
+          <div class="cram-section-header">&#129432; UNIT 2.2 &mdash; DEMENTIA &amp; DELIRIUM (5 exam questions)</div>
+          <p class="cram-para">The most important distinction on the exam: dementia versus delirium. Dementia is CHRONIC. It develops over months to years. It is progressive and largely irreversible. The most common cause is Alzheimer&rsquo;s disease, which is characterized by beta-amyloid plaques outside neurons and neurofibrillary tangles inside neurons. This can only be definitively confirmed at autopsy. Treatment with donepezil or rivastigmine, both acetylcholinesterase inhibitors, slows the rate of cognitive decline but does not cure the disease. Goals of care are safety, dignity, maximizing function, and quality of life.</p>
+          <p class="cram-para">Sundowning in Alzheimer&rsquo;s is increased confusion and agitation in the late afternoon and evening. Nursing interventions: increase lighting in the late afternoon, maintain a consistent daily routine, limit caffeine and stimulating activities in the evening, and use calm soothing music or familiar objects. Do not argue or repeatedly reorient the patient, as this causes frustration without benefit. Meet them in their reality with therapeutic validation instead.</p>
+          <p class="cram-para">Delirium is ACUTE. It develops over hours to days. It has a fluctuating, waxing-and-waning course. And it is POTENTIALLY REVERSIBLE if the cause is found and treated. The most common cause of delirium in hospitalized elderly patients is medications, especially anticholinergics, opioids, and benzodiazepines. Other causes include infection, hypoxia, pain, urinary retention, electrolyte imbalances, and dehydration. The nursing priority is to find and treat the underlying cause. Non-pharmacological interventions come first: reorientation, maintaining the day-night cycle, family presence, familiar objects, and early mobilization.</p>
+          <p class="cram-para">Memory hook: Dementia is Dull and Delayed. Delirium is Dramatic and Days. One last thing. The causes are different. Dementia is caused by neurodegeneration, mostly Alzheimer&rsquo;s, vascular disease, or Lewy body disease. Delirium is caused by acute reversible insults: drugs, infection, metabolic disturbance, or organ failure. Treating the delirium trigger often fully resolves it. Dementia cannot be reversed.</p>
+          <p class="cram-para">Alright Kenna, that is your entire exam in 15 minutes. Lock in these five things before you walk in: First, decussation means the left brain controls the right body. Second, the first sign of rising ICP is a change in level of consciousness, not Cushing&rsquo;s triad. Third, neurogenic shock has bradycardia with hypotension, not tachycardia. Fourth, for autonomic dysreflexia, sit them up first and find the trigger. Fifth, delirium is acute and reversible, dementia is slow and progressive. You know this material. Go in there and show them. You have got this.</p>
+        </div>
+
+      </div><!-- end cramScriptBox -->
+    </div>
+
+    <style>
+      .cram-section-header{font-size:.72rem;font-weight:900;text-transform:uppercase;letter-spacing:.1em;color:#2563eb;padding:10px 0 4px;margin-top:8px;border-top:1px solid #e2e8f0;}
+      .cram-section:first-child .cram-section-header{border-top:none;margin-top:0;}
+      .cram-para{margin:0 0 10px;padding:8px 12px;border-radius:8px;transition:background .3s;}
+      .cram-para.cram-active{background:#fefce8;border-left:3px solid #eab308;}
+      .cram-jump{background:#f1f5f9;color:#475569;border:1px solid #e2e8f0;border-radius:6px;padding:5px 10px;cursor:pointer;font-size:.75rem;font-weight:700;font-family:inherit;}
+      .cram-jump:hover{background:#eff6ff;color:#2563eb;border-color:#bfdbfe;}
+    </style>
+
+    <script>
+    var cramSpeaking=false, cramIdx=0, cramParas=[], cramTimer=null, cramSeconds=0;
+
+    function cramGetParas(){
+      return Array.from(document.querySelectorAll('.cram-para'));
+    }
+
+    function cramHighlight(i){
+      cramGetParas().forEach(function(p,j){ p.classList.toggle('cram-active', j===i); });
+      var el=cramGetParas()[i];
+      if(el) el.scrollIntoView({behavior:'smooth',block:'nearest'});
+      var total=cramGetParas().length;
+      document.getElementById('cramProgressBar').style.width=Math.round(i/total*100)+'%';
+    }
+
+    function cramReadAt(start){
+      window.speechSynthesis.cancel();
+      cramParas=cramGetParas();
+      cramIdx=start||0;
+      cramSpeaking=true;
+      document.getElementById('cramPlayBtn').textContent='&#9646;&#9646; Reading...';
+      cramNext();
+    }
+
+    function cramNext(){
+      if(cramIdx>=cramParas.length){
+        cramStop(); return;
+      }
+      cramHighlight(cramIdx);
+      var text=cramParas[cramIdx].textContent.trim();
+      var u=new SpeechSynthesisUtterance(text);
+      u.rate=parseFloat(document.getElementById('cramRate').value||0.95);
+      u.onend=function(){ cramIdx++; cramNext(); };
+      window.speechSynthesis.speak(u);
+    }
+
+    function cramPlay(){
+      if(cramSpeaking && window.speechSynthesis.paused){
+        window.speechSynthesis.resume();
+        document.getElementById('cramPlayBtn').textContent='&#9646;&#9646; Reading...';
+        return;
+      }
+      if(!cramSpeaking){ cramReadAt(cramIdx); }
+    }
+
+    function cramPause(){
+      if(cramSpeaking){ window.speechSynthesis.pause(); document.getElementById('cramPlayBtn').textContent='&#9654; Read Aloud'; }
+    }
+
+    function cramStop(){
+      window.speechSynthesis.cancel();
+      cramSpeaking=false;
+      cramIdx=0;
+      document.getElementById('cramPlayBtn').textContent='&#9654; Read Aloud';
+      document.getElementById('cramProgressBar').style.width='0%';
+      cramGetParas().forEach(function(p){ p.classList.remove('cram-active'); });
+    }
+
+    function cramJump(section){
+      var sections=document.querySelectorAll('.cram-section');
+      var target=sections[section];
+      if(!target) return;
+      var firstPara=target.querySelector('.cram-para');
+      if(!firstPara) return;
+      var allParas=cramGetParas();
+      var newIdx=allParas.indexOf(firstPara);
+      if(newIdx>=0){
+        cramIdx=newIdx;
+        if(cramSpeaking){ cramReadAt(newIdx); }
+        else { cramHighlight(newIdx); firstPara.scrollIntoView({behavior:'smooth',block:'start'}); }
+      }
+    }
+
+    function cramSetRate(){
+      if(cramSpeaking){ cramReadAt(cramIdx); }
+    }
+
+    // Timer
+    setInterval(function(){
+      if(!cramSpeaking||window.speechSynthesis.paused) return;
+      cramSeconds++;
+      var m=Math.floor(cramSeconds/60), s=cramSeconds%60;
+      document.getElementById('cramTimerDisplay').textContent=m+':'+(s<10?'0':'')+s+' / ~15:00';
+    },1000);
+    </script>
+
+
     <div class="card">
       <h3>🎤 Teach-Back — Speak Your Answer Out Loud</h3>
       <p style="font-size:.87rem;color:#475569;line-height:1.7;margin-bottom:10px">
