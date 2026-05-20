@@ -575,20 +575,20 @@ tr:last-child td{border-bottom:none;}
   <button onclick="showMain('m20',this)">🫀 2.0 Stroke</button>
   <button onclick="showMain('m21',this)">💊 2.1 Neurodegenerative</button>
   <button onclick="showMain('m22',this)">🤕 2.2 Trauma</button>
-  <button onclick="showMain('qr',this)">📋 Quick Reference</button>
+  <button onclick="showMain('glossary',this)">📖 Glossary</button>
+  <button onclick="showMain('meds',this)">💉 Medications</button>
   <button onclick="showMain('fc',this)">🃏 Flashcards</button>
   <button onclick="showMain('nclex',this)">✅ NCLEX Practice</button>
-  <button onclick="showMain('glossary',this)">📖 Glossary</button>
+  <button onclick="showMain('cases',this)">🏥 Case Studies</button>
   <button onclick="showMain('teachback',this)">🎤 Teach-Back</button>
-  <button onclick="showMain('videos',this)">📺 Videos</button>
-  <button onclick="showMain('meds',this)">💉 Medications</button>
   <button onclick="showMain('cheatsheet',this)">⭐ Cheat Sheet</button>
+  <button onclick="showMain('labs',this)">🧪 Labs &amp; Diagnostics</button>
+  <button onclick="showMain('neuroassess',this)">🔍 Neuro Assessment</button>
   <button onclick="showMain('priority',this)">🚨 Priority Actions</button>
   <button onclick="showMain('redflags',this)">🔴 Red Flags</button>
   <button onclick="showMain('compare',this)">⚖️ Compare &amp; Contrast</button>
-  <button onclick="showMain('cases',this)">🏥 Case Studies</button>
-  <button onclick="showMain('labs',this)">🧪 Labs &amp; Diagnostics</button>
-  <button onclick="showMain('neuroassess',this)">🔍 Neuro Assessment</button>
+  <button onclick="showMain('qr',this)">📋 Quick Reference</button>
+  <button onclick="showMain('videos',this)">📺 Videos</button>
 </nav>
 
 <!-- ══════ HOME ══════ -->
@@ -607,8 +607,8 @@ tr:last-child td{border-bottom:none;}
     <p style="font-size:.85rem;opacity:.78;line-height:1.75;max-width:520px;margin-bottom:20px;">Covers Modules 2.0–2.2 with clinical diagrams, NCLEX practice, voice flashcards, case studies, and a full exam cheat sheet.</p>
     <div style="display:flex;gap:10px;flex-wrap:wrap;">
       <button onclick="showMain('brain',document.querySelectorAll('.main-nav button')[1])" style="background:#f59e0b;color:#0f172a;border:none;border-radius:99px;padding:10px 20px;font-weight:800;font-size:.84rem;cursor:pointer;box-shadow:0 4px 16px rgba(245,158,11,.4);transition:all .2s;font-family:inherit;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='none'">🧠 Brain Visual</button>
-      <button onclick="showMain('fc',document.querySelectorAll('.main-nav button')[6]);initFlashcards()" style="background:rgba(255,255,255,.12);color:#fff;border:1.5px solid rgba(255,255,255,.25);border-radius:99px;padding:10px 20px;font-weight:700;font-size:.84rem;cursor:pointer;backdrop-filter:blur(4px);transition:all .2s;font-family:inherit;" onmouseover="this.style.background='rgba(255,255,255,.2)'" onmouseout="this.style.background='rgba(255,255,255,.12)'">🃏 Flashcards</button>
-      <button onclick="showMain('nclex',document.querySelectorAll('.main-nav button')[7])" style="background:rgba(255,255,255,.12);color:#fff;border:1.5px solid rgba(255,255,255,.25);border-radius:99px;padding:10px 20px;font-weight:700;font-size:.84rem;cursor:pointer;backdrop-filter:blur(4px);transition:all .2s;font-family:inherit;" onmouseover="this.style.background='rgba(255,255,255,.2)'" onmouseout="this.style.background='rgba(255,255,255,.12)'">✅ NCLEX Practice</button>
+      <button onclick="showMain('fc',document.querySelectorAll('.main-nav button')[7]);initFlashcards()" style="background:rgba(255,255,255,.12);color:#fff;border:1.5px solid rgba(255,255,255,.25);border-radius:99px;padding:10px 20px;font-weight:700;font-size:.84rem;cursor:pointer;backdrop-filter:blur(4px);transition:all .2s;font-family:inherit;" onmouseover="this.style.background='rgba(255,255,255,.2)'" onmouseout="this.style.background='rgba(255,255,255,.12)'">🃏 Flashcards</button>
+      <button onclick="showMain('nclex',document.querySelectorAll('.main-nav button')[8])" style="background:rgba(255,255,255,.12);color:#fff;border:1.5px solid rgba(255,255,255,.25);border-radius:99px;padding:10px 20px;font-weight:700;font-size:.84rem;cursor:pointer;backdrop-filter:blur(4px);transition:all .2s;font-family:inherit;" onmouseover="this.style.background='rgba(255,255,255,.2)'" onmouseout="this.style.background='rgba(255,255,255,.12)'">✅ NCLEX Practice</button>
     </div>
   </div>
 
@@ -640,17 +640,17 @@ tr:last-child td{border-bottom:none;}
       <div class="module-card-title">2.2 Trauma &amp; ICP</div>
       <div class="module-card-desc">TBI, SCI, ICP monitoring, Monro-Kellie, herniation syndromes</div>
     </div>
-    <div class="module-card tool" onclick="showMain('cheatsheet',document.querySelectorAll('.main-nav button')[12])">
+    <div class="module-card tool" onclick="showMain('cheatsheet',document.querySelectorAll('.main-nav button')[11])">
       <span class="module-card-icon">⭐</span>
       <div class="module-card-title">Exam Cheat Sheet</div>
       <div class="module-card-desc">Priority mnemonics, critical values, and must-know before the exam</div>
     </div>
-    <div class="module-card tool" onclick="showMain('priority',document.querySelectorAll('.main-nav button')[13])">
+    <div class="module-card tool" onclick="showMain('priority',document.querySelectorAll('.main-nav button')[14])">
       <span class="module-card-icon">🚨</span>
       <div class="module-card-title">Priority Actions</div>
       <div class="module-card-desc">SATA-style nursing priorities and NCLEX decision-making frameworks</div>
     </div>
-    <div class="module-card tool" onclick="showMain('neuroassess',document.querySelectorAll('.main-nav button')[18])">
+    <div class="module-card tool" onclick="showMain('neuroassess',document.querySelectorAll('.main-nav button')[13])">
       <span class="module-card-icon">🔍</span>
       <div class="module-card-title">Neuro Assessment</div>
       <div class="module-card-desc">GCS calculator, pupil check, cranial nerves, NIHSS walkthrough</div>
@@ -4907,121 +4907,228 @@ function filterVids(ch, el) {
   renderVids(filtered);
 }
 
-// ══════ GLOBAL SEARCH ══════
+// ══════ GLOBAL SEARCH (v2) ══════
 var searchIndex = [];
+var searchIndexBuilt = false;
+
+// All tab metadata — kept in sync with nav order
+var ALL_TABS = [
+  {id:'home',       label:'🏠 Home',              color:'#f59e0b'},
+  {id:'brain',      label:'🧠 Brain Visual',       color:'#ec4899'},
+  {id:'m20',        label:'🫀 2.0 Stroke',         color:'#ef4444'},
+  {id:'m21',        label:'💊 2.1 Neurodegenerative', color:'#8b5cf6'},
+  {id:'m22',        label:'🤕 2.2 Trauma',         color:'#f59e0b'},
+  {id:'glossary',   label:'📖 Glossary',           color:'#10b981'},
+  {id:'meds',       label:'💉 Medications',        color:'#06b6d4'},
+  {id:'fc',         label:'🃏 Flashcards',         color:'#3b82f6'},
+  {id:'nclex',      label:'✅ NCLEX Practice',     color:'#10b981'},
+  {id:'cases',      label:'🏥 Case Studies',       color:'#ef4444'},
+  {id:'teachback',  label:'🎤 Teach-Back',         color:'#3b82f6'},
+  {id:'cheatsheet', label:'⭐ Cheat Sheet',        color:'#f59e0b'},
+  {id:'labs',       label:'🧪 Labs & Diagnostics', color:'#06b6d4'},
+  {id:'neuroassess',label:'🔍 Neuro Assessment',   color:'#8b5cf6'},
+  {id:'priority',   label:'🚨 Priority Actions',   color:'#ef4444'},
+  {id:'redflags',   label:'🔴 Red Flags',          color:'#ef4444'},
+  {id:'compare',    label:'⚖️ Compare & Contrast', color:'#8b5cf6'},
+  {id:'qr',         label:'📋 Quick Reference',    color:'#06b6d4'},
+  {id:'videos',     label:'📺 Videos',             color:'#ef4444'}
+];
+
+function tabMeta(id) {
+  return ALL_TABS.find(function(t){ return t.id === id; }) || {id:id, label:id, color:'#64748b'};
+}
+
+function addToIndex(tabId, text, snippet, extra) {
+  if (!text || text.length < 4) return;
+  var meta = tabMeta(tabId);
+  var entry = Object.assign({
+    tabId: tabId,
+    tabLabel: meta.label,
+    tabColor: meta.color,
+    text: text,
+    snippet: (snippet || text).substring(0, 200)
+  }, extra || {});
+  searchIndex.push(entry);
+}
 
 function buildSearchIndex() {
+  if (searchIndexBuilt) return;
+  searchIndexBuilt = true;
   searchIndex = [];
-  var tabs = [
-    {id:'home', label:'🏠 Home', color:'#f59e0b'},
-    {id:'brain', label:'🧠 Brain Visual', color:'#ec4899'},
-    {id:'m20', label:'🫀 2.0 Stroke', color:'#ef4444'},
-    {id:'m21', label:'💊 2.1 Neuro', color:'#8b5cf6'},
-    {id:'m22', label:'🤕 2.2 Trauma', color:'#f59e0b'},
-    {id:'qr', label:'📋 Quick Ref', color:'#06b6d4'},
-    {id:'glossary', label:'📖 Glossary', color:'#10b981'},
-    {id:'teachback', label:'🎤 Teach-Back', color:'#3b82f6'},
-    {id:'videos', label:'📺 Videos', color:'#ef4444'}
-  ];
 
-  tabs.forEach(function(tab) {
-    var panel = document.getElementById('tab-'+tab.id);
+  // ── 1. Structured glossary data ──
+  if (typeof glossData !== 'undefined') {
+    glossData.forEach(function(g) {
+      addToIndex('glossary',
+        g.term + ' ' + g.plain + ' ' + (g.clinical || '') + ' ' + (g.memory || ''),
+        g.term + ': ' + g.plain.substring(0, 150),
+        { glossTerm: g.term, priority: 10 }
+      );
+    });
+  }
+
+  // ── 2. Flashcard data ──
+  if (typeof fcData !== 'undefined') {
+    fcData.forEach(function(card) {
+      addToIndex('fc',
+        card.q + ' ' + card.a,
+        'Q: ' + card.q.substring(0, 100) + ' → ' + card.a.substring(0, 80),
+        { priority: 7 }
+      );
+    });
+  }
+
+  // ── 3. NCLEX questions ──
+  if (typeof nclexData !== 'undefined') {
+    Object.keys(nclexData).forEach(function(bank) {
+      (nclexData[bank] || []).forEach(function(q) {
+        addToIndex('nclex',
+          q.q + ' ' + (q.opts || []).join(' '),
+          'NCLEX: ' + q.q.substring(0, 120),
+          { priority: 6 }
+        );
+      });
+    });
+  }
+
+  // ── 4. Medication cards ──
+  var medCards = document.querySelectorAll('#tab-meds .card');
+  medCards.forEach(function(card) {
+    var title = (card.querySelector('h3,h4,.card-title,strong') || {}).textContent || '';
+    var body = card.textContent.trim();
+    if (title.length > 2) {
+      addToIndex('meds',
+        title + ' ' + body,
+        title + ': ' + body.substring(title.length, title.length + 130).trim(),
+        { priority: 8 }
+      );
+    }
+  });
+
+  // ── 5. DOM crawl for all remaining tabs ──
+  ALL_TABS.forEach(function(tab) {
+    if (['glossary','fc','nclex','meds'].indexOf(tab.id) >= 0) return; // already done above
+    var panel = document.getElementById('tab-' + tab.id);
     if (!panel) return;
-    // Get all text nodes, headings, strong tags
-    var headings = panel.querySelectorAll('h2,h3,h4,strong,th,.kb,.card');
-    headings.forEach(function(el) {
-      var text = el.textContent.trim();
-      if (text.length < 8 || text.length > 500) return;
-      // Avoid duplicates
-      var alreadyAdded = searchIndex.some(function(s){ return s.text === text && s.tabId === tab.id; });
-      if (!alreadyAdded) {
-        searchIndex.push({
-          tabId: tab.id,
-          tabLabel: tab.label,
-          tabColor: tab.color,
-          text: text,
-          snippet: text.substring(0, 160)
-        });
+    var els = panel.querySelectorAll('h2,h3,h4,strong,.kb,.card-title,th,dt,.def-title,.condition-name');
+    els.forEach(function(el) {
+      var text = el.textContent.trim().replace(/\s+/g, ' ');
+      if (text.length < 6 || text.length > 600) return;
+      // grab a snippet from nearby context
+      var snip = text;
+      var next = el.nextElementSibling;
+      if (next) {
+        var ctx = next.textContent.trim().substring(0, 100);
+        if (ctx) snip = text + ' — ' + ctx;
       }
+      addToIndex(tab.id, text, snip, { priority: 5 });
     });
   });
 
-  // Also add glossary terms
-  glossData.forEach(function(g) {
-    searchIndex.push({
-      tabId: 'glossary',
-      tabLabel: '📖 Glossary',
-      tabColor: '#10b981',
-      text: g.term + ' ' + g.plain,
-      snippet: g.term + ': ' + g.plain.substring(0, 120) + '...',
-      glossTerm: g.term
-    });
-  });
+  console.log('[Search] Index built: ' + searchIndex.length + ' entries across ' + ALL_TABS.length + ' tabs');
+}
+
+function scoreMatch(itemText, query) {
+  var t = itemText.toLowerCase();
+  var q = query.toLowerCase();
+  if (t === q) return 20;                          // exact
+  if (t.startsWith(q)) return 15;                  // starts with query
+  if (t.indexOf(' ' + q) >= 0) return 12;          // whole word match
+  if (t.indexOf(q) >= 0) return 8;                 // substring match
+  return 0;
 }
 
 function runSearch() {
   var q = (document.getElementById('globalSearchInput').value || '').trim().toLowerCase();
   if (q.length < 2) return;
-  if (!searchIndex.length) buildSearchIndex();
+  if (!searchIndexBuilt) buildSearchIndex();
 
   var results = [];
   searchIndex.forEach(function(item) {
-    if (item.text.toLowerCase().indexOf(q) >= 0) {
-      // Score: prefer exact match in shorter strings
-      var score = item.text.length < 100 ? 2 : 1;
-      if (item.text.toLowerCase().indexOf(q) === 0) score += 2;
-      results.push({item: item, score: score});
-    }
+    var baseScore = scoreMatch(item.text, q);
+    if (baseScore === 0) return;
+    var score = baseScore + (item.priority || 0);
+    results.push({item: item, score: score});
   });
 
-  // Sort by score, deduplicate by tab+snippet
-  results.sort(function(a,b){ return b.score - a.score; });
+  results.sort(function(a, b){ return b.score - a.score; });
+
+  // Deduplicate: keep best-scoring entry per tab per "topic" (first 50 chars of text)
   var seen = new Set();
   var unique = [];
   results.forEach(function(r) {
-    var key = r.item.tabId + '|' + r.item.snippet.substring(0,60);
+    var key = r.item.tabId + '|' + (r.item.glossTerm || r.item.text.substring(0,50).toLowerCase());
     if (!seen.has(key)) { seen.add(key); unique.push(r); }
   });
-  unique = unique.slice(0,30);
+  unique = unique.slice(0, 35);
+
+  // Group by tab
+  var byTab = {};
+  unique.forEach(function(r) {
+    var tid = r.item.tabId;
+    if (!byTab[tid]) byTab[tid] = [];
+    byTab[tid].push(r);
+  });
 
   var overlay = document.getElementById('searchOverlay');
   var srList = document.getElementById('srList');
   var srCount = document.getElementById('srCount');
   overlay.classList.add('open');
-  srCount.textContent = unique.length + ' result' + (unique.length!==1?'s':'') + ' for "' + q + '"';
+  srCount.textContent = unique.length + ' result' + (unique.length !== 1 ? 's' : '') + ' for "' + q + '"';
 
   if (!unique.length) {
-    srList.innerHTML = '<div class="sr-empty">No results found. Try a different term — check the Glossary tab for definitions.</div>';
+    srList.innerHTML = '<div class="sr-empty">No results found for <strong>"' + q + '"</strong>. Try the Glossary tab for definitions, or check your spelling.</div>';
     return;
   }
 
-  var re = new RegExp('('+q.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')+')','gi');
-  srList.innerHTML = unique.map(function(r) {
-    var item = r.item;
-    var snippet = item.snippet.replace(re, '<mark class="sr-highlight">$1</mark>');
-    return '<div class="sr-item" onclick="goToTab(\'' + item.tabId + '\',' + (item.glossTerm ? '\'' + item.glossTerm.replace(/'/g,"\\'") + '\'' : 'null') + ')">' +
-      '<span class="sr-tab-badge" style="background:' + item.tabColor + '20;color:' + item.tabColor + '">' + item.tabLabel + '</span>' +
-      '<div class="sr-text">' +
-      '<div class="sr-title">' + (item.glossTerm || item.text.substring(0,60)).replace(re,'<mark class="sr-highlight">$1</mark>') + '</div>' +
-      '<div class="sr-snippet">' + snippet + '</div>' +
-      '</div></div>';
-  }).join('');
+  var re = new RegExp('(' + q.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + ')', 'gi');
+
+  var html = '';
+  Object.keys(byTab).forEach(function(tid) {
+    var meta = tabMeta(tid);
+    html += '<div class="sr-group">';
+    html += '<div class="sr-group-header" style="color:' + meta.color + '">' + meta.label + '</div>';
+    byTab[tid].forEach(function(r) {
+      var item = r.item;
+      var title = (item.glossTerm || item.text.substring(0, 70)).replace(re, '<mark class="sr-highlight">$1</mark>');
+      var snippet = item.snippet.replace(re, '<mark class="sr-highlight">$1</mark>');
+      var gt = item.glossTerm ? "'" + item.glossTerm.replace(/'/g, "\\'") + "'" : 'null';
+      html += '<div class="sr-item" onclick="goToTab(\'' + tid + '\',' + gt + ')">';
+      html += '<div class="sr-text">';
+      html += '<div class="sr-title">' + title + '</div>';
+      html += '<div class="sr-snippet">' + snippet + '</div>';
+      html += '</div></div>';
+    });
+    html += '</div>';
+  });
+  srList.innerHTML = html;
 }
 
 function goToTab(tabId, glossTerm) {
   closeSearch();
-  var btn = document.querySelector('.main-nav button[onclick*=\'' + tabId + '\']');
-  if (btn) btn.click();
+  // Robust: find the button by its data-tab or onclick containing the tabId
+  var btn = document.querySelector('.main-nav button[onclick*="showMain(\''+tabId+'\'"]:not(.active)') ||
+            document.querySelector('.main-nav button[onclick*="' + tabId + '"]');
+  if (btn) {
+    btn.click();
+  } else {
+    // Fallback: call showMain directly
+    if (typeof showMain === 'function') showMain(tabId, null);
+  }
   if (glossTerm && tabId === 'glossary') {
     setTimeout(function() {
       var searchEl = document.getElementById('glossSearch');
       if (searchEl) { searchEl.value = glossTerm; filterGloss(); }
-    }, 150);
+    }, 200);
+  } else if (tabId === 'fc' && typeof initFlashcards === 'function') {
+    setTimeout(initFlashcards, 100);
   }
 }
 
 function closeSearch() {
   document.getElementById('searchOverlay').classList.remove('open');
+  document.getElementById('globalSearchInput').value = '';
+  searchIndexBuilt = false; // re-build next time (DOM may have changed)
 }
 
 document.addEventListener('keydown', function(e) {
