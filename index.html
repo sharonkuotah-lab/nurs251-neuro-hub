@@ -418,6 +418,118 @@ tr:last-child td{border-bottom:none;}
   .med-detail-grid{grid-template-columns:1fr;}
 }
 @keyframes pulse{0%,100%{transform:scale(1);}50%{transform:scale(1.06);}}
+
+/* ── Stat card without numbers ─────────────────── */
+.stat-card{padding:18px 12px 14px;gap:6px;}
+.stat-icon{font-size:2rem;line-height:1;}
+.stat-lbl{font-size:.82rem;font-weight:700;letter-spacing:.02em;color:var(--text2);margin-top:2px;}
+
+/* ── Glossary cards ─────────────────────────────── */
+.gloss-item{background:var(--card);border:1px solid var(--border);border-radius:var(--radius-sm);
+  padding:16px 18px;margin-bottom:12px;transition:box-shadow .15s;}
+.gloss-item:hover{box-shadow:var(--shadow-md);}
+.gloss-term{font-size:1rem;font-weight:800;color:var(--acc);margin-bottom:4px;}
+.gloss-def{font-size:.875rem;color:var(--text);line-height:1.75;}
+.gloss-tag{display:inline-block;font-size:.7rem;font-weight:700;padding:2px 8px;
+  border-radius:99px;margin-top:8px;background:var(--acc-l);color:var(--acc);}
+
+/* ── Medication cards – more breathing room ─────── */
+.med-prac-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:18px;padding:4px 0;}
+.med-prac-card{border-radius:var(--radius);overflow:hidden;border:1px solid var(--border);
+  box-shadow:var(--shadow);background:var(--card);}
+.med-prac-hdr{display:flex;align-items:center;gap:10px;padding:14px 16px;cursor:pointer;user-select:none;}
+.med-prac-name{font-size:.9rem;font-weight:800;color:#fff;flex:1;}
+.med-prac-use{font-size:.72rem;font-weight:700;color:rgba(255,255,255,.8);
+  background:rgba(255,255,255,.15);padding:3px 8px;border-radius:99px;white-space:nowrap;}
+.med-prac-body{display:none;padding:14px 16px 6px;}
+.med-prac-body.open{display:block;}
+.med-q{margin-bottom:12px;}
+.med-q-lbl{font-size:.75rem;font-weight:800;padding:6px 12px;border-radius:6px 6px 0 0;letter-spacing:.02em;}
+.med-q-val{font-size:.84rem;line-height:1.75;padding:10px 14px;border-radius:0 0 6px 6px;
+  border:1px solid rgba(0,0,0,.06);border-top:none;}
+.med-q-val ul,.med-q-val ol{padding-left:18px;margin:4px 0;}
+.med-q-val li{margin-bottom:3px;}
+.med-mod-filter{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px;}
+.med-mod-btn{padding:7px 16px;border:1px solid var(--border2);border-radius:99px;
+  font-size:.8rem;font-weight:700;cursor:pointer;background:var(--card);color:var(--text2);transition:.15s;}
+.med-mod-btn.active,.med-mod-btn:hover{background:var(--acc);color:#fff;border-color:var(--acc);}
+
+/* ── NCLEX sets ─────────────────────────────────── */
+.nclex-topic-nav{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px;}
+.nclex-topic-btn{padding:7px 15px;border-radius:99px;border:1px solid var(--border2);
+  font-size:.8rem;font-weight:700;cursor:pointer;background:var(--card);color:var(--text2);transition:.15s;}
+.nclex-topic-btn.active,.nclex-topic-btn:hover{background:var(--c20);color:#fff;border-color:var(--c20);}
+.nclex-q-card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);
+  padding:20px 22px;margin-bottom:16px;box-shadow:var(--shadow);}
+.nclex-q-num{font-size:.72rem;font-weight:800;color:var(--muted);text-transform:uppercase;
+  letter-spacing:.08em;margin-bottom:8px;}
+.nclex-q-text{font-size:.92rem;font-weight:600;color:var(--text);line-height:1.7;margin-bottom:14px;}
+.nclex-opt{display:flex;align-items:flex-start;gap:10px;padding:10px 14px;border-radius:8px;
+  border:1.5px solid var(--border);cursor:pointer;margin-bottom:8px;transition:.15s;font-size:.88rem;
+  background:var(--card);}
+.nclex-opt:hover{border-color:var(--acc);background:var(--acc-l);}
+.nclex-opt.correct{border-color:#16a34a;background:#f0fdf4;color:#14532d;}
+.nclex-opt.wrong{border-color:#dc2626;background:#fef2f2;color:#991b1b;}
+.nclex-opt-letter{font-weight:800;width:20px;flex-shrink:0;color:var(--acc);}
+.nclex-rationale{margin-top:12px;padding:12px 16px;background:#fffbeb;border-radius:8px;
+  font-size:.84rem;line-height:1.7;border-left:4px solid var(--amber);display:none;}
+.nclex-rationale.show{display:block;}
+
+/* ── Cheat sheet spacing ─────────────────────────── */
+#tab-cheatsheet .card{margin-bottom:20px;}
+#tab-cheatsheet h3{margin-bottom:14px;}
+#tab-cheatsheet table td,#tab-cheatsheet table th{padding:9px 12px;}
+#tab-cheatsheet .chip{margin:3px;}
+
+/* ── General panel breathing room ───────────────── */
+.panel{padding:20px 18px 32px;}
+@media(min-width:640px){.panel{padding:24px 22px 40px;}}
+
+/* ── Case Study interactive Q&A ─────────────────── */
+.case-sel-bar{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:22px;}
+.case-sel-btn{padding:9px 18px;border-radius:99px;border:1.5px solid var(--border2);
+  font-size:.84rem;font-weight:700;cursor:pointer;background:var(--card);color:var(--text2);transition:.2s;}
+.case-sel-btn.active{color:#fff;border-color:transparent;}
+.case-scenario{border-radius:var(--radius);padding:16px 18px;font-size:.88rem;
+  line-height:1.85;margin-bottom:20px;border:1px solid var(--border);}
+.case-step-hdr{font-size:.7rem;font-weight:800;text-transform:uppercase;letter-spacing:.1em;
+  color:var(--muted);margin-bottom:8px;}
+.case-step-q{font-size:1rem;font-weight:800;color:var(--text);line-height:1.5;margin-bottom:16px;}
+.case-answer-area{width:100%;min-height:100px;border:1.5px solid var(--border2);border-radius:10px;
+  padding:12px 14px;font-size:.88rem;font-family:inherit;resize:vertical;
+  background:var(--card);color:var(--text);transition:.2s;box-sizing:border-box;}
+.case-answer-area:focus{outline:none;border-color:var(--acc);box-shadow:0 0 0 3px rgba(37,99,235,.12);}
+.case-answer-area.listening{border-color:#ef4444;background:#fff5f5;
+  box-shadow:0 0 0 3px rgba(239,68,68,.15);}
+.case-action-row{display:flex;gap:10px;margin-top:12px;flex-wrap:wrap;}
+.case-btn-speak{display:flex;align-items:center;gap:6px;padding:9px 16px;border-radius:99px;
+  border:1.5px solid #ef4444;color:#ef4444;font-size:.84rem;font-weight:700;cursor:pointer;
+  background:transparent;transition:.2s;}
+.case-btn-speak:hover{background:#fef2f2;}
+.case-btn-speak.listening{background:#ef4444;color:#fff;}
+.case-btn-submit{padding:9px 20px;border-radius:99px;border:none;font-size:.84rem;
+  font-weight:800;cursor:pointer;background:var(--acc);color:#fff;transition:.2s;}
+.case-btn-submit:hover{background:var(--pri2);}
+.case-btn-next{padding:9px 20px;border-radius:99px;border:none;font-size:.84rem;
+  font-weight:800;cursor:pointer;background:#16a34a;color:#fff;display:none;transition:.2s;}
+.case-btn-next:hover{background:#15803d;}
+.case-official-answer{margin-top:16px;padding:14px 16px;border-radius:10px;
+  font-size:.86rem;line-height:1.8;border-left:4px solid;display:none;}
+.case-official-answer.show{display:block;}
+.case-progress{display:flex;gap:6px;margin-bottom:16px;}
+.case-prog-dot{width:10px;height:10px;border-radius:50%;background:var(--border2);transition:.3s;}
+.case-prog-dot.done{background:#16a34a;}
+.case-prog-dot.current{background:var(--acc);}
+.case-complete-banner{text-align:center;padding:24px;background:linear-gradient(135deg,#f0fdf4,#ecfdf5);
+  border-radius:var(--radius);border:2px solid #86efac;}
+
+
+/* ── Definition boxes ─────────────────────────────── */
+.def-box{border-radius:12px;padding:18px 20px;margin-bottom:18px;border-left:5px solid;}
+.def-box-label{font-size:.68rem;font-weight:800;text-transform:uppercase;letter-spacing:.12em;margin-bottom:6px;}
+.def-box-title{font-size:1.05rem;font-weight:900;color:#1e293b;margin-bottom:10px;}
+.def-box-nursing{border-radius:8px;padding:10px 14px;font-size:.84rem;line-height:1.7;margin-top:10px;}
+
 </style>
 </head>
 <body>
@@ -502,12 +614,12 @@ tr:last-child td{border-bottom:none;}
 
   <!-- Stats -->
   <div class="stat-grid" style="margin-bottom:22px;">
-    <div class="stat-card"><div class="stat-icon">📚</div><div class="stat-num">19</div><div class="stat-lbl">Sections</div></div>
-    <div class="stat-card"><div class="stat-icon">🃏</div><div class="stat-num">60+</div><div class="stat-lbl">Flashcards</div></div>
-    <div class="stat-card"><div class="stat-icon">✅</div><div class="stat-num">46</div><div class="stat-lbl">NCLEX Qs</div></div>
-    <div class="stat-card"><div class="stat-icon">🖼️</div><div class="stat-num">6</div><div class="stat-lbl">Diagrams</div></div>
-    <div class="stat-card"><div class="stat-icon">🏥</div><div class="stat-num">3</div><div class="stat-lbl">Case Studies</div></div>
-    <div class="stat-card"><div class="stat-icon">📺</div><div class="stat-num">17</div><div class="stat-lbl">Videos</div></div>
+    <div class="stat-card"><div class="stat-icon">📚</div><div class="stat-lbl">Sections</div></div>
+    <div class="stat-card"><div class="stat-icon">🃏</div><div class="stat-lbl">Flashcards</div></div>
+    <div class="stat-card"><div class="stat-icon">✅</div><div class="stat-lbl">NCLEX Qs</div></div>
+    <div class="stat-card"><div class="stat-icon">🖼️</div><div class="stat-lbl">Diagrams</div></div>
+    <div class="stat-card"><div class="stat-icon">🏥</div><div class="stat-lbl">Case Studies</div></div>
+    <div class="stat-card"><div class="stat-icon">📺</div><div class="stat-lbl">Videos</div></div>
   </div>
 
   <!-- Module quick-access cards -->
@@ -646,6 +758,8 @@ tr:last-child td{border-bottom:none;}
     <button onclick="switchBrainView('anatomy',this)" class="active">🧠 Brain Anatomy</button>
     <button onclick="switchBrainView('stroke',this)">⚡ Stroke Types</button>
     <button onclick="switchBrainView('vessels',this)">🩸 Blood Vessels</button>
+    <button onclick="switchBrainView('neuron',this)">🔬 Neuron Anatomy</button>
+    <button onclick="switchBrainView('nmj',this)">🔌 NMJ &amp; Synapse</button>
   </div>
 
   <!-- ANATOMY VIEW -->
@@ -1038,6 +1152,434 @@ tr:last-child td{border-bottom:none;}
       <p style="font-size:.85rem;margin-top:8px;">This is why Afib patients need anticoagulation (warfarin, NOACs) — to prevent clot formation in the left atrium.</p>
     </div>
   </div>
+
+  <!-- ══════ NEURON ANATOMY VIEW ══════ -->
+  <div id="bview-neuron" class="sub-panel">
+    <div class="card" style="margin-bottom:18px;">
+      <h3 style="margin-bottom:4px;">🔬 Anatomy of a Neuron</h3>
+      <p style="font-size:.84rem;color:#64748b;margin-bottom:16px;">Click any labeled part to learn what it does — and what happens when it's damaged.</p>
+
+      <!-- Interactive Neuron SVG -->
+      <div style="overflow-x:auto;margin-bottom:14px;">
+      <svg viewBox="0 0 820 300" xmlns="http://www.w3.org/2000/svg" style="width:100%;min-width:600px;max-width:820px;background:#f8fafc;border-radius:12px;border:1px solid #e2e8f0;">
+        <defs>
+          <radialGradient id="somaGrad" cx="45%" cy="38%" r="55%">
+            <stop offset="0%" stop-color="#7dd3fc"/>
+            <stop offset="60%" stop-color="#3b82f6"/>
+            <stop offset="100%" stop-color="#1d4ed8"/>
+          </radialGradient>
+          <radialGradient id="myelinGrad" cx="50%" cy="30%" r="60%">
+            <stop offset="0%" stop-color="#fde68a"/>
+            <stop offset="100%" stop-color="#f59e0b"/>
+          </radialGradient>
+          <radialGradient id="terminalGrad" cx="40%" cy="35%" r="65%">
+            <stop offset="0%" stop-color="#86efac"/>
+            <stop offset="100%" stop-color="#16a34a"/>
+          </radialGradient>
+          <filter id="glow"><feGaussianBlur stdDeviation="3" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+        </defs>
+
+        <!-- DENDRITES (left side branching from soma) -->
+        <g id="n-dendrites" onclick="showNeuronPart('dendrites')" style="cursor:pointer;" class="neuron-part">
+          <!-- Branch 1 upper -->
+          <path d="M 118 115 C 95 100, 70 88, 48 75" stroke="#60a5fa" stroke-width="5" fill="none" stroke-linecap="round"/>
+          <path d="M 75 84 C 62 72, 52 58, 42 48" stroke="#60a5fa" stroke-width="3" fill="none" stroke-linecap="round"/>
+          <path d="M 75 84 C 65 78, 52 78, 38 80" stroke="#60a5fa" stroke-width="3" fill="none" stroke-linecap="round"/>
+          <!-- Branch 2 mid-upper -->
+          <path d="M 112 138 C 88 130, 65 122, 40 112" stroke="#60a5fa" stroke-width="5" fill="none" stroke-linecap="round"/>
+          <path d="M 62 118 C 48 108, 35 100, 22 96" stroke="#60a5fa" stroke-width="3" fill="none" stroke-linecap="round"/>
+          <path d="M 62 118 C 50 125, 38 128, 24 130" stroke="#60a5fa" stroke-width="3" fill="none" stroke-linecap="round"/>
+          <!-- Branch 3 mid -->
+          <path d="M 112 158 C 88 155, 65 150, 38 148" stroke="#60a5fa" stroke-width="5" fill="none" stroke-linecap="round"/>
+          <path d="M 56 150 C 42 142, 30 136, 16 136" stroke="#60a5fa" stroke-width="3" fill="none" stroke-linecap="round"/>
+          <!-- Branch 4 lower -->
+          <path d="M 115 178 C 92 182, 68 188, 42 196" stroke="#60a5fa" stroke-width="5" fill="none" stroke-linecap="round"/>
+          <path d="M 68 190 C 56 202, 46 212, 34 220" stroke="#60a5fa" stroke-width="3" fill="none" stroke-linecap="round"/>
+          <path d="M 68 190 C 58 184, 44 182, 30 180" stroke="#60a5fa" stroke-width="3" fill="none" stroke-linecap="round"/>
+          <!-- Branch 5 lower-lower -->
+          <path d="M 120 200 C 100 214, 78 224, 52 234" stroke="#60a5fa" stroke-width="4" fill="none" stroke-linecap="round"/>
+          <path d="M 68 226 C 56 238, 44 246, 30 250" stroke="#60a5fa" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+          <!-- Dendrite label -->
+          <text x="14" y="60" font-size="13" font-weight="700" fill="#1d4ed8">Dendrites</text>
+          <text x="14" y="75" font-size="11" fill="#3b82f6">(receive signals)</text>
+        </g>
+
+        <!-- SOMA / CELL BODY -->
+        <g id="n-soma" onclick="showNeuronPart('soma')" style="cursor:pointer;" class="neuron-part">
+          <circle cx="152" cy="158" r="48" fill="url(#somaGrad)" filter="url(#glow)"/>
+          <!-- Nucleus -->
+          <circle cx="152" cy="158" r="20" fill="rgba(255,255,255,0.25)" stroke="rgba(255,255,255,0.6)" stroke-width="2"/>
+          <text x="152" y="163" font-size="11" font-weight="700" fill="rgba(255,255,255,0.9)" text-anchor="middle">nucleus</text>
+          <!-- Label -->
+          <text x="152" y="228" font-size="13" font-weight="700" fill="#1d4ed8" text-anchor="middle">Cell Body</text>
+          <text x="152" y="243" font-size="11" fill="#3b82f6" text-anchor="middle">(soma)</text>
+        </g>
+
+        <!-- AXON HILLOCK -->
+        <g id="n-hillock" onclick="showNeuronPart('hillock')" style="cursor:pointer;" class="neuron-part">
+          <path d="M 198 150 C 215 148, 228 152, 238 158" stroke="#6366f1" stroke-width="7" fill="none" stroke-linecap="round"/>
+          <path d="M 198 166 C 215 168, 228 164, 238 158" stroke="#6366f1" stroke-width="5" fill="none" stroke-linecap="round"/>
+          <text x="205" y="188" font-size="12" font-weight="700" fill="#4338ca" text-anchor="middle">Axon</text>
+          <text x="205" y="202" font-size="12" font-weight="700" fill="#4338ca" text-anchor="middle">Hillock</text>
+        </g>
+
+        <!-- AXON (bare, between hillock and first myelin) -->
+        <line x1="238" y1="158" x2="272" y2="158" stroke="#6366f1" stroke-width="7" stroke-linecap="round"/>
+
+        <!-- MYELIN SHEATHS + NODES OF RANVIER -->
+        <!-- Myelin 1 -->
+        <g id="n-myelin" onclick="showNeuronPart('myelin')" style="cursor:pointer;" class="neuron-part">
+          <rect x="272" y="146" width="68" height="24" rx="12" fill="url(#myelinGrad)" stroke="#d97706" stroke-width="1.5"/>
+          <!-- Node of Ranvier 1 -->
+          <line x1="340" y1="152" x2="356" y2="152" stroke="#6366f1" stroke-width="7" stroke-linecap="round"/>
+          <line x1="340" y1="164" x2="356" y2="164" stroke="#6366f1" stroke-width="7" stroke-linecap="round"/>
+          <line x1="340" y1="158" x2="356" y2="158" stroke="#6366f1" stroke-width="7" stroke-linecap="round"/>
+          <!-- Myelin 2 -->
+          <rect x="356" y="146" width="68" height="24" rx="12" fill="url(#myelinGrad)" stroke="#d97706" stroke-width="1.5"/>
+          <!-- Node of Ranvier 2 -->
+          <line x1="424" y1="158" x2="440" y2="158" stroke="#6366f1" stroke-width="7" stroke-linecap="round"/>
+          <!-- Myelin 3 -->
+          <rect x="440" y="146" width="68" height="24" rx="12" fill="url(#myelinGrad)" stroke="#d97706" stroke-width="1.5"/>
+          <!-- Node of Ranvier 3 -->
+          <line x1="508" y1="158" x2="524" y2="158" stroke="#6366f1" stroke-width="7" stroke-linecap="round"/>
+          <!-- Myelin 4 -->
+          <rect x="524" y="146" width="68" height="24" rx="12" fill="url(#myelinGrad)" stroke="#d97706" stroke-width="1.5"/>
+          <!-- Labels -->
+          <text x="306" y="135" font-size="12" font-weight="700" fill="#b45309" text-anchor="middle">Myelin Sheath</text>
+          <text x="349" y="188" font-size="11" fill="#78350f" text-anchor="middle">Node of</text>
+          <text x="349" y="200" font-size="11" fill="#78350f" text-anchor="middle">Ranvier</text>
+          <line x1="349" y1="175" x2="349" y2="168" stroke="#b45309" stroke-width="1.5" stroke-dasharray="3"/>
+        </g>
+
+        <!-- AXON AFTER LAST MYELIN -->
+        <line x1="592" y1="158" x2="624" y2="158" stroke="#6366f1" stroke-width="7" stroke-linecap="round"/>
+
+        <!-- AXON TERMINALS (synaptic boutons) -->
+        <g id="n-terminal" onclick="showNeuronPart('terminal')" style="cursor:pointer;" class="neuron-part">
+          <!-- Branch split -->
+          <path d="M 624 158 C 638 140, 650 128, 658 118" stroke="#6366f1" stroke-width="5" fill="none" stroke-linecap="round"/>
+          <path d="M 624 158 L 658 158" stroke="#6366f1" stroke-width="5" stroke-linecap="round"/>
+          <path d="M 624 158 C 638 176, 650 188, 658 198" stroke="#6366f1" stroke-width="5" fill="none" stroke-linecap="round"/>
+          <!-- Boutons -->
+          <circle cx="672" cy="118" r="14" fill="url(#terminalGrad)" filter="url(#glow)"/>
+          <circle cx="672" cy="158" r="14" fill="url(#terminalGrad)" filter="url(#glow)"/>
+          <circle cx="672" cy="198" r="14" fill="url(#terminalGrad)" filter="url(#glow)"/>
+          <!-- ACh dots inside boutons -->
+          <circle cx="667" cy="113" r="3" fill="rgba(255,255,255,0.7)"/>
+          <circle cx="676" cy="116" r="3" fill="rgba(255,255,255,0.7)"/>
+          <circle cx="670" cy="122" r="3" fill="rgba(255,255,255,0.7)"/>
+          <circle cx="667" cy="153" r="3" fill="rgba(255,255,255,0.7)"/>
+          <circle cx="676" cy="156" r="3" fill="rgba(255,255,255,0.7)"/>
+          <circle cx="670" cy="162" r="3" fill="rgba(255,255,255,0.7)"/>
+          <circle cx="667" cy="193" r="3" fill="rgba(255,255,255,0.7)"/>
+          <circle cx="676" cy="196" r="3" fill="rgba(255,255,255,0.7)"/>
+          <circle cx="670" cy="202" r="3" fill="rgba(255,255,255,0.7)"/>
+          <!-- Label -->
+          <text x="720" y="155" font-size="13" font-weight="700" fill="#15803d">Axon</text>
+          <text x="720" y="170" font-size="13" font-weight="700" fill="#15803d">Terminals</text>
+          <text x="720" y="185" font-size="11" fill="#16a34a">(synaptic boutons)</text>
+        </g>
+
+        <!-- AXON label -->
+        <text x="430" y="135" font-size="13" font-weight="700" fill="#4338ca" text-anchor="middle">Axon</text>
+        <text x="430" y="148" font-size="11" fill="#6366f1" text-anchor="middle">(signal highway)</text>
+
+        <!-- Direction arrow -->
+        <defs><marker id="arr" markerWidth="8" markerHeight="6" refX="6" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#94a3b8"/></marker></defs>
+        <line x1="250" y1="270" x2="590" y2="270" stroke="#94a3b8" stroke-width="2" marker-end="url(#arr)"/>
+        <text x="420" y="286" font-size="12" fill="#64748b" text-anchor="middle" font-style="italic">signal travels this direction →</text>
+      </svg>
+      </div>
+
+      <!-- Info panel for clicked part -->
+      <div id="neuronInfo" style="background:#eff6ff;border-radius:10px;padding:16px 18px;font-size:.88rem;line-height:1.8;border-left:4px solid #2563eb;display:none;">
+        <div id="neuronInfoContent"></div>
+      </div>
+    </div>
+
+    <!-- Cards: What goes wrong in disease -->
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:14px;margin-bottom:18px;">
+
+      <div class="card" style="border-top:4px solid #f59e0b;">
+        <h4 style="color:#b45309;margin-bottom:10px;">⚡ Myelin: Why It Matters</h4>
+        <p style="font-size:.85rem;line-height:1.75;color:#334155;">Myelin is the fatty insulating sheath wrapped around axons. It enables <strong>saltatory conduction</strong> — the signal "jumps" from Node of Ranvier to Node of Ranvier at up to 120 m/s. Without myelin, signals travel slowly (~1 m/s) or stop entirely. In the CNS (brain/spinal cord), myelin is made by <strong>oligodendrocytes</strong>. In the PNS (peripheral nerves), by <strong>Schwann cells</strong>.</p>
+        <div style="margin-top:10px;background:#fffbeb;border-radius:8px;padding:10px 12px;font-size:.82rem;">
+          <strong style="color:#b45309;">🔑 Exam Distinction:</strong><br>
+          MS → oligodendrocytes (CNS) destroyed → brain/spinal cord plaques<br>
+          GBS → Schwann cells (PNS) attacked → ascending peripheral weakness
+        </div>
+      </div>
+
+      <div class="card" style="border-top:4px solid #7c3aed;">
+        <h4 style="color:#6d28d9;margin-bottom:10px;">⚡ Seizures: Neurons Gone Haywire</h4>
+        <p style="font-size:.85rem;line-height:1.75;color:#334155;">Neurons communicate via controlled electrical impulses — action potentials. A seizure happens when a group of neurons fires chaotically and synchronously at the same time, like a power surge. This abnormal electrical burst can stay localized (focal seizure) or spread across both hemispheres (generalized). Anti-seizure drugs like phenytoin block voltage-gated sodium channels — they raise the threshold for firing, making it harder for neurons to sustain the rapid, repetitive firing of a seizure.</p>
+        <div style="margin-top:10px;background:#f5f3ff;border-radius:8px;padding:10px 12px;font-size:.82rem;">
+          <strong style="color:#7c3aed;">🔑 SAND = Phenytoin toxicity:</strong> Sedation · Ataxia · Nystagmus · Diplopia
+        </div>
+      </div>
+
+      <div class="card" style="border-top:4px solid #dc2626;">
+        <h4 style="color:#991b1b;margin-bottom:10px;">🧠 Neurotransmitters at a Glance</h4>
+        <table style="font-size:.83rem;width:100%;">
+          <thead><tr style="background:#fef2f2;"><th style="padding:6px 8px;text-align:left;">Neurotransmitter</th><th style="padding:6px 8px;text-align:left;">Role</th><th style="padding:6px 8px;text-align:left;">Disease if Low</th></tr></thead>
+          <tbody>
+            <tr><td style="padding:6px 8px;font-weight:700;">Dopamine</td><td style="padding:6px 8px;">Smooth movement, reward</td><td style="padding:6px 8px;">Parkinson's disease</td></tr>
+            <tr style="background:#fafafa;"><td style="padding:6px 8px;font-weight:700;">Acetylcholine (ACh)</td><td style="padding:6px 8px;">Memory, muscle contraction</td><td style="padding:6px 8px;">Alzheimer's (brain), MG (NMJ)</td></tr>
+            <tr><td style="padding:6px 8px;font-weight:700;">GABA</td><td style="padding:6px 8px;">Main inhibitory signal</td><td style="padding:6px 8px;">Seizures (too little inhibition)</td></tr>
+            <tr style="background:#fafafa;"><td style="padding:6px 8px;font-weight:700;">Glutamate</td><td style="padding:6px 8px;">Main excitatory signal</td><td style="padding:6px 8px;">Excess → neurotoxicity (ALS)</td></tr>
+            <tr><td style="padding:6px 8px;font-weight:700;">Serotonin</td><td style="padding:6px 8px;">Mood, sleep, appetite</td><td style="padding:6px 8px;">Depression, migraines</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="card" style="border-top:4px solid #0369a1;">
+        <h4 style="color:#0369a1;margin-bottom:10px;">🔌 Types of Neurons</h4>
+        <div style="font-size:.84rem;line-height:1.8;color:#334155;">
+          <div style="display:flex;gap:8px;align-items:flex-start;margin-bottom:8px;padding:8px;background:#f0f9ff;border-radius:6px;">
+            <div style="font-weight:800;color:#0369a1;min-width:110px;">Motor neurons</div>
+            <div>Carry commands FROM brain/spinal cord TO muscles. Damaged in ALS (upper &amp; lower motor neurons) and GBS (peripheral motor fibers).</div>
+          </div>
+          <div style="display:flex;gap:8px;align-items:flex-start;margin-bottom:8px;padding:8px;background:#f0fdf4;border-radius:6px;">
+            <div style="font-weight:800;color:#15803d;min-width:110px;">Sensory neurons</div>
+            <div>Carry signals FROM body TO brain. Damaged in GBS (ascending sensory loss starts in feet), SCI (loss below injury level).</div>
+          </div>
+          <div style="display:flex;gap:8px;align-items:flex-start;padding:8px;background:#fdf4ff;border-radius:6px;">
+            <div style="font-weight:800;color:#7c3aed;min-width:110px;">Interneurons</div>
+            <div>Connect neurons within the CNS. Most numerous. Involved in reflexes and seizure propagation.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Action potential diagram card -->
+    <div class="card" style="margin-bottom:0;">
+      <h4 style="color:#1e293b;margin-bottom:14px;">⚡ Action Potential — How Neurons Fire</h4>
+      <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:0;margin-bottom:14px;">
+        <div style="text-align:center;padding:12px 8px;background:#f1f5f9;border-radius:10px 0 0 10px;border-right:1px solid #e2e8f0;">
+          <div style="font-size:1.4rem;margin-bottom:4px;">😴</div>
+          <div style="font-weight:800;font-size:.78rem;color:#0f172a;">Resting</div>
+          <div style="font-size:.72rem;color:#64748b;margin-top:4px;">−70 mV inside cell. Na⁺ outside, K⁺ inside. Stable.</div>
+        </div>
+        <div style="text-align:center;padding:12px 8px;background:#fff7ed;border-right:1px solid #e2e8f0;">
+          <div style="font-size:1.4rem;margin-bottom:4px;">📶</div>
+          <div style="font-weight:800;font-size:.78rem;color:#c2410c;">Depolarize</div>
+          <div style="font-size:.72rem;color:#64748b;margin-top:4px;">Stimulus opens Na⁺ channels → Na⁺ rushes IN → inside becomes positive.</div>
+        </div>
+        <div style="text-align:center;padding:12px 8px;background:#fef9c3;border-right:1px solid #e2e8f0;">
+          <div style="font-size:1.4rem;margin-bottom:4px;">🔺</div>
+          <div style="font-weight:800;font-size:.78rem;color:#854d0e;">Peak (+30 mV)</div>
+          <div style="font-size:.72rem;color:#64748b;margin-top:4px;">Na⁺ channels close. K⁺ channels open → K⁺ flows OUT.</div>
+        </div>
+        <div style="text-align:center;padding:12px 8px;background:#f0fdf4;border-right:1px solid #e2e8f0;">
+          <div style="font-size:1.4rem;margin-bottom:4px;">📉</div>
+          <div style="font-weight:800;font-size:.78rem;color:#166534;">Repolarize</div>
+          <div style="font-size:.72rem;color:#64748b;margin-top:4px;">Cell returns to negative inside. Brief hyperpolarization (refractory period).</div>
+        </div>
+        <div style="text-align:center;padding:12px 8px;background:#f8fafc;border-radius:0 10px 10px 0;">
+          <div style="font-size:1.4rem;margin-bottom:4px;">✅</div>
+          <div style="font-weight:800;font-size:.78rem;color:#0f172a;">Restored</div>
+          <div style="font-size:.72rem;color:#64748b;margin-top:4px;">Na⁺/K⁺ pump restores balance. Ready to fire again.</div>
+        </div>
+      </div>
+      <div style="background:#fef2f2;border-radius:8px;padding:10px 14px;font-size:.84rem;line-height:1.7;">
+        <strong style="color:#dc2626;">💊 How drugs work here:</strong> Phenytoin &amp; Levetiracetam block Na⁺ channels → harder to sustain rapid firing → seizure threshold raised. Mannitol does NOT affect action potentials — it works osmotically to pull fluid from brain cells.
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════ NMJ & SYNAPSE VIEW ══════ -->
+  <div id="bview-nmj" class="sub-panel">
+    <div class="card" style="margin-bottom:18px;">
+      <h3 style="margin-bottom:4px;">🔌 The Neuromuscular Junction (NMJ) &amp; Synapse</h3>
+      <p style="font-size:.84rem;color:#64748b;margin-bottom:16px;">The NMJ is where motor neurons talk to muscles using acetylcholine (ACh). Click any labeled part to understand what it does — and how Myasthenia Gravis, pyridostigmine, and other drugs affect it.</p>
+
+      <!-- NMJ SVG -->
+      <div style="overflow-x:auto;margin-bottom:14px;">
+      <svg viewBox="0 0 820 380" xmlns="http://www.w3.org/2000/svg" style="width:100%;min-width:600px;background:#f8fafc;border-radius:12px;border:1px solid #e2e8f0;">
+        <defs>
+          <radialGradient id="neuronTermGrad" cx="50%" cy="35%" r="60%">
+            <stop offset="0%" stop-color="#93c5fd"/>
+            <stop offset="100%" stop-color="#1d4ed8"/>
+          </radialGradient>
+          <radialGradient id="achVesGrad" cx="40%" cy="35%" r="60%">
+            <stop offset="0%" stop-color="#bbf7d0"/>
+            <stop offset="100%" stop-color="#16a34a"/>
+          </radialGradient>
+          <linearGradient id="muscleGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" stop-color="#fde68a"/>
+            <stop offset="100%" stop-color="#f59e0b"/>
+          </linearGradient>
+          <linearGradient id="mfGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" stop-color="#fde68a"/>
+            <stop offset="40%" stop-color="#f59e0b"/>
+            <stop offset="100%" stop-color="#d97706"/>
+          </linearGradient>
+        </defs>
+
+        <!-- ── MOTOR NEURON AXON (top) ── -->
+        <!-- Axon coming from left -->
+        <rect x="20" y="55" width="200" height="28" rx="14" fill="#3b82f6"/>
+        <text x="120" y="74" font-size="13" font-weight="700" fill="#fff" text-anchor="middle">Motor Neuron Axon</text>
+
+        <!-- Myelin sheath label -->
+        <rect x="20" y="50" width="200" height="8" rx="4" fill="#f59e0b" opacity="0.7"/>
+        <rect x="20" y="75" width="200" height="8" rx="4" fill="#f59e0b" opacity="0.7"/>
+        <text x="20" y="45" font-size="11" fill="#b45309" font-weight="600">Myelin sheath</text>
+
+        <!-- Axon terminal / synaptic bouton -->
+        <g id="nmj-terminal" onclick="showNMJPart('terminal')" style="cursor:pointer;" class="neuron-part">
+          <ellipse cx="410" cy="110" rx="150" ry="72" fill="url(#neuronTermGrad)" stroke="#1d4ed8" stroke-width="2"/>
+          <text x="410" y="58" font-size="13" font-weight="700" fill="#1e40af" text-anchor="middle">Axon Terminal (Presynaptic)</text>
+          <!-- ACh vesicles -->
+          <g id="nmj-vesicles" onclick="showNMJPart('vesicles')" style="cursor:pointer;">
+            <circle cx="340" cy="105" r="13" fill="url(#achVesGrad)" stroke="#15803d" stroke-width="1.5"/>
+            <circle cx="370" cy="90" r="13" fill="url(#achVesGrad)" stroke="#15803d" stroke-width="1.5"/>
+            <circle cx="400" cy="108" r="13" fill="url(#achVesGrad)" stroke="#15803d" stroke-width="1.5"/>
+            <circle cx="430" cy="88" r="13" fill="url(#achVesGrad)" stroke="#15803d" stroke-width="1.5"/>
+            <circle cx="462" cy="106" r="13" fill="url(#achVesGrad)" stroke="#15803d" stroke-width="1.5"/>
+            <circle cx="355" cy="125" r="11" fill="url(#achVesGrad)" stroke="#15803d" stroke-width="1.5"/>
+            <circle cx="418" cy="128" r="11" fill="url(#achVesGrad)" stroke="#15803d" stroke-width="1.5"/>
+            <circle cx="448" cy="122" r="11" fill="url(#achVesGrad)" stroke="#15803d" stroke-width="1.5"/>
+            <!-- ACh label -->
+            <text x="340" y="105" font-size="9" font-weight="700" fill="#fff" text-anchor="middle">ACh</text>
+            <text x="370" y="90" font-size="9" font-weight="700" fill="#fff" text-anchor="middle">ACh</text>
+            <text x="400" y="108" font-size="9" font-weight="700" fill="#fff" text-anchor="middle">ACh</text>
+            <text x="430" y="88" font-size="9" font-weight="700" fill="#fff" text-anchor="middle">ACh</text>
+            <text x="462" y="106" font-size="9" font-weight="700" fill="#fff" text-anchor="middle">ACh</text>
+          </g>
+          <!-- Ca2+ ions -->
+          <circle cx="310" cy="90" r="7" fill="#c084fc" stroke="#7c3aed" stroke-width="1.5"/>
+          <text x="310" y="94" font-size="8" font-weight="700" fill="#fff" text-anchor="middle">Ca²⁺</text>
+          <circle cx="495" cy="92" r="7" fill="#c084fc" stroke="#7c3aed" stroke-width="1.5"/>
+          <text x="495" y="96" font-size="8" font-weight="700" fill="#fff" text-anchor="middle">Ca²⁺</text>
+        </g>
+
+        <!-- ACh molecules being released -->
+        <g id="nmj-ach-release" onclick="showNMJPart('ach')" style="cursor:pointer;">
+          <circle cx="350" cy="195" r="7" fill="#22c55e" stroke="#15803d" stroke-width="1.5" opacity="0.9"/>
+          <circle cx="380" cy="200" r="7" fill="#22c55e" stroke="#15803d" stroke-width="1.5" opacity="0.9"/>
+          <circle cx="410" cy="192" r="7" fill="#22c55e" stroke="#15803d" stroke-width="1.5" opacity="0.9"/>
+          <circle cx="440" cy="200" r="7" fill="#22c55e" stroke="#15803d" stroke-width="1.5" opacity="0.9"/>
+          <circle cx="470" cy="194" r="7" fill="#22c55e" stroke="#15803d" stroke-width="1.5" opacity="0.9"/>
+          <circle cx="365" cy="210" r="6" fill="#22c55e" stroke="#15803d" stroke-width="1" opacity="0.7"/>
+          <circle cx="425" cy="208" r="6" fill="#22c55e" stroke="#15803d" stroke-width="1" opacity="0.7"/>
+          <circle cx="455" cy="210" r="6" fill="#22c55e" stroke="#15803d" stroke-width="1" opacity="0.7"/>
+        </g>
+
+        <!-- SYNAPTIC CLEFT label -->
+        <text x="620" y="200" font-size="12" font-weight="700" fill="#64748b">Synaptic Cleft</text>
+        <line x1="610" y1="200" x2="565" y2="200" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="4"/>
+
+        <!-- AChE label -->
+        <g id="nmj-ache" onclick="showNMJPart('ache')" style="cursor:pointer;">
+          <text x="200" y="205" font-size="11" font-weight="700" fill="#dc2626">AChE</text>
+          <text x="200" y="218" font-size="10" fill="#dc2626">(breaks down ACh)</text>
+          <line x1="245" y1="205" x2="300" y2="205" stroke="#dc2626" stroke-width="1.5" stroke-dasharray="3"/>
+        </g>
+
+        <!-- MUSCLE FIBER (postsynaptic) -->
+        <g id="nmj-muscle" onclick="showNMJPart('muscle')" style="cursor:pointer;" class="neuron-part">
+          <!-- Muscle fiber body with folded membrane (junctional folds) -->
+          <rect x="200" y="230" width="420" height="80" rx="8" fill="url(#mfGrad)" stroke="#d97706" stroke-width="2"/>
+          <!-- Junctional folds (infoldings of postsynaptic membrane) -->
+          <path d="M 240 230 L 240 255 M 280 230 L 280 258 M 320 230 L 320 252 M 360 230 L 360 256 M 400 230 L 400 252 M 440 230 L 440 256 M 480 230 L 480 252 M 520 230 L 520 257 M 560 230 L 560 253"
+                stroke="#b45309" stroke-width="2" fill="none"/>
+          <!-- ACh receptors on postsynaptic membrane -->
+          <g id="nmj-receptors" onclick="showNMJPart('receptors')" style="cursor:pointer;">
+            <rect x="232" y="225" width="12" height="10" rx="2" fill="#f97316" stroke="#ea580c" stroke-width="1"/>
+            <rect x="272" y="225" width="12" height="10" rx="2" fill="#f97316" stroke="#ea580c" stroke-width="1"/>
+            <rect x="312" y="225" width="12" height="10" rx="2" fill="#f97316" stroke="#ea580c" stroke-width="1"/>
+            <rect x="352" y="225" width="12" height="10" rx="2" fill="#f97316" stroke="#ea580c" stroke-width="1"/>
+            <rect x="392" y="225" width="12" height="10" rx="2" fill="#f97316" stroke="#ea580c" stroke-width="1"/>
+            <rect x="432" y="225" width="12" height="10" rx="2" fill="#f97316" stroke="#ea580c" stroke-width="1"/>
+            <rect x="472" y="225" width="12" height="10" rx="2" fill="#f97316" stroke="#ea580c" stroke-width="1"/>
+            <rect x="512" y="225" width="12" height="10" rx="2" fill="#f97316" stroke="#ea580c" stroke-width="1"/>
+            <rect x="552" y="225" width="12" height="10" rx="2" fill="#f97316" stroke="#ea580c" stroke-width="1"/>
+          </g>
+          <text x="410" y="270" font-size="14" font-weight="800" fill="#78350f" text-anchor="middle">MUSCLE FIBER (Postsynaptic)</text>
+          <text x="410" y="288" font-size="11" fill="#92400e" text-anchor="middle">Contracts when ACh binds to its receptors</text>
+          <!-- Striations -->
+          <line x1="200" y1="300" x2="620" y2="300" stroke="#d97706" stroke-width="1" opacity="0.5"/>
+          <line x1="200" y1="310" x2="620" y2="310" stroke="#d97706" stroke-width="1" opacity="0.5"/>
+        </g>
+
+        <!-- Label: ACh receptors -->
+        <text x="680" y="228" font-size="11" font-weight="700" fill="#ea580c">ACh Receptors</text>
+        <text x="680" y="242" font-size="10" fill="#ea580c">(attacked in MG)</text>
+        <line x1="675" y1="233" x2="570" y2="233" stroke="#ea580c" stroke-width="1.5" stroke-dasharray="3"/>
+
+        <!-- MG antibody indicators -->
+        <g id="nmj-mg" onclick="showNMJPart('mg')" style="cursor:pointer;">
+          <path d="M 350 350 C 355 340, 348 332, 356 228" stroke="#dc2626" stroke-width="1.5" stroke-dasharray="4" fill="none"/>
+          <text x="200" y="355" font-size="11" font-weight="800" fill="#dc2626">⚠️ In MG: autoantibodies destroy these receptors</text>
+          <text x="200" y="370" font-size="10" fill="#dc2626">→ less ACh binding → muscle weakness that worsens with use</text>
+        </g>
+
+        <!-- Axon connecting left to terminal -->
+        <rect x="220" y="55" width="100" height="28" rx="14" fill="#3b82f6"/>
+        <text x="270" y="74" font-size="11" fill="#fff" text-anchor="middle">→ signal</text>
+      </svg>
+      </div>
+
+      <!-- NMJ info panel -->
+      <div id="nmjInfo" style="background:#eff6ff;border-radius:10px;padding:16px 18px;font-size:.88rem;line-height:1.8;border-left:4px solid #2563eb;display:none;">
+        <div id="nmjInfoContent"></div>
+      </div>
+    </div>
+
+    <!-- NMJ disease cards -->
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:14px;margin-bottom:18px;">
+
+      <div class="card" style="border-top:4px solid #dc2626;">
+        <h4 style="color:#991b1b;margin-bottom:10px;">⚠️ Myasthenia Gravis (MG) at the NMJ</h4>
+        <div style="font-size:.84rem;line-height:1.8;color:#334155;">
+          <div style="display:flex;gap:6px;margin-bottom:6px;"><span style="font-weight:800;color:#dc2626;">1.</span><span>Autoantibodies attack ACh receptors on the muscle fiber</span></div>
+          <div style="display:flex;gap:6px;margin-bottom:6px;"><span style="font-weight:800;color:#dc2626;">2.</span><span>Fewer receptors available → ACh has less to bind to</span></div>
+          <div style="display:flex;gap:6px;margin-bottom:6px;"><span style="font-weight:800;color:#dc2626;">3.</span><span>Repeated nerve firing depletes available ACh → weakness worsens with activity</span></div>
+          <div style="display:flex;gap:6px;margin-bottom:6px;"><span style="font-weight:800;color:#dc2626;">4.</span><span>Rest allows ACh to replenish → improves with rest</span></div>
+          <div style="margin-top:10px;background:#fef2f2;border-radius:8px;padding:10px 12px;">
+            <strong style="color:#dc2626;">💊 Pyridostigmine (Mestinon)</strong> — blocks AChE (the enzyme that breaks down ACh) → more ACh remains in the cleft → more binding → temporary strength improvement
+          </div>
+        </div>
+      </div>
+
+      <div class="card" style="border-top:4px solid #059669;">
+        <h4 style="color:#065f46;margin-bottom:10px;">✅ Normal NMJ Sequence</h4>
+        <div style="font-size:.84rem;line-height:1.8;color:#334155;">
+          <div style="display:flex;gap:6px;margin-bottom:5px;padding:6px;background:#f0fdf4;border-radius:6px;"><span style="font-weight:800;color:#059669;">1.</span><span>Action potential arrives at axon terminal</span></div>
+          <div style="display:flex;gap:6px;margin-bottom:5px;padding:6px;background:#f0fdf4;border-radius:6px;"><span style="font-weight:800;color:#059669;">2.</span><span>Ca²⁺ enters terminal → triggers ACh vesicle fusion</span></div>
+          <div style="display:flex;gap:6px;margin-bottom:5px;padding:6px;background:#f0fdf4;border-radius:6px;"><span style="font-weight:800;color:#059669;">3.</span><span>ACh released into synaptic cleft</span></div>
+          <div style="display:flex;gap:6px;margin-bottom:5px;padding:6px;background:#f0fdf4;border-radius:6px;"><span style="font-weight:800;color:#059669;">4.</span><span>ACh binds to nicotinic receptors → Na⁺ enters muscle → depolarization</span></div>
+          <div style="display:flex;gap:6px;margin-bottom:5px;padding:6px;background:#f0fdf4;border-radius:6px;"><span style="font-weight:800;color:#059669;">5.</span><span>Muscle contracts</span></div>
+          <div style="display:flex;gap:6px;padding:6px;background:#f0fdf4;border-radius:6px;"><span style="font-weight:800;color:#059669;">6.</span><span>AChE breaks down ACh → cleft cleared → ready to fire again</span></div>
+        </div>
+      </div>
+
+      <div class="card" style="border-top:4px solid #7c3aed;">
+        <h4 style="color:#6d28d9;margin-bottom:10px;">⚡ Cholinergic vs Myasthenic Crisis</h4>
+        <table style="font-size:.82rem;width:100%;">
+          <thead><tr style="background:#f5f3ff;"><th style="padding:6px;text-align:left;">Feature</th><th style="padding:6px;text-align:left;">Myasthenic</th><th style="padding:6px;text-align:left;">Cholinergic</th></tr></thead>
+          <tbody>
+            <tr><td style="padding:6px;font-weight:600;">Cause</td><td style="padding:6px;">Too LITTLE ACh effect</td><td style="padding:6px;">Too MUCH ACh effect</td></tr>
+            <tr style="background:#fafafa;"><td style="padding:6px;font-weight:600;">Trigger</td><td style="padding:6px;">Disease worsening, infection</td><td style="padding:6px;">Too much pyridostigmine</td></tr>
+            <tr><td style="padding:6px;font-weight:600;">SLUDGE?</td><td style="padding:6px;">❌ Absent</td><td style="padding:6px;">✅ Present</td></tr>
+            <tr style="background:#fafafa;"><td style="padding:6px;font-weight:600;">Weakness?</td><td style="padding:6px;">✅ Yes</td><td style="padding:6px;">✅ Yes (both!)</td></tr>
+            <tr><td style="padding:6px;font-weight:600;">Treatment</td><td style="padding:6px;">IVIG, plasmapheresis</td><td style="padding:6px;">HOLD drug, atropine</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="card" style="border-top:4px solid #0891b2;">
+        <h4 style="color:#0369a1;margin-bottom:10px;">🔗 GBS at the Peripheral Nerve</h4>
+        <p style="font-size:.84rem;line-height:1.8;color:#334155;">While GBS doesn't affect the NMJ itself, it damages the peripheral nerve axons and myelin that carry signals TO the NMJ. Without the nerve signal arriving, the NMJ has nothing to transmit — the muscle can't contract even if the NMJ is intact.</p>
+        <div style="background:#ecfeff;border-radius:8px;padding:10px 12px;font-size:.82rem;margin-top:8px;">
+          <strong style="color:#0369a1;">GBS pattern:</strong> Signal never reaches NMJ (axon/myelin destroyed) → <strong>ascending</strong> weakness feet→legs→trunk→diaphragm.<br><br>
+          <strong style="color:#dc2626;">MG pattern:</strong> Signal arrives at NMJ fine, but receptors are destroyed → weakness <strong>worsens with repeated use</strong>, improves with rest.
+        </div>
+      </div>
+    </div>
+  </div>
+
 </div>
 
 <!-- ══════ MODULE 2.0 ══════ -->
@@ -1045,7 +1587,7 @@ tr:last-child td{border-bottom:none;}
   <div class="sub-nav" id="m20-subnav">
     <button onclick="showSub('m20','decuss',this)" class="active">🔀 Decussation</button>
     <button onclick="showSub('m20','stroke',this)">⚡ Stroke</button>
-    <button onclick="showSub('m20','tpa',this)">💉 tPA</button>
+    <button onclick="showSub('m20','tpa',this)">💉 tPA (Tissue Plasminogen Activator)</button>
     <button onclick="showSub('m20','cn',this)">🔢 Cranial Nerves</button>
     <button onclick="showSub('m20','clinical',this)">🏥 Clinical Snapshot</button>
   </div>
@@ -1055,6 +1597,15 @@ tr:last-child td{border-bottom:none;}
     <p>Every neighborhood (brain region) needs constant delivery of oxygen and glucose — 24/7, no breaks. A <strong>stroke</strong> is when one road (blood vessel) either gets <em>blocked</em> (ischemic = traffic jam) or <em>breaks</em> (hemorrhagic = burst pipe). The neighborhood it supplies loses its supply and starts shutting down. Which neighborhood loses power = which symptoms the patient shows. That's why knowing brain anatomy is key!</p>
   </div>
   <div id="m20-decuss" class="sub-panel active">
+  <div style="background:#f1f5f9;border-left:5px solid #0f172a;border-radius:12px;padding:18px 20px;margin-bottom:18px;">
+    <div style="font-size:.68rem;font-weight:800;text-transform:uppercase;letter-spacing:.12em;color:#0f172a;margin-bottom:6px;">🔀 What is this?</div>
+    <div style="font-size:1.05rem;font-weight:900;color:#1e293b;margin-bottom:10px;">Decussation — Why the Brain Controls the Opposite Side</div>
+    <p style="font-size:.9rem;line-height:1.85;color:#334155;margin-bottom:10px;">Decussation is the crossing of nerve tracts from one side of the brain to the other, occurring at the medulla oblongata (base of the brain). About 80% of the motor fibers in the corticospinal tract (the main movement highway) cross here. This is why a stroke on the <em>left</em> side of the brain causes weakness on the <em>right</em> side of the body — and vice versa. Think of it like an X-shaped highway interchange.</p>
+    <div style="background:rgba(255,255,255,.7);border-radius:8px;padding:10px 14px;font-size:.84rem;color:#475569;line-height:1.7;">
+      <strong style="color:#0f172a;">🩺 Why nurses need to know this:</strong> Every time you assess a stroke patient, you use decussation. If a patient has right-sided weakness → you know the LEFT hemisphere is affected → which also contains the language centers → watch for aphasia. Location of deficit = location of brain damage.
+    </div>
+  </div>
+
     <div class="card u20">
       <h3>🔀 Decussation — Most Tested Concept!</h3>
       <div class="kb kb-blue"><strong>Rule:</strong> ~80% of corticospinal nerves CROSS (decussate) at the medulla oblongata. Each brain hemisphere controls the <em>opposite (contralateral)</em> side of the body. 20% remain ipsilateral.</div>
@@ -1091,7 +1642,16 @@ tr:last-child td{border-bottom:none;}
       </div>
     </div>
   </div>
-  <div id="m20-stroke" class="sub-panel">
+  <div <div 20-stroke" class="sub-panel">
+  <div style="background:#fef2f2;border-left:5px solid #dc2626;border-radius:12px;padding:18px 20px;margin-bottom:18px;">
+    <div style="font-size:.68rem;font-weight:800;text-transform:uppercase;letter-spacing:.12em;color:#dc2626;margin-bottom:6px;">⚡ What is this?</div>
+    <div style="font-size:1.05rem;font-weight:900;color:#1e293b;margin-bottom:10px;">Stroke (Cerebrovascular Accident / CVA)</div>
+    <p style="font-size:.9rem;line-height:1.85;color:#334155;margin-bottom:10px;">A stroke happens when blood supply to part of the brain is suddenly cut off. Brain cells need oxygen and glucose every second — without blood flow, they begin dying in minutes. There are two main types: <strong>Ischemic stroke</strong> (87% of cases) — a clot blocks a blood vessel, like a traffic jam stopping deliveries to a neighborhood. <strong>Hemorrhagic stroke</strong> (13%) — a blood vessel bursts, like a pipe breaking and flooding the area. Which abilities are lost depends entirely on <em>which part of the brain</em> loses its blood supply.</p>
+    <div style="background:rgba(255,255,255,.7);border-radius:8px;padding:10px 14px;font-size:.84rem;color:#475569;line-height:1.7;">
+      <strong style="color:#dc2626;">🩺 Why nurses need to know this:</strong> Stroke is a time-critical emergency. Every minute = ~2 million neurons lost. Your job is to recognize it fast (BEFAST), call the stroke team, and act without hesitation. Treatment decisions (tPA, thrombectomy) depend on type, timing, and contraindications — all things you assess.
+    </div>
+  </div>
+
 
 <div class="diagram-box" style="margin-bottom:20px;">
   <div class="diagram-title">⚡ Stroke — Ischemic vs. Hemorrhagic at a Glance</div>
@@ -1212,6 +1772,15 @@ tr:last-child td{border-bottom:none;}
     </div>
   </div>
   <div id="m20-tpa" class="sub-panel">
+  <div style="background:#eff6ff;border-left:5px solid #1d6fb8;border-radius:12px;padding:18px 20px;margin-bottom:18px;">
+    <div style="font-size:.68rem;font-weight:800;text-transform:uppercase;letter-spacing:.12em;color:#1d6fb8;margin-bottom:6px;">💉 What is this?</div>
+    <div style="font-size:1.05rem;font-weight:900;color:#1e293b;margin-bottom:10px;">tPA — Tissue Plasminogen Activator (Alteplase)</div>
+    <p style="font-size:.9rem;line-height:1.85;color:#334155;margin-bottom:10px;">tPA is the 'clot-busting' drug used in ischemic stroke. It works by activating plasminogen, a protein already in the blood, which converts to plasmin — essentially chemical scissors that cut apart the fibrin threads holding the clot together. The clot dissolves, blood flow restores, and the penumbra (the still-alive brain tissue surrounding the dead core) is saved. <strong>Critical window: within 4 hours of symptom onset</strong> (3 hours for some patients). After that, bleeding risk outweighs benefit.</p>
+    <div style="background:rgba(255,255,255,.7);border-radius:8px;padding:10px 14px;font-size:.84rem;color:#475569;line-height:1.7;">
+      <strong style="color:#1d6fb8;">🩺 Why nurses need to know this:</strong> You are the tPA safety checkpoint. You verify: CT head done (no hemorrhage), last-known-well time, BP &lt;185/110, glucose 50–400, no contraindications. During infusion: neuro checks every 15 min. Any sudden headache or LOC change = stop infusion, call MD — this means intracranial hemorrhage.
+    </div>
+  </div>
+
 
 <div class="diagram-box" style="margin-bottom:20px;">
   <div class="diagram-title">⏱️ tPA Time Window — Every Minute Counts</div>
@@ -1326,15 +1895,24 @@ tr:last-child td{border-bottom:none;}
     <button onclick="showSub('m21','seizure',this)" class="active">⚡ Seizures</button>
     <button onclick="showSub('m21','headache',this)">🤯 Headaches</button>
     <button onclick="showSub('m21','parkinsons',this)">🤲 Parkinson's</button>
-    <button onclick="showSub('m21','als',this)">💪 ALS</button>
-    <button onclick="showSub('m21','ms',this)">🔗 MS</button>
-    <button onclick="showSub('m21','gbs',this)">📈 GBS</button>
-    <button onclick="showSub('m21','mg',this)">👁 MG</button>
+    <button onclick="showSub('m21','als',this)">💪 ALS (Amyotrophic Lateral Sclerosis)</button>
+    <button onclick="showSub('m21','ms',this)">🔗 MS (Multiple Sclerosis)</button>
+    <button onclick="showSub('m21','gbs',this)">📈 GBS (Guillain-Barré Syndrome)</button>
+    <button onclick="showSub('m21','mg',this)">👁 MG (Myasthenia Gravis)</button>
     <button onclick="showSub('m21','huntington',this)">🕺 Huntington\'s</button>
     <button onclick="showSub('m21','clinical',this)">🏥 Clinical Snapshot</button>
   </div>
 
   <div id="m21-seizure" class="sub-panel active">
+  <div style="background:#f5f3ff;border-left:5px solid #7c3aed;border-radius:12px;padding:18px 20px;margin-bottom:18px;">
+    <div style="font-size:.68rem;font-weight:800;text-transform:uppercase;letter-spacing:.12em;color:#7c3aed;margin-bottom:6px;">⚡ What is this?</div>
+    <div style="font-size:1.05rem;font-weight:900;color:#1e293b;margin-bottom:10px;">Seizures</div>
+    <p style="font-size:.9rem;line-height:1.85;color:#334155;margin-bottom:10px;">A seizure is an episode of abnormal, uncontrolled electrical activity in the brain. Normally, neurons fire in organized patterns. In a seizure, a group of neurons 'short-circuits' and fires chaotically all at once — like a power surge overwhelming a circuit. Depending on where in the brain this happens and how far it spreads, the patient may experience muscle jerking, staring spells, altered consciousness, strange sensations, or automatisms (repetitive movements like lip-smacking). Seizures are <em>symptoms</em> — they always have an underlying cause (epilepsy, brain injury, low blood sugar, alcohol withdrawal, head trauma, infection, electrolyte imbalance).</p>
+    <div style="background:rgba(255,255,255,.7);border-radius:8px;padding:10px 14px;font-size:.84rem;color:#475569;line-height:1.7;">
+      <strong style="color:#7c3aed;">🩺 Why nurses need to know this:</strong> During a seizure: protect (don't restrain, pad rails, turn to side after), time it (anything &gt;5 min = status epilepticus = call MD stat), document exactly what you see. After: assess LOC, injury, postictal state. A patient who is confused after a 'fainting episode' is actually postictal — crucial distinction from a simple faint.
+    </div>
+  </div>
+
     <div class="card u21">
       <h3>⚡ Types of Seizures</h3>
       <table>
@@ -1392,6 +1970,15 @@ tr:last-child td{border-bottom:none;}
   </div>
 
   <div id="m21-headache" class="sub-panel">
+  <div style="background:#ecfeff;border-left:5px solid #0891b2;border-radius:12px;padding:18px 20px;margin-bottom:18px;">
+    <div style="font-size:.68rem;font-weight:800;text-transform:uppercase;letter-spacing:.12em;color:#0891b2;margin-bottom:6px;">🤯 What is this?</div>
+    <div style="font-size:1.05rem;font-weight:900;color:#1e293b;margin-bottom:10px;">Headaches — Primary vs. Secondary</div>
+    <p style="font-size:.9rem;line-height:1.85;color:#334155;margin-bottom:10px;">A headache is pain anywhere in the head or upper neck. From a nursing standpoint, the critical distinction is: <strong>Primary headaches</strong> (the headache IS the condition — migraine, tension, cluster) vs. <strong>Secondary headaches</strong> (the headache is a SYMPTOM of something dangerous — meningitis, stroke, ↑ICP, subarachnoid hemorrhage, hypertensive emergency). Most headaches are primary and benign. The ones that kill are secondary. The 'thunderclap headache' (sudden, worst of life) is a subarachnoid hemorrhage until proven otherwise.</p>
+    <div style="background:rgba(255,255,255,.7);border-radius:8px;padding:10px 14px;font-size:.84rem;color:#475569;line-height:1.7;">
+      <strong style="color:#0891b2;">🩺 Why nurses need to know this:</strong> Your job: distinguish dangerous from benign. Red flags = 'SNOOP': Systemic symptoms (fever, weight loss), Neurological symptoms, Onset sudden, Older age (first severe HA &gt;50), Previous headache change. Any of these → escalate immediately.
+    </div>
+  </div>
+
     <div class="card u21">
       <h3>🤯 Headache Types Comparison</h3>
       <table>
@@ -1410,6 +1997,15 @@ tr:last-child td{border-bottom:none;}
   </div>
 
   <div id="m21-parkinsons" class="sub-panel">
+  <div style="background:#f0fdf4;border-left:5px solid #16a34a;border-radius:12px;padding:18px 20px;margin-bottom:18px;">
+    <div style="font-size:.68rem;font-weight:800;text-transform:uppercase;letter-spacing:.12em;color:#16a34a;margin-bottom:6px;">🤲 What is this?</div>
+    <div style="font-size:1.05rem;font-weight:900;color:#1e293b;margin-bottom:10px;">Parkinson's Disease</div>
+    <p style="font-size:.9rem;line-height:1.85;color:#334155;margin-bottom:10px;">Parkinson's disease is a progressive neurodegenerative disorder caused by the slow death of dopamine-producing neurons in the <em>substantia nigra</em> (a region in the brainstem). Dopamine is the neurotransmitter that fine-tunes movement — it's what makes movement smooth, fast, and coordinated. As dopamine levels fall, the brain loses its 'movement regulator.' The result: tremor at rest, muscle rigidity (stiffness), bradykinesia (extreme slowness), and postural instability. It is NOT just shaking — it's a whole-body movement disorder. There is no cure; treatment aims to replace or mimic dopamine to manage symptoms.</p>
+    <div style="background:rgba(255,255,255,.7);border-radius:8px;padding:10px 14px;font-size:.84rem;color:#475569;line-height:1.7;">
+      <strong style="color:#16a34a;">🩺 Why nurses need to know this:</strong> Parkinson's patients are at extreme fall risk and aspiration risk. Your priorities: give Sinemet (levodopa/carbidopa) EXACTLY on time — even 30 minutes late can leave a patient unable to swallow or walk. Assess swallowing before every meal. Never hold the medication to 'reduce fall risk' — it makes everything worse.
+    </div>
+  </div>
+
     <div class="card u21">
       <h3>🤲 Parkinson's Disease</h3>
       <div class="kb kb-purple"><strong>Pathophysiology:</strong> Progressive loss of dopamine-producing cells in the substantia nigra (basal ganglia). Dopamine↓ → acetylcholine unopposed → tremor + rigidity. Alpha-synuclein accumulates in Lewy bodies.</div>
@@ -1429,6 +2025,15 @@ tr:last-child td{border-bottom:none;}
   </div>
 
   <div id="m21-als" class="sub-panel">
+  <div style="background:#eff6ff;border-left:5px solid #0369a1;border-radius:12px;padding:18px 20px;margin-bottom:18px;">
+    <div style="font-size:.68rem;font-weight:800;text-transform:uppercase;letter-spacing:.12em;color:#0369a1;margin-bottom:6px;">💪 What is this?</div>
+    <div style="font-size:1.05rem;font-weight:900;color:#1e293b;margin-bottom:10px;">ALS — Amyotrophic Lateral Sclerosis (Lou Gehrig's Disease)</div>
+    <p style="font-size:.9rem;line-height:1.85;color:#334155;margin-bottom:10px;">Amyotrophic Lateral Sclerosis is a rapidly progressive, fatal disease that destroys both upper motor neurons (in the brain and spinal cord) and lower motor neurons (that directly connect to muscles). The result: muscles progressively waste and weaken — starting anywhere (hand, foot, speech) and spreading to all voluntary muscles. Eventually the diaphragm is affected → respiratory failure, which is the cause of death. Crucially, <strong>cognition and sensation are typically preserved</strong> — the patient is fully aware of their deterioration. Average survival is 2–5 years from diagnosis.</p>
+    <div style="background:rgba(255,255,255,.7);border-radius:8px;padding:10px 14px;font-size:.84rem;color:#475569;line-height:1.7;">
+      <strong style="color:#0369a1;">🩺 Why nurses need to know this:</strong> ALS care is about maintaining quality of life and preparing for respiratory decline. Monitor respiratory function closely (FVC% — forced vital capacity). The decision about mechanical ventilation is deeply personal. Advance directives and a palliative care team are essential. Nutritional support (often via PEG tube) and communication devices become critical as the disease progresses.
+    </div>
+  </div>
+
     <div class="card u21">
       <h3>💪 ALS (Lou Gehrig's Disease)</h3>
       <div class="kb kb-purple"><strong>Key Fact:</strong> ALS affects ONLY motor neurons (upper AND lower). <strong>Sensation, vision, hearing, taste, smell, and COGNITION remain completely intact.</strong></div>
@@ -1447,6 +2052,15 @@ tr:last-child td{border-bottom:none;}
   </div>
 
   <div id="m21-ms" class="sub-panel">
+  <div style="background:#f5f3ff;border-left:5px solid #7c3aed;border-radius:12px;padding:18px 20px;margin-bottom:18px;">
+    <div style="font-size:.68rem;font-weight:800;text-transform:uppercase;letter-spacing:.12em;color:#7c3aed;margin-bottom:6px;">🔗 What is this?</div>
+    <div style="font-size:1.05rem;font-weight:900;color:#1e293b;margin-bottom:10px;">MS — Multiple Sclerosis</div>
+    <p style="font-size:.9rem;line-height:1.85;color:#334155;margin-bottom:10px;">Multiple Sclerosis is an autoimmune disease in which the body's immune system attacks and destroys the myelin sheath — the fatty insulation around nerve fibers in the <em>central nervous system</em> (brain and spinal cord). Without myelin, nerve signals slow down, become distorted, or stop entirely — like a frayed electrical wire. Scar tissue (sclerosis) forms at the attack sites (plaques), especially in periventricular white matter. Symptoms vary wildly depending on which nerve pathways are affected: vision problems (optic neuritis), weakness, spasticity, fatigue, bladder dysfunction, balance problems. Most common form: relapsing-remitting MS (RRMS) — periods of attacks (relapses) followed by partial or complete recovery (remission).</p>
+    <div style="background:rgba(255,255,255,.7);border-radius:8px;padding:10px 14px;font-size:.84rem;color:#475569;line-height:1.7;">
+      <strong style="color:#7c3aed;">🩺 Why nurses need to know this:</strong> MS management focuses on: disease-modifying therapy (to slow progression), managing relapses (often IV steroids), and symptom control. Key nursing points: heat worsens MS symptoms (Uhthoff's phenomenon) — avoid baths &gt;98°F; fatigue is neurological, not laziness; bladder dysfunction increases UTI risk; depression is common. Never give live vaccines during immunosuppressive therapy.
+    </div>
+  </div>
+
     <div class="card u21">
       <h3>🔗 Multiple Sclerosis (MS)</h3>
       <div class="kb kb-purple"><strong>Pathophysiology:</strong> Autoimmune disorder → demyelination of CNS (brain, spinal cord, optic nerves) → impaired nerve signal conduction → sensory AND motor deficits. Predilection for optic nerves.</div>
@@ -1466,6 +2080,15 @@ tr:last-child td{border-bottom:none;}
   </div>
 
   <div id="m21-gbs" class="sub-panel">
+  <div style="background:#ecfdf5;border-left:5px solid #059669;border-radius:12px;padding:18px 20px;margin-bottom:18px;">
+    <div style="font-size:.68rem;font-weight:800;text-transform:uppercase;letter-spacing:.12em;color:#059669;margin-bottom:6px;">📈 What is this?</div>
+    <div style="font-size:1.05rem;font-weight:900;color:#1e293b;margin-bottom:10px;">GBS — Guillain-Barré Syndrome</div>
+    <p style="font-size:.9rem;line-height:1.85;color:#334155;margin-bottom:10px;">Guillain-Barré Syndrome is an acute autoimmune attack on the myelin sheath of the <em>peripheral nervous system</em> — the nerves outside the brain and spinal cord. It almost always follows an infection (GI or respiratory, most commonly Campylobacter jejuni) by 2–4 weeks. The immune system makes antibodies to fight the infection but accidentally attacks peripheral nerve myelin too. The defining feature: <strong>ascending weakness</strong> — starting in the feet and legs and rising toward the trunk, arms, and eventually the diaphragm. Without the diaphragm, the patient cannot breathe → respiratory failure is the life-threatening emergency. Most patients (80%+) recover with treatment, but it takes months.</p>
+    <div style="background:rgba(255,255,255,.7);border-radius:8px;padding:10px 14px;font-size:.84rem;color:#475569;line-height:1.7;">
+      <strong style="color:#059669;">🩺 Why nurses need to know this:</strong> GBS nursing is about respiratory surveillance. Monitor vital capacity (VC) frequently — if VC falls below 20 mL/kg or 1 liter, prepare for intubation. Watch for autonomic instability (wild BP and HR swings, arrhythmias). Strict NPO if bulbar symptoms. Emotional support is critical — the patient is fully awake and aware while becoming paralyzed.
+    </div>
+  </div>
+
     <div class="card u21">
       <h3>📈 Guillain-Barré Syndrome (GBS)</h3>
       <div class="kb kb-purple"><strong>Key:</strong> Acute peripheral neuropathy — autoimmune attack on peripheral nerve myelin following infection (C. jejuni, CMV, EBV) or vaccination. Presents as ASCENDING paralysis.</div>
@@ -1485,6 +2108,15 @@ tr:last-child td{border-bottom:none;}
   </div>
 
   <div id="m21-mg" class="sub-panel">
+  <div style="background:#fdf2f8;border-left:5px solid #be185d;border-radius:12px;padding:18px 20px;margin-bottom:18px;">
+    <div style="font-size:.68rem;font-weight:800;text-transform:uppercase;letter-spacing:.12em;color:#be185d;margin-bottom:6px;">👁 What is this?</div>
+    <div style="font-size:1.05rem;font-weight:900;color:#1e293b;margin-bottom:10px;">MG — Myasthenia Gravis</div>
+    <p style="font-size:.9rem;line-height:1.85;color:#334155;margin-bottom:10px;">Myasthenia Gravis is an autoimmune disease in which the body produces antibodies that attack and destroy acetylcholine (ACh) receptors at the <em>neuromuscular junction</em> — the gap where nerves connect to muscles. Without enough receptors, the muscle can't receive the nerve's signal to contract. The hallmark: <strong>muscle weakness that worsens with use and improves with rest</strong>. Classic early sign: ptosis (drooping eyelid) and diplopia (double vision) that worsen throughout the day. Bulbar symptoms (difficulty swallowing, nasal voice) signal danger. <em>Myasthenic crisis</em> = severe weakness leading to respiratory failure. <em>Cholinergic crisis</em> = too much ACh medication causing SLUDGE symptoms + weakness.</p>
+    <div style="background:rgba(255,255,255,.7);border-radius:8px;padding:10px 14px;font-size:.84rem;color:#475569;line-height:1.7;">
+      <strong style="color:#be185d;">🩺 Why nurses need to know this:</strong> Distinguishing myasthenic crisis from cholinergic crisis is a high-stakes nursing skill. Both cause weakness and breathing difficulty. The difference: SLUDGE symptoms (Salivation, Lacrimation, Urination, Defecation/Diarrhea, GI cramps, Emesis) = cholinergic crisis → HOLD pyridostigmine + give atropine. No SLUDGE = myasthenic crisis → may need more medication or IVIG/plasmapheresis. When in doubt → call the physician.
+    </div>
+  </div>
+
     <div class="card u21">
       <h3>👁 Myasthenia Gravis (MG)</h3>
       <div class="kb kb-purple"><strong>Pathophysiology:</strong> Autoimmune — antibodies destroy nicotinic acetylcholine (ACh) receptors at the neuromuscular junction → inefficient neuromuscular transmission → muscle weakness and fatigability.</div>
@@ -1508,6 +2140,15 @@ tr:last-child td{border-bottom:none;}
   </div>
 
   <div id="m21-huntington" class="sub-panel">
+  <div style="background:#fffbeb;border-left:5px solid #d97706;border-radius:12px;padding:18px 20px;margin-bottom:18px;">
+    <div style="font-size:.68rem;font-weight:800;text-transform:uppercase;letter-spacing:.12em;color:#d97706;margin-bottom:6px;">🕺 What is this?</div>
+    <div style="font-size:1.05rem;font-weight:900;color:#1e293b;margin-bottom:10px;">Huntington's Disease</div>
+    <p style="font-size:.9rem;line-height:1.85;color:#334155;margin-bottom:10px;">Huntington's disease is a hereditary, progressive neurodegenerative disorder caused by a mutation in the HTT gene (chromosome 4) that leads to the gradual death of neurons, particularly in the <em>basal ganglia and cerebral cortex</em>. It causes a devastating triad: <strong>motor symptoms</strong> (chorea — involuntary, jerky, dance-like movements), <strong>cognitive decline</strong> (dementia), and <strong>psychiatric symptoms</strong> (depression, anxiety, personality changes). Onset is typically 30–50 years old. Because it is autosomal dominant, each child of an affected parent has a 50% chance of inheriting it. There is no cure — death typically occurs 15–20 years after diagnosis.</p>
+    <div style="background:rgba(255,255,255,.7);border-radius:8px;padding:10px 14px;font-size:.84rem;color:#475569;line-height:1.7;">
+      <strong style="color:#d97706;">🩺 Why nurses need to know this:</strong> Huntington's nursing focuses on safety (fall prevention with chorea), nutrition (high-calorie diet as the body burns energy with constant involuntary movements), aspiration precautions, and emotional/family support. The genetic counseling aspect is profound — family members may be deciding whether to get tested for the gene. Depression and suicide risk are high. A multidisciplinary team including neurologist, speech therapy, OT/PT, and social work is essential.
+    </div>
+  </div>
+
     <div class="card u21">
       <h3>🕺 Huntington's Disease (HD)</h3>
       <div class="kb kb-purple"><strong>Genetics:</strong> Autosomal dominant — gene on chromosome 4 → abnormal CAG repeat → mutated huntingtin protein accumulates → neurodegeneration of striatum/basal ganglia. If parent has it, 50% chance of inheriting.</div>
@@ -1553,14 +2194,23 @@ tr:last-child td{border-bottom:none;}
     <p>The skull is a rigid, sealed box containing three things: <strong>brain tissue</strong>, <strong>blood</strong>, and <strong>CSF</strong> (Monroe-Kellie doctrine). There's no room for anything extra. If a bleed, swelling, or tumor adds volume, something else has to shrink — or the pressure inside rises dangerously (<strong>↑ICP</strong>). Too much pressure = the brain gets squeezed downward through small openings (<strong>herniation</strong>) = fatal. Every ICP intervention is about reducing the stuff inside the box.</p>
   </div>
   <div class="sub-nav" id="m22-subnav">
-    <button onclick="showSub('m22','icp',this)" class="active">📈 ICP & Monro-Kellie</button>
-    <button onclick="showSub('m22','tbi',this)">🤕 TBI Types</button>
+    <button onclick="showSub('m22','icp',this)" class="active">📈 ICP (Intracranial Pressure) & Monro-Kellie</button>
+    <button onclick="showSub('m22','tbi',this)">🤕 TBI (Traumatic Brain Injury) Types</button>
     <button onclick="showSub('m22','hematoma',this)">🩸 Hematomas</button>
-    <button onclick="showSub('m22','sci',this)">🦴 Spinal Cord Injury</button>
+    <button onclick="showSub('m22','sci',this)">🦴 SCI (Spinal Cord Injury)</button>
     <button onclick="showSub('m22','dementia',this)">🧓 Dementia & Delirium</button>
   </div>
 
   <div id="m22-icp" class="sub-panel active">
+  <div style="background:#fef2f2;border-left:5px solid #dc2626;border-radius:12px;padding:18px 20px;margin-bottom:18px;">
+    <div style="font-size:.68rem;font-weight:800;text-transform:uppercase;letter-spacing:.12em;color:#dc2626;margin-bottom:6px;">📈 What is this?</div>
+    <div style="font-size:1.05rem;font-weight:900;color:#1e293b;margin-bottom:10px;">ICP — Intracranial Pressure & the Monro-Kellie Doctrine</div>
+    <p style="font-size:.9rem;line-height:1.85;color:#334155;margin-bottom:10px;">Intracranial Pressure (ICP) is the pressure inside the skull. Normal = 5–15 mmHg. The skull is a rigid, non-expandable box containing three things: <strong>brain tissue</strong> (80%), <strong>blood</strong> (10%), and <strong>cerebrospinal fluid (CSF)</strong> (10%). This is the Monro-Kellie Doctrine — if any one component increases in volume, one or both of the others MUST decrease to keep pressure normal. When compensation fails (all three are at max), pressure rises dangerously. High ICP compresses brain structures, cuts off blood flow (reduces CPP = Cerebral Perfusion Pressure), and can cause herniation — the brain being squeezed through openings in the skull — which is fatal.</p>
+    <div style="background:rgba(255,255,255,.7);border-radius:8px;padding:10px 14px;font-size:.84rem;color:#475569;line-height:1.7;">
+      <strong style="color:#dc2626;">🩺 Why nurses need to know this:</strong> You are the first to detect rising ICP. Know the signs in order of progression: early (subtle behavior change, headache, nausea), middle (worsening confusion, pupil changes), late (Cushing's Triad: ↑BP + ↓HR + irregular respirations = herniation is happening → call MD immediately). Position HOB 30°, head midline, avoid anything that raises pressure (coughing, Valsalva, hip flexion &gt;90°).
+    </div>
+  </div>
+
 
 <div class="diagram-box" style="margin-bottom:20px;">
   <div class="diagram-title">📈 Monro-Kellie Doctrine — Why ICP Rises</div>
@@ -1676,6 +2326,15 @@ tr:last-child td{border-bottom:none;}
   </div>
 
   <div id="m22-tbi" class="sub-panel">
+  <div style="background:#fffbeb;border-left:5px solid #b45309;border-radius:12px;padding:18px 20px;margin-bottom:18px;">
+    <div style="font-size:.68rem;font-weight:800;text-transform:uppercase;letter-spacing:.12em;color:#b45309;margin-bottom:6px;">🤕 What is this?</div>
+    <div style="font-size:1.05rem;font-weight:900;color:#1e293b;margin-bottom:10px;">TBI — Traumatic Brain Injury</div>
+    <p style="font-size:.9rem;line-height:1.85;color:#334155;margin-bottom:10px;">Traumatic Brain Injury occurs when an external force (blow, jolt, penetrating object) disrupts normal brain function. TBI ranges from mild (concussion — brief confusion, no structural damage) to severe (prolonged unconsciousness, structural damage, coma). Two types of brain damage occur: <strong>Primary injury</strong> — the direct damage at the moment of impact (contusion, laceration, axonal shearing). <strong>Secondary injury</strong> — the cascade of damage that follows over hours to days: cerebral edema, ↑ICP, hypoxia, hypotension, seizures, infection. The primary injury is already done — nursing focuses almost entirely on <em>preventing secondary injury</em>.</p>
+    <div style="background:rgba(255,255,255,.7);border-radius:8px;padding:10px 14px;font-size:.84rem;color:#475569;line-height:1.7;">
+      <strong style="color:#b45309;">🩺 Why nurses need to know this:</strong> Your secondary injury prevention bundle: maintain SpO₂ ≥94% (hypoxia kills neurons), keep MAP adequate for CPP ≥60, prevent fever (raises metabolic demand), control ICP, prevent seizures, minimize stimulation. The GCS is your monitoring tool — any downward trend is an emergency. Know your baseline and reassess frequently.
+    </div>
+  </div>
+
     <div class="card u22">
       <h3>🤕 Concussion (Mild TBI)</h3>
       <div class="kb kb-red">Physiological disruption of brain function — may or may not include LOC. NO structural changes on CT (CT normal in &gt;90%).</div>
@@ -1725,6 +2384,15 @@ tr:last-child td{border-bottom:none;}
   </div>
 
   <div id="m22-hematoma" class="sub-panel">
+  <div style="background:#fef2f2;border-left:5px solid #7f1d1d;border-radius:12px;padding:18px 20px;margin-bottom:18px;">
+    <div style="font-size:.68rem;font-weight:800;text-transform:uppercase;letter-spacing:.12em;color:#7f1d1d;margin-bottom:6px;">🩸 What is this?</div>
+    <div style="font-size:1.05rem;font-weight:900;color:#1e293b;margin-bottom:10px;">Intracranial Hematomas — Blood Where It Shouldn't Be</div>
+    <p style="font-size:.9rem;line-height:1.85;color:#334155;margin-bottom:10px;">An intracranial hematoma is a collection of blood inside the skull, compressing the brain. Three main locations: <strong>Epidural hematoma</strong> — blood between skull and dura (usually from middle meningeal artery rupture after temporal skull fracture). Classic: brief LOC → lucid interval → rapid deterioration. <strong>Subdural hematoma</strong> — blood between dura and arachnoid (from torn bridging veins, common in elderly/anticoagulated). Can be acute, subacute, or chronic. <strong>Subarachnoid hemorrhage (SAH)</strong> — blood in the CSF space (often from ruptured aneurysm). Classic: sudden 'thunderclap' headache — worst of life.</p>
+    <div style="background:rgba(255,255,255,.7);border-radius:8px;padding:10px 14px;font-size:.84rem;color:#475569;line-height:1.7;">
+      <strong style="color:#7f1d1d;">🩺 Why nurses need to know this:</strong> The classic patterns help you anticipate who is at risk: epidural = young trauma patient + lucid interval; subdural = elderly/falls/anticoagulated + subtle onset; SAH = sudden catastrophic headache. All three are surgical emergencies. Your role: recognize the pattern, monitor neuro status vigilantly, prepare for rapid escalation.
+    </div>
+  </div>
+
 
 <div class="diagram-box" style="margin-bottom:20px;">
   <div class="diagram-title">🩸 Types of Brain Hemorrhage — Anatomical Cross-Section</div>
@@ -1850,6 +2518,15 @@ tr:last-child td{border-bottom:none;}
   </div>
 
   <div id="m22-sci" class="sub-panel">
+  <div style="background:#eff6ff;border-left:5px solid #0369a1;border-radius:12px;padding:18px 20px;margin-bottom:18px;">
+    <div style="font-size:.68rem;font-weight:800;text-transform:uppercase;letter-spacing:.12em;color:#0369a1;margin-bottom:6px;">🦴 What is this?</div>
+    <div style="font-size:1.05rem;font-weight:900;color:#1e293b;margin-bottom:10px;">SCI — Spinal Cord Injury</div>
+    <p style="font-size:.9rem;line-height:1.85;color:#334155;margin-bottom:10px;">Spinal Cord Injury (SCI) is damage to the spinal cord — the main information highway between the brain and the body. Injury can be <strong>complete</strong> (total loss of sensation and motor function below the injury level) or <strong>incomplete</strong> (some function preserved). Location matters: cervical injuries (C1–C8) affect arms, trunk, legs + potentially breathing. Thoracic (T1–T12) affects trunk and legs. Lumbar (L1–L5) affects legs. Two dangerous early complications: <strong>Spinal shock</strong> (temporary loss of all function below injury — resolves in days/weeks) and <strong>Neurogenic shock</strong> (loss of sympathetic tone → hypotension + bradycardia — NO tachycardia, distinguishing it from other shock). Long-term complication at T6+: <strong>Autonomic Dysreflexia</strong>.</p>
+    <div style="background:rgba(255,255,255,.7);border-radius:8px;padding:10px 14px;font-size:.84rem;color:#475569;line-height:1.7;">
+      <strong style="color:#0369a1;">🩺 Why nurses need to know this:</strong> Priority nursing for acute SCI: immobilize (never move without spinal precautions), maintain airway (cervical injuries may paralyze respiratory muscles), monitor for neurogenic shock (vasopressors + atropine, NOT aggressive fluids alone), log-roll for turns. Long-term: prevent pressure injuries (cannot feel pain), bowel/bladder program, autonomic dysreflexia education (full bladder = most common trigger → sit up + check Foley first).
+    </div>
+  </div>
+
 
 <div class="diagram-box" style="margin-bottom:20px;">
   <div class="diagram-title">🦴 Spinal Cord Injury — Level Determines Function</div>
@@ -1961,6 +2638,15 @@ tr:last-child td{border-bottom:none;}
   </div>
 
   <div id="m22-dementia" class="sub-panel">
+  <div style="background:#ecfdf5;border-left:5px solid #059669;border-radius:12px;padding:18px 20px;margin-bottom:18px;">
+    <div style="font-size:.68rem;font-weight:800;text-transform:uppercase;letter-spacing:.12em;color:#059669;margin-bottom:6px;">🧓 What is this?</div>
+    <div style="font-size:1.05rem;font-weight:900;color:#1e293b;margin-bottom:10px;">Dementia & Delirium — Critical Differences</div>
+    <p style="font-size:.9rem;line-height:1.85;color:#334155;margin-bottom:10px;">These two are often confused but are completely different conditions. <strong>Dementia</strong> is a progressive, irreversible syndrome of cognitive decline — memory, reasoning, language, judgment all slowly deteriorate over months to years. Most common cause: Alzheimer's disease (beta-amyloid plaques + neurofibrillary tangles). Cannot be reversed. <strong>Delirium</strong> is an acute, sudden-onset confusion with fluctuating consciousness, often with hallucinations. It ALWAYS has a reversible underlying cause (infection, medications, metabolic disturbance, pain, urinary retention). The key clinical distinction: <strong>Dementia = gradual + stable</strong>. <strong>Delirium = sudden onset + fluctuating</strong>. A demented patient CAN develop delirium on top of their dementia — called 'delirium superimposed on dementia' and it is very common in hospitalized elderly.</p>
+    <div style="background:rgba(255,255,255,.7);border-radius:8px;padding:10px 14px;font-size:.84rem;color:#475569;line-height:1.7;">
+      <strong style="color:#059669;">🩺 Why nurses need to know this:</strong> The most important nursing action: if a patient suddenly becomes MORE confused than their baseline → think delirium first. Find and fix the cause: check for UTI, pain, urinary retention, hypoxia, medication review, electrolytes. Delirium is preventable and treatable — it is NOT just 'normal for old people.' DELIRIUM INCREASES MORTALITY. Non-pharmacologic management first: reorientation, restore sleep/wake cycle, mobilization, familiar faces, minimize lines/catheters.
+    </div>
+  </div>
+
     <div class="card u22">
       <h3>🧓 Dementia vs. Delirium — Most Tested Distinction!</h3>
       <table>
@@ -2409,7 +3095,7 @@ tr:last-child td{border-bottom:none;}
     <button onclick="showNclex('n21a',this)">⚡ 2.1 Seizures (6 Qs)</button>
     <button onclick="showNclex('n21b',this)">💊 2.1 Neurodegenerative (10 Qs)</button>
     <button onclick="showNclex('n22a',this)">📈 2.2 ICP/TBI (10 Qs)</button>
-    <button onclick="showNclex('n22b',this)">🦴 2.2 SCI (5 Qs)</button>
+    <button onclick="showNclex('n22b',this)">🦴 2.2 Spinal Cord Injury (5 Qs)</button>
     <button onclick="showNclex('n22c',this)">🧓 2.2 Dementia (5 Qs)</button>
     <button onclick="showNclex('nmix',this)">🎲 Mixed (15 Qs)</button>
   </div>
@@ -3510,67 +4196,149 @@ function initNclex(){
   renderBank(currentBank);
 }
 
+/* ── NCLEX one-at-a-time state ── */
+var nclexOTA = {}; // per-bank: { idx, score, selected, answered }
+
+function initNclexOTA(bank){
+  if(!nclexOTA[bank]) nclexOTA[bank] = { idx:0, score:0, selected:null, answered:false };
+}
+
 function renderBank(bank){
+  initNclexOTA(bank);
+  var state = nclexOTA[bank];
   var container = document.getElementById('nclex-sets');
   var qs = nclexData[bank] || [];
-  userAnswers[bank] = userAnswers[bank] || {};
-  submitted[bank] = submitted[bank] || {};
-  
-  var html = '<div class="quiz-header" style="margin-bottom:14px;display:flex;justify-content:space-between;align-items:center;">';
-  html += '<span style="font-size:.85rem;color:#64748b;">'+qs.length+' Questions | Click an answer, then submit to see rationales</span>';
-  html += '<button onclick="showSummary(\''+bank+'\')" style="padding:8px 16px;background:#059669;color:#fff;border:none;border-radius:8px;font-weight:700;cursor:pointer;font-size:.82rem;">📊 View My Score</button>';
-  html += '</div>';
-  
-  qs.forEach(function(q, qi){
-    html += '<div class="q-block" id="qb-'+q.id+'">';
-    html += '<div class="q-num">Question '+(qi+1)+' of '+qs.length+'</div>';
-    html += '<div class="q-topic-tag">'+q.topic+'</div>';
-    if(q.sata) html += '<div class="sata">⚠️ Select ALL that Apply</div>';
-    html += '<div class="q-stem">'+q.stem+'</div>';
-    html += '<div class="q-opts">';
-    q.opts.forEach(function(opt){
-      var type = q.sata ? 'checkbox' : 'radio';
-      var name = 'q-'+q.id;
-      var cls = 'q-opt';
-      var checked = '';
-      var lockedAttr = '';
-      if(submitted[bank] && submitted[bank][q.id]){
-        cls += opt.correct ? ' correct' : '';
-        if(userAnswers[bank][q.id]){
-          var ans = userAnswers[bank][q.id];
-          if(Array.isArray(ans)){
-            if(ans.indexOf(opt.l)!==-1 && !opt.correct) cls += ' wrong';
-            if(ans.indexOf(opt.l)===-1 && opt.correct) cls += ' missed';
-            if(ans.indexOf(opt.l)!==-1) checked = 'checked';
-          } else {
-            if(ans===opt.l && !opt.correct) cls += ' wrong';
-            if(ans!==opt.l && opt.correct) cls += ' missed';
-            if(ans===opt.l) checked = 'checked';
-          }
-        }
-        lockedAttr = 'disabled';
-        cls += ' locked';
-      }
-      html += '<label class="'+cls+'" onclick="selectOpt(\''+bank+'\',\''+q.id+'\',\''+opt.l+'\','+!!q.sata+')">';
-      html += '<input type="'+type+'" name="'+name+'" value="'+opt.l+'" '+checked+' '+lockedAttr+' style="pointer-events:none;">';
-      html += '<span>'+opt.l+'. '+opt.t+'</span>';
-      html += '</label>';
-    });
-    html += '</div>';
-    var subDisabled = (submitted[bank] && submitted[bank][q.id]) ? 'disabled' : '';
-    html += '<button class="submit-q" '+subDisabled+' onclick="submitQ(\''+bank+'\',\''+q.id+'\')">Submit Answer</button>';
-    if(submitted[bank] && submitted[bank][q.id]){
-      html += '<div class="rat-box"><h4>📖 Rationales:</h4>';
-      q.opts.forEach(function(opt){
-        var rc = opt.correct ? 'rat-c' : 'rat-w';
-        var icon = opt.correct ? '✅' : '❌';
-        html += '<div class="rat-item '+rc+'"><strong>'+icon+' '+opt.l+'.</strong> '+q.rats[opt.l]+'</div>';
-      });
-      html += '</div>';
+
+  if(state.idx >= qs.length){
+    // Summary screen
+    var pct = qs.length > 0 ? Math.round(state.score/qs.length*100) : 0;
+    var grade = pct>=90?'🏆 Excellent!':pct>=75?'✅ Good Job!':pct>=60?'📖 Keep Studying':'💪 Review Needed';
+    container.innerHTML =
+      '<div style="text-align:center;padding:36px 16px;">' +
+      '<div style="width:120px;height:120px;border-radius:50%;background:linear-gradient(135deg,#1565c0,#42a5f5);color:#fff;' +
+        'display:flex;flex-direction:column;align-items:center;justify-content:center;margin:0 auto 20px;box-shadow:0 4px 20px rgba(21,101,192,.3);">' +
+      '<div style="font-size:2rem;font-weight:900;line-height:1;">'+pct+'%</div>' +
+      '<div style="font-size:.75rem;opacity:.9;">Score</div></div>' +
+      '<div style="font-size:1.15rem;font-weight:800;margin-bottom:6px;">'+grade+'</div>' +
+      '<div style="color:#64748b;font-size:.9rem;margin-bottom:24px;">You got '+state.score+' out of '+qs.length+' correct.</div>' +
+      '<button onclick="nclexRestart(\''+bank+'\')" style="background:#2563eb;color:#fff;border:none;border-radius:10px;padding:12px 28px;font-size:.95rem;font-weight:800;cursor:pointer;margin:4px;">🔄 Restart</button>' +
+      '</div>';
+    return;
+  }
+
+  var q = qs[state.idx];
+  var idx = state.idx;
+  var progress = Math.round(idx / qs.length * 100);
+
+  // Progress bar + score header
+  var h = '<div style="margin-bottom:18px;">' +
+    '<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;font-size:.82rem;">' +
+    '<span style="color:#64748b;font-weight:600;">Question '+(idx+1)+' of '+qs.length+'</span>' +
+    '<span style="background:#eff6ff;color:#2563eb;padding:3px 12px;border-radius:99px;font-weight:700;">Score: '+state.score+'/'+idx+'</span>' +
+    '</div>' +
+    '<div style="background:#e2e8f0;border-radius:99px;height:7px;">' +
+    '<div style="background:linear-gradient(90deg,#1565c0,#42a5f5);height:7px;border-radius:99px;width:'+progress+'%;transition:.4s;"></div>' +
+    '</div></div>';
+
+  // Question card
+  h += '<div style="background:#fff;border-radius:14px;border:1px solid #e2e8f0;box-shadow:0 1px 3px rgba(15,23,42,.06),0 4px 16px rgba(15,23,42,.06);padding:22px 24px;">';
+  h += '<div style="font-size:.72rem;font-weight:800;text-transform:uppercase;letter-spacing:.08em;color:#94a3b8;margin-bottom:5px;">'+q.topic+'</div>';
+  if(q.sata) h += '<div style="background:#fffbeb;color:#b45309;padding:6px 12px;border-radius:6px;font-size:.8rem;font-weight:700;margin-bottom:10px;display:inline-block;">⚠️ Select ALL That Apply</div>';
+  h += '<div style="font-size:.96rem;font-weight:600;color:#1e293b;line-height:1.7;margin-bottom:18px;">'+q.stem+'</div>';
+
+  // Answer options
+  h += '<div style="display:flex;flex-direction:column;gap:9px;margin-bottom:16px;">';
+  q.opts.forEach(function(opt){
+    var isSelected = state.selected && (
+      q.sata ? (state.selected.indexOf(opt.l)!==-1) : (state.selected===opt.l)
+    );
+    var cls = '', border = '#e2e8f0', bg = '#f8fafc', color = '#334155';
+    if(state.answered){
+      if(opt.correct){ border='#16a34a'; bg='#f0fdf4'; color='#14532d'; cls='font-weight:700;'; }
+      else if(isSelected && !opt.correct){ border='#dc2626'; bg='#fef2f2'; color='#991b1b'; cls='font-weight:700;'; }
+    } else if(isSelected){
+      border='#2563eb'; bg='#eff6ff'; color='#1e3a8a'; cls='font-weight:700;';
     }
-    html += '</div>';
+    var clickAttr = state.answered ? '' : ('onclick="nclexSelectOpt(\''+bank+'\',\''+opt.l+'\','+!!q.sata+')"');
+    h += '<div '+clickAttr+' style="display:flex;align-items:flex-start;gap:10px;padding:11px 14px;border-radius:9px;border:1.5px solid '+border+';background:'+bg+';cursor:'+(state.answered?'default':'pointer')+';transition:.15s;'+cls+'">';
+    h += '<span style="font-weight:800;width:20px;flex-shrink:0;color:'+(state.answered&&opt.correct?'#16a34a':state.answered&&isSelected&&!opt.correct?'#dc2626':'#2563eb')+';">'+opt.l+'.</span>';
+    h += '<span style="font-size:.89rem;line-height:1.6;color:'+color+';">'+opt.t+'</span></div>';
   });
-  container.innerHTML = html;
+  h += '</div>';
+
+  // Submit button
+  if(!state.answered){
+    h += '<button onclick="nclexSubmitOTA(\''+bank+'\',\''+q.id+'\')" '+
+      'style="background:#2563eb;color:#fff;border:none;border-radius:9px;padding:11px 26px;font-size:.9rem;font-weight:800;cursor:pointer;">Submit Answer →</button>';
+  }
+
+  // Rationales (all options) after answering
+  if(state.answered){
+    h += '<div style="border-top:1px solid #e2e8f0;padding-top:16px;margin-top:4px;">';
+    h += '<div style="font-size:.72rem;font-weight:800;text-transform:uppercase;letter-spacing:.08em;color:#64748b;margin-bottom:12px;">📖 Rationales — Every Option Explained</div>';
+    q.opts.forEach(function(opt){
+      var bg = opt.correct ? '#f0fdf4' : '#fef2f2';
+      var border = opt.correct ? '#16a34a' : '#dc2626';
+      var icon = opt.correct ? '✅' : '❌';
+      h += '<div style="padding:11px 14px;border-radius:9px;border-left:4px solid '+border+';background:'+bg+';margin-bottom:10px;font-size:.85rem;line-height:1.75;">';
+      h += '<strong>'+icon+' '+opt.l+'.</strong> '+q.rats[opt.l]+'</div>';
+    });
+    h += '</div>';
+    var isLast = (idx+1 >= qs.length);
+    var nextLabel = isLast ? 'View My Score ✓' : 'Next Question →';
+    h += '<button onclick="nclexNextOTA(\''+bank+'\')" style="background:#16a34a;color:#fff;border:none;border-radius:9px;padding:11px 26px;font-size:.9rem;font-weight:800;cursor:pointer;margin-top:6px;">'+nextLabel+'</button>';
+  }
+
+  h += '</div>'; // close card
+  container.innerHTML = h;
+}
+
+function nclexSelectOpt(bank, letter, isSata){
+  initNclexOTA(bank);
+  var state = nclexOTA[bank];
+  if(state.answered) return;
+  if(isSata){
+    if(!Array.isArray(state.selected)) state.selected = [];
+    var idx = state.selected.indexOf(letter);
+    if(idx===-1) state.selected.push(letter); else state.selected.splice(idx,1);
+  } else {
+    state.selected = letter;
+  }
+  renderBank(bank);
+}
+
+function nclexSubmitOTA(bank, qid){
+  initNclexOTA(bank);
+  var state = nclexOTA[bank];
+  if(!state.selected || (Array.isArray(state.selected) && state.selected.length===0)) return;
+  var qs = nclexData[bank] || [];
+  var q = qs[state.idx];
+  var isCorrect = false;
+  if(q.sata){
+    var correctLetters = q.opts.filter(function(o){return o.correct;}).map(function(o){return o.l;}).sort();
+    var userLetters = (state.selected||[]).slice().sort();
+    isCorrect = JSON.stringify(correctLetters)===JSON.stringify(userLetters);
+  } else {
+    var correct = q.opts.find(function(o){return o.correct;});
+    isCorrect = correct && state.selected===correct.l;
+  }
+  if(isCorrect) state.score++;
+  state.answered = true;
+  renderBank(bank);
+}
+
+function nclexNextOTA(bank){
+  initNclexOTA(bank);
+  var state = nclexOTA[bank];
+  state.idx++;
+  state.selected = null;
+  state.answered = false;
+  renderBank(bank);
+}
+
+function nclexRestart(bank){
+  nclexOTA[bank] = { idx:0, score:0, selected:null, answered:false };
+  renderBank(bank);
 }
 
 function selectOpt(bank, qid, letter, isSata){
@@ -3731,18 +4499,32 @@ var currentGlossTag = 'all';
 function renderGloss(data){
   var list = document.getElementById('glossList');
   if(!list) return;
-  if(!data.length){list.innerHTML='<div style="text-align:center;color:#94a3b8;padding:30px;font-size:.9rem;">No terms found. Try a different search.</div>';return;}
-  list.innerHTML = data.map(function(g,i){
-    var chip = '<span class="gloss-tag-chip" style="background:'+g.tagColor+'20;color:'+g.tagColor+'">'+g.tag+'</span>';
-    return '<div class="gloss-item"><div class="gloss-hdr" onclick="toggleGloss('+i+')" id="ghdr'+i+'">' +
-      '<div class="gloss-term">'+g.term+'</div>'+chip+'<span id="garr'+i+'">▾</span>' +
-      '</div><div class="gloss-body" id="gbody'+i+'">' +
-      '<div class="gloss-row">' +
-      '<div class="gloss-lbl">Plain English</div><div class="gloss-val">'+g.plain+'</div>' +
-      '<div class="gloss-lbl">Related To</div><div class="gloss-val">'+g.related+'</div>' +
+  if(!data.length){
+    list.innerHTML='<div style="text-align:center;color:#94a3b8;padding:30px;font-size:.9rem;">No terms found. Try a different search.</div>';
+    return;
+  }
+  list.innerHTML = data.map(function(g, i){
+    var tagBg = g.tagColor ? g.tagColor+'22' : '#e2e8f0';
+    var tagColor = g.tagColor || '#64748b';
+    var chip = '<span style="font-size:.7rem;font-weight:700;padding:3px 10px;border-radius:99px;background:'+tagBg+';color:'+tagColor+';">'+g.tag+'</span>';
+    return (
+      '<div style="background:#fff;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,.07);margin-bottom:12px;overflow:hidden;border:1px solid #f1f5f9;">' +
+      '<div onclick="toggleGloss('+i+')" id="ghdr'+i+'" style="display:flex;align-items:center;gap:10px;padding:14px 18px;cursor:pointer;transition:background .15s;" onmouseover="this.style.background=\'#f8fafc\'" onmouseout="this.style.background=\'#fff\'">' +
+      '<div style="font-weight:800;font-size:.97rem;flex:1;color:#1e293b;">'+g.term+'</div>' +
+      chip +
+      '<span id="garr'+i+'" style="color:#94a3b8;font-size:.85rem;transition:transform .2s;">▾</span>' +
       '</div>' +
-      '<div class="mem-trick"><strong>Memory Trick</strong><br>'+g.trick+'</div>' +
-      '</div></div>';
+      '<div class="gloss-body" id="gbody'+i+'" style="display:none;border-top:1px solid #f1f5f9;">' +
+      '<div style="display:grid;grid-template-columns:130px 1fr;gap:6px 14px;padding:14px 18px 6px;font-size:.85rem;">' +
+      '<div style="font-weight:700;color:#94a3b8;font-size:.72rem;text-transform:uppercase;letter-spacing:.06em;padding-top:3px;">Plain English</div>' +
+      '<div style="line-height:1.75;color:#334155;">'+g.plain+'</div>' +
+      '<div style="font-weight:700;color:#94a3b8;font-size:.72rem;text-transform:uppercase;letter-spacing:.06em;padding-top:3px;">Clinical Context</div>' +
+      '<div style="line-height:1.75;color:#334155;">'+g.related+'</div>' +
+      '</div>' +
+      '<div style="margin:0 18px 14px;background:#fffde7;border-radius:8px;padding:10px 14px;font-size:.83rem;line-height:1.7;border-left:3px solid #f59e0b;">' +
+      '<strong style="color:#b45309;">💡 Memory Trick</strong><br>'+g.trick+
+      '</div></div></div>'
+    );
   }).join('');
 }
 
@@ -3767,10 +4549,11 @@ function filterGlossTag(tag, el){
 
 function toggleGloss(i){
   var body = document.getElementById('gbody'+i);
-  var arr = document.getElementById('garr'+i);
+  var arr  = document.getElementById('garr'+i);
   if(!body) return;
-  body.classList.toggle('open');
-  if(arr) arr.textContent = body.classList.contains('open') ? '▴' : '▾';
+  var open = body.style.display === 'block';
+  body.style.display = open ? 'none' : 'block';
+  if(arr) arr.textContent = open ? '▾' : '▴';
 }
 
 // ══════ TEACH-BACK ══════
@@ -4655,164 +5438,410 @@ window.switchStroke = window.showStroke;
 <!-- ══════ CLINICAL JUDGMENT CASE STUDIES ══════ -->
 <div id="tab-cases" class="panel">
   <h2 style="margin-bottom:8px;color:var(--text);font-size:1.3rem;">🏥 Clinical Judgment Case Studies</h2>
-  <p style="color:var(--muted);margin-bottom:22px;font-size:.9rem;">NGN-style scenarios using the NCSBN Clinical Judgment Measurement Model. Practice recognizing cues, analyzing, prioritizing, and evaluating outcomes.</p>
+  <p style="color:var(--muted);margin-bottom:20px;font-size:.9rem;">NGN-style scenarios using the NCSBN Clinical Judgment Measurement Model. Answer each step — type your response or use your voice — then reveal the clinical answer before moving on.</p>
 
-  <!-- Case 1 -->
-  <div class="card" style="margin-bottom:22px;border-left:5px solid var(--c20);">
-    <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:8px;margin-bottom:14px;">
-      <h3 style="color:var(--c20);">Case 1: Mr. Thompson, 68 years old</h3>
-      <span style="background:var(--c20l);color:var(--c20d);padding:4px 10px;border-radius:6px;font-size:.78rem;font-weight:700;">MODULE 2.0 — STROKE</span>
-    </div>
-    <div style="background:#f5faff;border-radius:8px;padding:14px;margin-bottom:14px;font-size:.88rem;line-height:1.8;">
-      <strong>Scenario:</strong> Mr. Thompson is brought to the ED by his wife at 0930. She states he woke up "fine" at 0700, had breakfast, then at 0845 she noticed he could not move his right arm and his speech was "garbled." He has a history of atrial fibrillation, hypertension, and type 2 diabetes. His current medications include warfarin, metoprolol, and metformin. Vital signs: BP 198/104, HR 88 (irregular), RR 16, SpO₂ 95%, Temp 37.1°C. On assessment: right-sided facial droop, right arm drift, expressive aphasia. GCS = 13 (E4 V3 M6).
-    </div>
-
-    <details style="margin-bottom:10px;">
-      <summary style="cursor:pointer;padding:10px 14px;background:var(--c20l);border-radius:8px;font-weight:700;color:var(--c20d);font-size:.88rem;">🔍 Step 1: Recognize Cues — What findings are significant? (Click to reveal)</summary>
-      <div style="padding:12px 14px;background:#f5faff;border-radius:0 0 8px 8px;font-size:.86rem;line-height:1.8;">
-        <strong>Significant cues:</strong><ul style="padding-left:18px;margin-top:6px;">
-          <li><strong>Last-known-well: 0700</strong> — window of 2h45min at 0930 — tPA may be possible</li>
-          <li>Right-sided deficits → LEFT hemisphere stroke (contralateral)</li>
-          <li>Expressive aphasia → Broca's area (left frontal lobe)</li>
-          <li>Atrial fibrillation → cardioembolic source likely</li>
-          <li>Warfarin → must check INR before tPA</li>
-          <li>BP 198/104 → do NOT treat unless tPA given; permissive hypertension</li>
-          <li>SpO₂ 95% → supplement O₂ to ≥94%</li>
-          <li>Irregular HR → confirms AFib</li>
-        </ul>
-      </div>
-    </details>
-
-    <details style="margin-bottom:10px;">
-      <summary style="cursor:pointer;padding:10px 14px;background:var(--c20l);border-radius:8px;font-weight:700;color:var(--c20d);font-size:.88rem;">⚡ Step 2: Prioritize Hypotheses — What is most likely happening?</summary>
-      <div style="padding:12px 14px;background:#f5faff;border-radius:0 0 8px 8px;font-size:.86rem;line-height:1.8;">
-        <strong>Most likely:</strong> Ischemic stroke (cardioembolic from AFib) — left MCA distribution<br>
-        <strong>Must rule out first:</strong> Hemorrhagic stroke (CT head required before ANY anticoagulation or tPA)<br>
-        <strong>Differential:</strong> Hypoglycemia (check glucose — diabetes + metformin; must rule out immediately as glucose &lt;50 can mimic stroke)
-      </div>
-    </details>
-
-    <details style="margin-bottom:10px;">
-      <summary style="cursor:pointer;padding:10px 14px;background:var(--c20l);border-radius:8px;font-weight:700;color:var(--c20d);font-size:.88rem;">✅ Step 3: Take Actions — What do you do FIRST, SECOND, THIRD?</summary>
-      <div style="padding:12px 14px;background:#f5faff;border-radius:0 0 8px 8px;font-size:.86rem;line-height:1.8;">
-        <ol style="padding-left:18px;line-height:2.2;">
-          <li>Activate STROKE ALERT — time is critical</li>
-          <li>Point-of-care glucose — rule out hypoglycemia immediately</li>
-          <li>Supplemental O₂ to keep SpO₂ ≥94%</li>
-          <li>Establish 2 large-bore IVs; draw blood: CBC, coags, INR, BMP, type & screen</li>
-          <li>CT head STAT — no contrast (rule out hemorrhage)</li>
-          <li>NPO — dysphagia/aspiration risk</li>
-          <li>12-lead ECG</li>
-          <li>If CT negative → discuss tPA eligibility with MD (INR on warfarin may disqualify)</li>
-        </ol>
-      </div>
-    </details>
-
-    <details>
-      <summary style="cursor:pointer;padding:10px 14px;background:var(--c20l);border-radius:8px;font-weight:700;color:var(--c20d);font-size:.88rem;">📊 Step 4: Evaluate Outcomes — What would tell you he's improving or worsening?</summary>
-      <div style="padding:12px 14px;background:#f5faff;border-radius:0 0 8px 8px;font-size:.86rem;line-height:1.8;">
-        <strong>Signs of improvement:</strong> Improving grip strength, clearer speech, GCS rising, BP stabilizing<br>
-        <strong>Signs of worsening:</strong> Declining GCS, new deficits, BP continues rising with Cushing response, decreased SpO₂<br>
-        <strong>Post-tPA watch (if given):</strong> Any bleeding (gums, IV sites, hematuria), neurological change → STOP tPA, call MD immediately
-      </div>
-    </details>
+  <div class="case-sel-bar">
+    <button class="case-sel-btn active" style="background:var(--c20);border-color:var(--c20);" onclick="selectCase(0,this)">🫀 Case 1: Stroke</button>
+    <button class="case-sel-btn" onclick="selectCase(1,this)">🧠 Case 2: ↑ICP / TBI</button>
+    <button class="case-sel-btn" onclick="selectCase(2,this)">⚡ Case 3: GBS</button>
   </div>
 
-  <!-- Case 2 -->
-  <div class="card" style="margin-bottom:22px;border-left:5px solid #8b0000;">
-    <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:8px;margin-bottom:14px;">
-      <h3 style="color:#8b0000;">Case 2: Mrs. Garcia, 45 years old</h3>
-      <span style="background:#fde8e6;color:#8b0000;padding:4px 10px;border-radius:6px;font-size:.78rem;font-weight:700;">MODULE 2.2 — ↑ICP / TBI</span>
-    </div>
-    <div style="background:#fff8f8;border-radius:8px;padding:14px;margin-bottom:14px;font-size:.88rem;line-height:1.8;">
-      <strong>Scenario:</strong> Mrs. Garcia was admitted 48 hours ago following a motor vehicle accident with traumatic brain injury (TBI). GCS on admission was 9. Current assessment findings: GCS now 7 (down from 10 two hours ago), BP 168/52 (was 140/78), HR 52 (was 78), breathing irregular, right pupil 7mm and non-reactive (left pupil 3mm reactive). ICP monitor reads 28 mmHg (normal &lt;20). She is on a ventilator.
-    </div>
-
-    <details style="margin-bottom:10px;">
-      <summary style="cursor:pointer;padding:10px 14px;background:#fde8e6;border-radius:8px;font-weight:700;color:#8b0000;font-size:.88rem;">🚨 STOP — What do these vital signs together tell you? (Critical Recognition)</summary>
-      <div style="padding:12px 14px;background:#fff8f8;border-radius:0 0 8px 8px;font-size:.86rem;line-height:1.8;">
-        <strong style="color:#8b0000;font-size:1rem;">THIS IS CUSHING'S TRIAD = HERNIATION IN PROGRESS</strong>
-        <ul style="padding-left:18px;margin-top:8px;line-height:2;">
-          <li>↑↑ BP (widening pulse pressure) ✓</li>
-          <li>↓ HR (bradycardia) ✓</li>
-          <li>Irregular respirations ✓</li>
-          <li>Fixed, dilated right pupil = CN III compression = uncal herniation</li>
-          <li>GCS dropping 3 points in 2 hours = deteriorating rapidly</li>
-          <li>ICP 28 = severely elevated (CPP = MAP − ICP; critically low)</li>
-        </ul>
-        <strong style="color:#8b0000;">This is a LIFE-THREATENING EMERGENCY. Activate rapid response NOW.</strong>
-      </div>
-    </details>
-
-    <details style="margin-bottom:10px;">
-      <summary style="cursor:pointer;padding:10px 14px;background:#fde8e6;border-radius:8px;font-weight:700;color:#8b0000;font-size:.88rem;">✅ Immediate Nursing Actions (in order)</summary>
-      <div style="padding:12px 14px;background:#fff8f8;border-radius:0 0 8px 8px;font-size:.86rem;line-height:1.8;">
-        <ol style="padding-left:18px;line-height:2.2;">
-          <li>Call rapid response / neurosurgery STAT</li>
-          <li>HOB 30° — head midline, no hip flexion (&gt;30°)</li>
-          <li>Hyperventilate via ventilator (target PaCO₂ 35–40 → temporary reduction)</li>
-          <li>Mannitol 0.25–1 g/kg IV bolus as ordered (osmotic therapy)</li>
-          <li>Sedation/analgesia to reduce agitation (ICP spikes with stimulation)</li>
-          <li>Temperature control — treat fever aggressively</li>
-          <li>Prepare for emergency CT and possible neurosurgical intervention (decompressive craniectomy)</li>
-        </ol>
-      </div>
-    </details>
-
-    <details>
-      <summary style="cursor:pointer;padding:10px 14px;background:#fde8e6;border-radius:8px;font-weight:700;color:#8b0000;font-size:.88rem;">📊 Evaluation: What is CPP right now and why does it matter?</summary>
-      <div style="padding:12px 14px;background:#fff8f8;border-radius:0 0 8px 8px;font-size:.86rem;line-height:1.8;">
-        <strong>CPP = MAP − ICP</strong><br>
-        MAP = (SBP + 2×DBP)/3 = (168 + 2×52)/3 = 272/3 = <strong>91 mmHg</strong><br>
-        CPP = 91 − 28 = <strong>63 mmHg</strong> (goal is ≥60–70; this is borderline critical)<br><br>
-        If ICP continues rising or MAP drops further → CPP falls below 60 → brain ischemia → brain death<br>
-        Every intervention you take either ↓ICP or ↑MAP to improve CPP.
-      </div>
-    </details>
-  </div>
-
-  <!-- Case 3 -->
-  <div class="card" style="border-left:5px solid var(--cg);">
-    <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:8px;margin-bottom:14px;">
-      <h3 style="color:var(--cg);">Case 3: Mr. Osei, 34 years old</h3>
-      <span style="background:var(--cgl);color:var(--cgd);padding:4px 10px;border-radius:6px;font-size:.78rem;font-weight:700;">MODULE 2.1 — GUILLAIN-BARRÉ</span>
-    </div>
-    <div style="background:#f5fdf8;border-radius:8px;padding:14px;margin-bottom:14px;font-size:.88rem;line-height:1.8;">
-      <strong>Scenario:</strong> Mr. Osei was admitted 3 days ago with ascending weakness starting in his legs. He reports having a GI illness 3 weeks ago. Today he rates his leg weakness as 4/5, but now reports difficulty swallowing and his voice sounds "nasal." Vital signs: BP 136/88, HR 102, RR 22, SpO₂ 93% on room air. He is anxious and states "I can't catch my breath." Pulmonary function: Vital capacity 1.2L (his predicted normal is 3.8L).
-    </div>
-
-    <details style="margin-bottom:10px;">
-      <summary style="cursor:pointer;padding:10px 14px;background:var(--cgl);border-radius:8px;font-weight:700;color:var(--cgd);font-size:.88rem;">🔍 Recognize & Analyze: What is the most critical concern right now?</summary>
-      <div style="padding:12px 14px;background:#f5fdf8;border-radius:0 0 8px 8px;font-size:.86rem;line-height:1.8;">
-        <strong>Critical concern: Impending respiratory failure</strong>
-        <ul style="padding-left:18px;margin-top:8px;line-height:2;">
-          <li>Vital capacity 1.2L = only 32% of predicted → threshold for intubation is &lt;15 mL/kg or VC &lt;1L</li>
-          <li>SpO₂ 93% on room air — already hypoxic</li>
-          <li>RR 22 — tachypneic, working harder</li>
-          <li>Nasal voice + dysphagia = bulbar involvement (CN IX, X, XII affected)</li>
-          <li>Ascending weakness now reaching diaphragm/respiratory muscles</li>
-          <li>Anxiety + "can't catch breath" = classic early respiratory distress signs</li>
-        </ul>
-        <strong style="color:#8b0000;">He is one step away from intubation. This is not a "watch and wait" situation.</strong>
-      </div>
-    </details>
-
-    <details>
-      <summary style="cursor:pointer;padding:10px 14px;background:var(--cgl);border-radius:8px;font-weight:700;color:var(--cgd);font-size:.88rem;">✅ Priority Actions + SBAR Handoff</summary>
-      <div style="padding:12px 14px;background:#f5fdf8;border-radius:0 0 8px 8px;font-size:.86rem;line-height:1.8;">
-        <ol style="padding-left:18px;line-height:2.2;">
-          <li>Apply supplemental O₂ — titrate to SpO₂ ≥95%</li>
-          <li>Call MD — SBAR report: "This is GBS patient with VC now 32% predicted, SpO₂ 93%, bulbar symptoms. I am concerned about impending respiratory failure."</li>
-          <li>Elevate HOB 30–45°</li>
-          <li>Strict NPO — swallowing impaired, aspiration risk critical</li>
-          <li>Prepare for intubation — confirm RSI meds available; avoid succinylcholine (hyperkalaemia risk in denervated muscle)</li>
-          <li>Serial VC measurements q2h</li>
-          <li>Continuous cardiac monitoring (autonomic instability → arrhythmias)</li>
-        </ol>
-      </div>
-    </details>
-  </div>
+  <div id="caseDisplay"></div>
 </div>
+
+<script>
+// ── Case Study Data ─────────────────────────────────────────────
+const CASE_DATA = [
+  {
+    title: "Mr. Thompson, 68 years old",
+    badge: "MODULE 2.0 — STROKE",
+    color: "var(--c20)",
+    colorLight: "var(--c20l)",
+    colorDark: "var(--c20d)",
+    scenarioBg: "#f5faff",
+    answerBg: "#eef6ff",
+    answerBorder: "var(--c20)",
+    scenario: `Mr. Thompson is brought to the ED by his wife at 0930. She states he woke up "fine" at 0700, had breakfast, then at 0845 she noticed he could not move his right arm and his speech was "garbled." He has a history of atrial fibrillation, hypertension, and type 2 diabetes. Current medications: warfarin, metoprolol, metformin. Vital signs: BP 198/104, HR 88 (irregular), RR 16, SpO₂ 95%, Temp 37.1°C. Assessment: right-sided facial droop, right arm drift, expressive aphasia. GCS = 13 (E4 V3 M6).`,
+    steps: [
+      {
+        q: "🔍 Step 1: Recognize Cues — What findings are significant and why?",
+        a: `<strong>Key significant cues:</strong>
+<ul>
+<li><strong>Last-known-well: 0700</strong> → window of 2h 45min at 0930 → tPA may be possible (within 4-hr window)</li>
+<li>Right-sided deficits → <strong>LEFT hemisphere stroke</strong> (contralateral control)</li>
+<li>Expressive aphasia → Broca's area (left frontal lobe)</li>
+<li>Atrial fibrillation → likely <strong>cardioembolic</strong> source</li>
+<li>Warfarin → <strong>must check INR</strong> before tPA</li>
+<li>BP 198/104 → <strong>do NOT treat</strong> unless tPA given (permissive hypertension)</li>
+<li>SpO₂ 95% → supplement O₂ to ≥94%</li>
+<li>Irregular HR → confirms ongoing AFib</li>
+</ul>`
+      },
+      {
+        q: "⚡ Step 2: Prioritize Hypotheses — What is most likely happening? What must you rule out first?",
+        a: `<strong>Most likely:</strong> Ischemic stroke, cardioembolic (from AFib) — left MCA distribution<br><br>
+<strong>Must rule out FIRST:</strong> Hemorrhagic stroke → CT head required before ANY anticoagulation or tPA<br><br>
+<strong>Differential:</strong> Hypoglycemia — diabetes + metformin; glucose &lt;50 can mimic stroke perfectly. Rule out immediately with POC glucose.`
+      },
+      {
+        q: "✅ Step 3: Take Actions — What do you do FIRST, SECOND, THIRD?",
+        a: `<ol>
+<li>Activate <strong>STROKE ALERT</strong> — time is brain</li>
+<li>Point-of-care glucose — rule out hypoglycemia immediately</li>
+<li>Supplemental O₂ to keep SpO₂ ≥94%</li>
+<li>2 large-bore IVs; draw: CBC, coags, INR, BMP, type &amp; screen</li>
+<li><strong>CT head STAT</strong> — non-contrast (rule out hemorrhage first)</li>
+<li>NPO — dysphagia/aspiration risk</li>
+<li>12-lead ECG</li>
+<li>If CT negative → tPA eligibility discussion (warfarin/INR may disqualify)</li>
+</ol>`
+      },
+      {
+        q: "📊 Step 4: Evaluate Outcomes — What tells you he's improving? What signals deterioration?",
+        a: `<strong>Signs of improvement:</strong> Improving grip strength, clearer speech, GCS rising, BP stabilizing within goal range<br><br>
+<strong>Signs of worsening:</strong> Declining GCS, new deficits, BP rising with Cushing response, decreased SpO₂<br><br>
+<strong>Post-tPA watch (if given):</strong> Any bleeding (gums, IV sites, hematuria) or new neuro change → STOP tPA immediately, call MD`
+      }
+    ]
+  },
+  {
+    title: "Mrs. Garcia, 45 years old",
+    badge: "MODULE 2.2 — ↑ICP / TBI",
+    color: "#8b0000",
+    colorLight: "#fde8e6",
+    colorDark: "#7f1d1d",
+    scenarioBg: "#fff8f8",
+    answerBg: "#fff1f0",
+    answerBorder: "#8b0000",
+    scenario: `Mrs. Garcia was admitted 48 hours ago following a motor vehicle accident with traumatic brain injury (TBI). GCS on admission was 9. Current assessment: GCS now 7 (↓ from 10 two hours ago), BP 168/52 (was 140/78), HR 52 (was 78), breathing irregular, right pupil 7mm and non-reactive (left 3mm reactive). ICP monitor reads 28 mmHg (normal &lt;20). She is on a ventilator.`,
+    steps: [
+      {
+        q: "🚨 Step 1: Critical Recognition — What do these vital signs together tell you?",
+        a: `<strong style="color:#8b0000;font-size:1rem;">THIS IS CUSHING'S TRIAD = HERNIATION IN PROGRESS</strong>
+<ul>
+<li>↑↑ BP with widening pulse pressure ✓</li>
+<li>↓ HR (bradycardia) ✓</li>
+<li>Irregular respirations ✓</li>
+<li>Fixed, dilated right pupil = CN III compression = <strong>uncal herniation</strong></li>
+<li>GCS dropping 3 points in 2 hours = rapidly deteriorating</li>
+<li>ICP 28 = severely elevated (CPP = MAP − ICP; critically low)</li>
+</ul>
+<strong style="color:#8b0000;">This is a LIFE-THREATENING EMERGENCY. Activate rapid response NOW.</strong>`
+      },
+      {
+        q: "✅ Step 2: Immediate Nursing Actions — List them in priority order.",
+        a: `<ol>
+<li>Call <strong>rapid response / neurosurgery STAT</strong></li>
+<li>HOB 30° — head midline, no hip flexion &gt;30°</li>
+<li>Hyperventilate via ventilator (target PaCO₂ 35–40 → temporary vasconstriction)</li>
+<li>Mannitol 0.25–1 g/kg IV bolus as ordered (osmotic therapy)</li>
+<li>Sedation/analgesia to reduce agitation (ICP spikes with stimulation)</li>
+<li>Temperature control — treat fever aggressively</li>
+<li>Prepare for emergency CT and possible neurosurgical intervention (decompressive craniectomy)</li>
+</ol>`
+      },
+      {
+        q: "📊 Step 3: Evaluate — Calculate the CPP right now. Why does it matter?",
+        a: `<strong>CPP = MAP − ICP</strong><br>
+MAP = (SBP + 2×DBP) ÷ 3 = (168 + 2×52) ÷ 3 = 272 ÷ 3 = <strong>91 mmHg</strong><br>
+CPP = 91 − 28 = <strong>63 mmHg</strong> (goal: ≥60–70 mmHg; this is borderline critical)<br><br>
+If ICP continues rising OR MAP drops → CPP falls below 60 → brain ischemia → brain death.<br>
+Every intervention either <strong>↓ICP</strong> (mannitol, HOB, hyperventilation) or <strong>↑MAP</strong> (vasopressors) to protect CPP.`
+      }
+    ]
+  },
+  {
+    title: "Mr. Osei, 34 years old",
+    badge: "MODULE 2.1 — GUILLAIN-BARRÉ",
+    color: "var(--cg)",
+    colorLight: "var(--cgl)",
+    colorDark: "var(--cgd)",
+    scenarioBg: "#f5fdf8",
+    answerBg: "#f0fdf4",
+    answerBorder: "var(--cg)",
+    scenario: `Mr. Osei was admitted 3 days ago with ascending weakness starting in his legs. He had a GI illness 3 weeks ago. Today he rates leg weakness 4/5, but now reports difficulty swallowing and his voice sounds "nasal." Vital signs: BP 136/88, HR 102, RR 22, SpO₂ 93% on room air. He is anxious: "I can't catch my breath." Pulmonary function: Vital capacity 1.2 L (predicted normal 3.8 L).`,
+    steps: [
+      {
+        q: "🔍 Step 1: Recognize & Analyze — What is the MOST critical concern right now?",
+        a: `<strong>Critical concern: Impending respiratory failure</strong>
+<ul>
+<li>Vital capacity 1.2 L = only <strong>32% of predicted</strong> → threshold for intubation is &lt;15 mL/kg or VC &lt;1 L</li>
+<li>SpO₂ 93% on room air — already hypoxic</li>
+<li>RR 22 — tachypneic, using accessory muscles</li>
+<li>Nasal voice + dysphagia = <strong>bulbar involvement</strong> (CN IX, X, XII)</li>
+<li>Ascending weakness now approaching diaphragm</li>
+<li>"Can't catch my breath" = classic early respiratory distress</li>
+</ul>
+<strong style="color:#8b0000;">He is one step away from intubation. This is NOT watch-and-wait.</strong>`
+      },
+      {
+        q: "✅ Step 2: Priority Actions — What do you do and what SBAR do you give the MD?",
+        a: `<ol>
+<li>Apply supplemental O₂ — titrate to SpO₂ ≥95%</li>
+<li>Call MD — <em>SBAR:</em> "This is GBS patient with VC now 32% predicted, SpO₂ 93%, bulbar symptoms. I am concerned about <strong>impending respiratory failure.</strong>"</li>
+<li>Elevate HOB 30–45°</li>
+<li>Strict <strong>NPO</strong> — swallowing impaired, aspiration risk</li>
+<li>Prepare for intubation — confirm RSI meds available; avoid succinylcholine (hyperkalemia risk in denervated muscle)</li>
+<li>Serial VC measurements every 2 hours</li>
+<li>Continuous cardiac monitoring (autonomic instability → arrhythmias)</li>
+</ol>`
+      }
+    ]
+  }
+];
+
+let caseState = { idx: 0, step: 0, phase: 'question' };
+let caseRecog = null;
+
+function selectCase(idx, el) {
+  document.querySelectorAll('.case-sel-btn').forEach(b => {
+    b.classList.remove('active');
+    b.style.background = '';
+    b.style.borderColor = '';
+    b.style.color = '';
+  });
+  el.classList.add('active');
+  const c = CASE_DATA[idx];
+  el.style.background = c.color;
+  el.style.borderColor = c.color;
+  el.style.color = '#fff';
+  caseState = { idx, step: 0, phase: 'question' };
+  renderCase();
+}
+
+function renderCase() {
+  const c = CASE_DATA[caseState.idx];
+  const stepIdx = caseState.step;
+  const totalSteps = c.steps.length;
+  const step = c.steps[stepIdx];
+  const isComplete = caseState.phase === 'complete';
+
+  // Progress dots
+  let dots = '';
+  for (let i = 0; i < totalSteps; i++) {
+    let cls = 'case-prog-dot';
+    if (i < stepIdx || isComplete) cls += ' done';
+    else if (i === stepIdx) cls += ' current';
+    dots += `<div class="${cls}" title="Step ${i+1}"></div>`;
+  }
+
+  let body = '';
+  if (isComplete) {
+    body = `<div class="case-complete-banner">
+      <div style="font-size:2.5rem;margin-bottom:10px;">🎉</div>
+      <div style="font-size:1.1rem;font-weight:800;color:#15803d;margin-bottom:6px;">Case Complete!</div>
+      <div style="font-size:.88rem;color:#166534;">You worked through all ${totalSteps} clinical judgment steps for ${c.title}.</div>
+      <button onclick="caseState.step=0;caseState.phase='question';renderCase();"
+        style="margin-top:16px;padding:9px 22px;border-radius:99px;border:none;font-size:.84rem;font-weight:800;cursor:pointer;background:var(--acc);color:#fff;">
+        🔄 Restart This Case
+      </button>
+    </div>`;
+  } else {
+    const revealed = caseState.phase === 'revealed';
+    body = `
+      <div class="case-step-hdr">Step ${stepIdx + 1} of ${totalSteps}</div>
+      <div class="case-step-q">${step.q}</div>
+      <textarea id="caseTextarea" class="case-answer-area"
+        placeholder="Type your clinical reasoning here… or click the microphone to speak your answer."
+        ${revealed ? 'disabled' : ''}>${revealed ? '' : ''}</textarea>
+      <div class="case-action-row">
+        <button id="caseSpeakBtn" class="case-btn-speak" onclick="toggleCaseVoice()" ${revealed ? 'disabled style="opacity:.4"' : ''}>
+          🎤 <span id="caseSpeakLabel">Speak Answer</span>
+        </button>
+        <button class="case-btn-submit" onclick="submitCaseAnswer()" ${revealed ? 'style="display:none"' : ''}>
+          Submit Answer →
+        </button>
+        <button id="caseNextBtn" class="case-btn-next" onclick="nextCaseStep()"
+          style="${revealed ? 'display:inline-block' : 'display:none'}">
+          ${stepIdx + 1 < totalSteps ? 'Next Step →' : 'Finish Case ✓'}
+        </button>
+      </div>
+      <div id="caseOfficialAnswer" class="case-official-answer ${revealed ? 'show' : ''}"
+        style="background:${c.answerBg};border-color:${c.answerBorder};">
+        <div style="font-size:.72rem;font-weight:800;text-transform:uppercase;letter-spacing:.08em;
+          color:${c.color};margin-bottom:8px;">✅ Clinical Answer</div>
+        ${step.a}
+      </div>`;
+  }
+
+  document.getElementById('caseDisplay').innerHTML = `
+    <div class="card" style="border-left:5px solid ${c.color};padding:20px 22px;">
+      <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:8px;margin-bottom:14px;">
+        <h3 style="color:${c.color};font-size:1.1rem;">${c.title}</h3>
+        <span style="background:${c.colorLight};color:${c.colorDark};padding:4px 10px;border-radius:6px;font-size:.78rem;font-weight:700;">${c.badge}</span>
+      </div>
+      <div class="case-scenario" style="background:${c.scenarioBg};border-color:${c.colorLight || 'var(--border)'};">
+        <strong>Scenario:</strong> ${c.scenario}
+      </div>
+      <div class="case-progress">${dots}</div>
+      ${body}
+    </div>`;
+}
+
+function submitCaseAnswer() {
+  if (caseRecog) { caseRecog.stop(); caseRecog = null; }
+  caseState.phase = 'revealed';
+  renderCase();
+}
+
+function nextCaseStep() {
+  const c = CASE_DATA[caseState.idx];
+  if (caseState.step + 1 >= c.steps.length) {
+    caseState.phase = 'complete';
+  } else {
+    caseState.step += 1;
+    caseState.phase = 'question';
+  }
+  renderCase();
+}
+
+function toggleCaseVoice() {
+  const SpeechRec = window.SpeechRecognition || window.webkitSpeechRecognition;
+  if (!SpeechRec) { alert('Voice recognition is not supported in this browser. Use Chrome.'); return; }
+  if (caseRecog) {
+    caseRecog.stop(); caseRecog = null;
+    const btn = document.getElementById('caseSpeakBtn');
+    const lbl = document.getElementById('caseSpeakLabel');
+    if (btn) { btn.classList.remove('listening'); }
+    if (lbl) lbl.textContent = 'Speak Answer';
+    const ta = document.getElementById('caseTextarea');
+    if (ta) ta.classList.remove('listening');
+    return;
+  }
+  caseRecog = new SpeechRec();
+  caseRecog.continuous = true;
+  caseRecog.interimResults = true;
+  caseRecog.lang = 'en-US';
+  const btn = document.getElementById('caseSpeakBtn');
+  const lbl = document.getElementById('caseSpeakLabel');
+  const ta = document.getElementById('caseTextarea');
+  if (btn) btn.classList.add('listening');
+  if (lbl) lbl.textContent = 'Listening… (click to stop)';
+  if (ta) ta.classList.add('listening');
+  let finalTranscript = ta ? ta.value : '';
+  caseRecog.onresult = (e) => {
+    let interim = '';
+    for (let i = e.resultIndex; i < e.results.length; i++) {
+      if (e.results[i].isFinal) finalTranscript += e.results[i][0].transcript + ' ';
+      else interim += e.results[i][0].transcript;
+    }
+    if (ta) ta.value = finalTranscript + interim;
+  };
+  caseRecog.onerror = () => { caseRecog = null; if (btn) btn.classList.remove('listening'); if (lbl) lbl.textContent = 'Speak Answer'; if (ta) ta.classList.remove('listening'); };
+  caseRecog.onend = () => { if (caseRecog) { caseRecog = null; if (btn) btn.classList.remove('listening'); if (lbl) lbl.textContent = 'Speak Answer'; if (ta) ta.classList.remove('listening'); } };
+  caseRecog.start();
+}
+
+// Init case display on load
+(function() {
+  const panel = document.getElementById('tab-cases');
+  if (panel) {
+    // Render when the tab is first shown
+    const observer = new MutationObserver(() => {
+      if (panel.classList.contains('active') && !document.getElementById('caseDisplay').innerHTML.trim()) {
+        renderCase();
+      }
+    });
+    observer.observe(panel, { attributes: true, attributeFilter: ['class'] });
+    // Also render immediately if already active
+    if (panel.classList.contains('active')) renderCase();
+  }
+})();
+
+// ── Neuron part click info ──────────────────────────────────────────────
+var neuronParts = {
+  dendrites: {
+    title: '🌿 Dendrites — The Receivers',
+    body: 'Dendrites are the branching extensions of the cell body that receive incoming signals from other neurons (via synapses). A single neuron can have thousands of dendritic branches. They integrate excitatory and inhibitory signals — if the sum is strong enough, it triggers an action potential at the axon hillock. <strong>Clinical:</strong> Alzheimer\'s disease destroys dendritic spines and synaptic connections, which is why memory and cognition deteriorate progressively.',
+    color: '#2563eb'
+  },
+  soma: {
+    title: '🔵 Cell Body (Soma) — The Control Center',
+    body: 'The soma contains the nucleus (with DNA) and all the machinery to keep the neuron alive (ribosomes, mitochondria, endoplasmic reticulum). It integrates all signals received by the dendrites. If the combined signal reaches threshold at the axon hillock, it fires an action potential. <strong>Clinical:</strong> In Parkinson\'s disease, dopaminergic neurons in the substantia nigra have their cell bodies progressively destroyed, reducing dopamine production.',
+    color: '#1d4ed8'
+  },
+  hillock: {
+    title: '⚡ Axon Hillock — The Decision Maker',
+    body: 'The axon hillock is the cone-shaped junction between the cell body and axon. It has the highest concentration of voltage-gated Na⁺ channels in the neuron. This is the "decision point" — if incoming signals push the membrane potential above −55 mV (threshold), an action potential fires here and propagates down the axon. <strong>Clinical:</strong> Anti-seizure drugs (phenytoin) stabilize Na⁺ channels at the axon hillock to raise the firing threshold and prevent seizures.',
+    color: '#4338ca'
+  },
+  myelin: {
+    title: '🟡 Myelin Sheath & Nodes of Ranvier — The Speed Boosters',
+    body: 'Myelin is a fatty insulating layer wrapped around the axon by glial cells (Schwann cells in PNS; oligodendrocytes in CNS). It forces electrical current to "jump" from one Node of Ranvier (gap in myelin) to the next — called <strong>saltatory conduction</strong> (up to 120 m/s). Without myelin, signals travel slowly by continuous conduction (~1 m/s) or fail entirely. <strong>MS</strong> (CNS) = oligodendrocytes destroyed → plaques form → signals slow/stop. <strong>GBS</strong> (PNS) = Schwann cells attacked → ascending weakness. Both are demyelinating diseases affecting <em>different</em> parts of the nervous system.',
+    color: '#b45309'
+  },
+  terminal: {
+    title: '🟢 Axon Terminal (Synaptic Bouton) — The Transmitter',
+    body: 'The axon terminal is the swollen tip at the end of the axon that stores and releases neurotransmitters. When an action potential arrives, Ca²⁺ channels open → calcium floods in → ACh-filled vesicles fuse with the membrane → ACh is released into the synaptic cleft. <strong>Clinical:</strong> In Myasthenia Gravis, the terminal releases ACh normally — the problem is the destroyed receptors on the muscle side. In Lambert-Eaton syndrome (associated with lung cancer), the Ca²⁺ channels in the terminal are attacked instead.',
+    color: '#15803d'
+  }
+};
+
+function showNeuronPart(part) {
+  var info = neuronParts[part];
+  if (!info) return;
+  var box = document.getElementById('neuronInfo');
+  var content = document.getElementById('neuronInfoContent');
+  if (!box || !content) return;
+  box.style.display = 'block';
+  box.style.borderColor = info.color;
+  box.style.background = info.color + '11';
+  content.innerHTML = '<strong style="font-size:.95rem;color:' + info.color + ';">' + info.title + '</strong><br><br>' + info.body;
+}
+
+// ── NMJ part click info ─────────────────────────────────────────────────
+var nmjParts = {
+  terminal: {
+    title: '🔵 Axon Terminal (Presynaptic)',
+    body: 'The axon terminal contains hundreds of vesicles packed with acetylcholine (ACh). When an action potential arrives, voltage-gated Ca²⁺ channels open — calcium ions flood in, triggering vesicle fusion with the presynaptic membrane and ACh release into the cleft. This process is called exocytosis.',
+    color: '#1d4ed8'
+  },
+  vesicles: {
+    title: '🟢 ACh Vesicles',
+    body: 'Each vesicle contains ~5,000–10,000 molecules of acetylcholine (ACh). When Ca²⁺ enters the terminal, vesicles fuse with the membrane and dump their ACh into the synaptic cleft. In Myasthenia Gravis, vesicle release is NORMAL — it\'s the receptors on the other side that are destroyed.',
+    color: '#15803d'
+  },
+  ach: {
+    title: '🟢 ACh in the Synaptic Cleft',
+    body: 'Acetylcholine (ACh) diffuses across the 50-nm synaptic cleft and binds to nicotinic ACh receptors on the muscle fiber. Binding opens ion channels → Na⁺ rushes into the muscle → depolarization → muscle contraction. ACh is then broken down by acetylcholinesterase (AChE) to recycle it.',
+    color: '#16a34a'
+  },
+  ache: {
+    title: '🔴 Acetylcholinesterase (AChE)',
+    body: 'AChE is an enzyme in the synaptic cleft that rapidly breaks down ACh into choline + acetate after it has done its job. This terminates the signal and allows the muscle to relax. Without AChE working, ACh builds up → continuous muscle stimulation → SLUDGE symptoms (Salivation, Lacrimation, Urination, Defecation, GI cramps, Emesis). <strong>Pyridostigmine (Mestinon)</strong> blocks AChE → more ACh available → helps MG patients. Organophosphate poisoning also blocks AChE — causing SLUDGE toxicity.',
+    color: '#dc2626'
+  },
+  receptors: {
+    title: '🟠 ACh Receptors (Postsynaptic)',
+    body: 'Nicotinic ACh receptors on the muscle membrane bind ACh and open ligand-gated Na⁺ channels. Na⁺ flows in → membrane depolarizes → action potential in the muscle → contraction. In <strong>Myasthenia Gravis</strong>, IgG autoantibodies attack and destroy these receptors. Fewer receptors = less muscle activation = progressive weakness, especially with repeated use. Classic sign: ptosis (eyelid drooping) worsening throughout the day.',
+    color: '#ea580c'
+  },
+  muscle: {
+    title: '🟡 Muscle Fiber (Postsynaptic)',
+    body: 'The junctional folds of the muscle membrane increase surface area for ACh receptors. When ACh binds, Na⁺ channels open → depolarization → Ca²⁺ released from sarcoplasmic reticulum → actin-myosin cross-bridges form → muscle contraction. In GBS, the peripheral nerve is damaged so the signal never reaches the NMJ. In MG, the signal arrives but the receptors are destroyed.',
+    color: '#d97706'
+  },
+  mg: {
+    title: '⚠️ Myasthenia Gravis — NMJ Attack',
+    body: 'In MG, the body produces IgG antibodies against nicotinic ACh receptors (anti-AChR antibodies, positive in 85% of cases). These antibodies: (1) block ACh binding, (2) cross-link and accelerate receptor destruction, (3) activate complement causing membrane damage. Result: fewer functional receptors → increasing weakness with repeated muscle use, improving with rest. Treatment: pyridostigmine (AChE inhibitor, symptomatic) + immunosuppressants (prednisone, azathioprine) + IVIG/plasmapheresis for crises.',
+    color: '#dc2626'
+  }
+};
+
+function showNMJPart(part) {
+  var info = nmjParts[part];
+  if (!info) return;
+  var box = document.getElementById('nmjInfo');
+  var content = document.getElementById('nmjInfoContent');
+  if (!box || !content) return;
+  box.style.display = 'block';
+  box.style.borderColor = info.color;
+  box.style.background = info.color + '11';
+  content.innerHTML = '<strong style="font-size:.95rem;color:' + info.color + ';">' + info.title + '</strong><br><br>' + info.body;
+}
+
+</script>
+
 
 <!-- ══════ LABS & DIAGNOSTICS ══════ -->
 <div id="tab-labs" class="panel">
